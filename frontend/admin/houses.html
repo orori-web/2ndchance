@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- ==========================================
+         MATERIAL SYMBOLS
+    =========================================== -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        rel="stylesheet"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+    <link
+    rel="stylesheet"
+    href="./css/variables.css"
+>
+
+
+    <!-- ==========================================
+         SHARED ADMIN CSS
+    =========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="./css/admin.css"
+    >
+
+
+    <!-- ==========================================
+         HOUSES PAGE CSS
+    =========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="./css/houses.css"
+    >
+
+    <link rel="stylesheet" href="./css/admin-mobile.css">
+
+    <link rel="stylesheet" href="./css/houses-mobile.css">
+
+
+    <title>Admin - Houses | Second Chance Store</title>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         ADMIN LAYOUT
+    =========================================== -->
+
+    <div class="admin-layout">
+
+
+        <!-- ======================================
+             SHARED ADMIN HEADER
+             Injected by admin-layout.js
+        ======================================= -->
+
+        <div id="admin-header"></div>
+
+
+        <!-- ======================================
+             SHARED ADMIN SIDEBAR
+             Injected by admin-layout.js
+        ======================================= -->
+
+        <div id="admin-sidebar"></div>
+
+
+        <!-- ======================================
+             HOUSES PAGE
+        ======================================= -->
+
+        <main class="admin-page">
+
+
+            <div class="admin-page-content">
+
+
+                <!-- ==================================
+                     PAGE HEADER
+                =================================== -->
+
+                <section class="houses-page-header">
+
+                    <div>
+
+                        <p class="houses-eyebrow">
+                           
+                        </p>
+
+                        <h1>
+                            Houses
+                        </h1>
+
+                     
+
+                    </div>
+
+
+                    <!-- CREATE HOUSE -->
+
+                    <a
+                        href="house-create.html"
+                        class="houses-create-button"
+                    >
+
+                        <span class="material-symbols-outlined">
+                            add
+                        </span>
+
+                        <span>
+                            Add House
+                        </span>
+
+                    </a>
+
+                </section>
+
+
+                <!-- ==================================
+                     SEARCH + FILTERS
+                =================================== -->
+
+                <section class="houses-controls">
+
+
+                    <!-- SEARCH -->
+
+                    <div class="houses-search">
+
+                        <span class="material-symbols-outlined">
+                            search
+                        </span>
+
+                        <input
+                            type="text"
+                            id="house-search"
+                            placeholder="Search houses..."
+                            autocomplete="off"
+                        >
+
+                        <button
+                            type="button"
+                            id="search-button"
+                            class="houses-search-button"
+                        >
+                            Search
+                        </button>
+
+                    </div>
+
+
+                    <!-- FILTERS -->
+
+                    <div class="houses-filters">
+
+
+                        <!-- AVAILABILITY -->
+
+                        <div class="houses-filter-group">
+
+                            <label for="availability-filter">
+                                Availability
+                            </label>
+
+                            <select
+                                id="availability-filter"
+                            >
+
+                                <option value="">
+                                    All
+                                </option>
+
+                                <option value="Available">
+                                    Available
+                                </option>
+
+                                <option value="Occupied">
+                                    Occupied
+                                </option>
+
+                                <option value="Unknown">
+                                    Unknown
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- HOUSE TYPE -->
+
+                        <div class="houses-filter-group">
+
+                            <label for="house-type-filter">
+                                House Type
+                            </label>
+
+                            <select
+                                id="house-type-filter"
+                            >
+
+                                <option value="">
+                                    All
+                                </option>
+
+                                <option value="Single Room">
+                                    Single Room
+                                </option>
+
+                                <option value="Bedsitter">
+                                    Bedsitter
+                                </option>
+
+                                <option value="1 Bedroom">
+                                    1 Bedroom
+                                </option>
+
+                                <option value="2 Bedroom">
+                                    2 Bedroom
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- AREA -->
+
+                        <div class="houses-filter-group">
+
+                            <label for="area-filter">
+                                Area
+                            </label>
+
+                            <input
+                                type="text"
+                                id="area-filter"
+                                placeholder="e.g. Kangaru"
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+
+                        <!-- APPLY FILTERS -->
+
+                        <button
+                            type="button"
+                            id="filter-button"
+                            class="houses-filter-button"
+                        >
+
+                            <span class="material-symbols-outlined">
+                                filter_list
+                            </span>
+
+                            <span>
+                                Apply Filters
+                            </span>
+
+                        </button>
+
+
+                        <!-- REFRESH -->
+
+                        <button
+                            type="button"
+                            id="refresh-button"
+                            class="houses-refresh-button"
+                            aria-label="Refresh houses"
+                            title="Refresh houses"
+                        >
+
+                            <span class="material-symbols-outlined">
+                                refresh
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================
+                     MESSAGE
+                =================================== -->
+
+                <div
+                    id="houses-message"
+                    class="houses-message"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- ==================================
+                     HOUSES
+                =================================== -->
+
+                <section
+                    id="houses-container"
+                    class="houses-container"
+                >
+
+                    <!-- Houses are rendered here by houses.js -->
+
+                </section>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- ==========================================
+         SHARED ADMIN LAYOUT
+    =========================================== -->
+
+    <script
+        type="module"
+        src="./js/admin-layout.js"
+    ></script>
+
+
+    <!-- ==========================================
+         HOUSES PAGE JAVASCRIPT
+    =========================================== -->
+
+    <script
+        type="module"
+        src="./js/houses.js"
+    ></script>
+
+
+</body>
+
+</html>
+

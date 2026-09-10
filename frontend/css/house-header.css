@@ -1,0 +1,747 @@
+body {
+    font-family:
+        "Poppins",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+/* ==========================================
+   SECOND CHANCE STORE
+   HOUSE HEADER
+========================================== */
+
+
+/* ==========================================
+   ROOT
+========================================== */
+
+:root {
+
+    --house-header-blue: #0050aa;
+    --house-header-blue-dark: #003f86;
+
+    --house-header-text: #222222;
+    --house-header-background: #ffffff;
+
+    --house-header-search-background: #f5f5f5;
+
+    --house-header-border: #e5e7eb;
+
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.house-site-header {
+
+    width: 100%;
+
+    background: var(--house-header-background);
+
+    border-bottom:
+        1px solid var(--house-header-border);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+
+/* ==========================================
+   HEADER INNER
+========================================== */
+
+.house-header-inner {
+
+    width: 100%;
+
+    max-width: 1280px;
+
+    min-height: 72px;
+
+    margin: 0 auto;
+
+    padding:
+        0 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+
+    box-sizing: border-box;
+
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.house-site-logo {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+}
+
+
+.house-site-logo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+/* ==========================================
+   HOUSE SEARCH
+========================================== */
+
+.house-header-search {
+
+    flex: 1;
+
+    min-width: 0;
+
+    max-width: 700px;
+
+    height: 48px;
+
+    margin:
+        0 auto;
+
+    display: flex;
+
+}
+
+
+/* ==========================================
+   SEARCH INPUT
+========================================== */
+
+#house-header-search-input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 48px;
+
+    padding:
+        0 18px;
+
+    border: none;
+
+    outline: none;
+
+    background:
+        var(--house-header-search-background);
+
+    color:
+        var(--house-header-text);
+
+    font-size: 15px;
+
+    border-radius:
+        24px 0 0 24px;
+
+    box-sizing: border-box;
+
+}
+
+
+#house-header-search-input::placeholder {
+
+    color: #777777;
+
+}
+
+
+#house-header-search-input:focus {
+
+    background: #ffffff;
+
+    box-shadow:
+        inset 0 0 0 1px #dddddd;
+
+}
+
+
+/* ==========================================
+   SEARCH BUTTON
+========================================== */
+
+#house-header-search-button {
+
+    width: 58px;
+
+    height: 48px;
+
+    padding: 0;
+
+    border: none;
+
+    background:
+        var(--house-header-blue);
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    border-radius:
+        0 24px 24px 0;
+
+    transition:
+        background 0.2s ease;
+
+}
+
+
+#house-header-search-button:hover {
+
+    background:
+        var(--house-header-blue-dark);
+
+}
+
+
+#house-header-search-button
+.material-symbols-outlined {
+
+    font-size: 22px;
+
+}
+
+
+/* ==========================================
+   USER AREA
+========================================== */
+
+.house-header-user-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+
+}
+
+
+/* ==========================================
+   LOGIN
+========================================== */
+
+#house-login-button {
+
+    border: none;
+
+    background: transparent;
+
+    color:
+        var(--house-header-text);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    padding:
+        8px 12px;
+
+    white-space: nowrap;
+
+}
+
+
+#house-login-button:hover {
+
+    color:
+        var(--house-header-blue);
+
+}
+
+
+/* ==========================================
+   USER LINK
+========================================== */
+
+.house-header-user-link {
+
+    display: none;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color:
+        var(--house-header-text);
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+}
+
+
+.house-header-user-link:hover {
+
+    color:
+        var(--house-header-blue);
+
+}
+
+
+.house-header-user-link
+.material-symbols-outlined {
+
+    font-size: 21px;
+
+}
+
+
+/* ==========================================
+   LOGOUT
+========================================== */
+
+#house-logout-button {
+
+    display: none;
+
+}
+
+
+/* ==========================================
+   CART
+========================================== */
+
+#house-cart-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-width: 74px;
+
+    height: 42px;
+
+    padding:
+        0 14px;
+
+    background:
+        var(--house-header-blue);
+
+    color: #ffffff;
+
+    border-radius: 22px;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease;
+
+    flex-shrink: 0;
+
+}
+
+
+#house-cart-link:hover {
+
+    background:
+        var(--house-header-blue-dark);
+
+}
+
+
+#house-cart-link:active {
+
+    transform: scale(0.97);
+
+}
+
+
+#house-cart-link
+.material-symbols-outlined {
+
+    font-size: 23px;
+
+}
+
+
+/* ==========================================
+   CART COUNT
+========================================== */
+
+#house-cart-count {
+
+    min-width: 22px;
+
+    height: 22px;
+
+    padding:
+        0 6px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ed1c24;
+
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    box-sizing: border-box;
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .house-header-inner {
+
+        gap: 16px;
+
+        padding:
+            0 18px;
+
+    }
+
+    .house-header-search {
+
+        max-width: none;
+
+    }
+
+    .house-header-user-area {
+
+        display: none;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .house-header-inner {
+
+        min-height: 64px;
+
+        padding:
+            0 12px;
+
+        gap: 10px;
+
+    }
+
+
+    .house-site-logo {
+
+        width: 46px;
+
+        height: 46px;
+
+    }
+
+
+    .house-header-search {
+
+        height: 42px;
+
+    }
+
+
+    #house-header-search-input {
+
+        height: 42px;
+
+        padding:
+            0 14px;
+
+        font-size: 14px;
+
+    }
+
+
+    #house-header-search-button {
+
+        width: 48px;
+
+        height: 42px;
+
+    }
+
+
+    #house-cart-link {
+
+        min-width: 48px;
+
+        width: 48px;
+
+        height: 40px;
+
+        padding: 0;
+
+    }
+
+
+    #house-cart-link
+    .material-symbols-outlined {
+
+        font-size: 21px;
+
+    }
+
+
+    #house-cart-count {
+
+        min-width: 19px;
+
+        height: 19px;
+
+        font-size: 10px;
+
+    }
+
+}
+
+
+/* =====================================================
+   SECOND CHANCE STORE
+   FOOTER
+===================================================== */
+
+.site-footer {
+    background: #0050aa;
+    color: #ffffff;
+
+    margin-top: 80px;
+}
+
+
+/* =====================================================
+   FOOTER MAIN AREA
+===================================================== */
+
+.footer-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 60px 40px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 60px;
+}
+
+
+/* =====================================================
+   FOOTER COLUMNS
+===================================================== */
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.footer-brand h2 {
+    margin: 0 0 12px;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.3px;
+}
+
+
+.footer-brand p {
+    margin: 0;
+
+    max-width: 280px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   COLUMN HEADINGS
+===================================================== */
+
+.footer-column h3 {
+    margin: 0 0 10px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =====================================================
+   FOOTER LINKS
+===================================================== */
+
+.footer-column a {
+    width: fit-content;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.footer-column a:hover {
+    color: #ffffff;
+
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+
+    padding: 20px 40px;
+
+    text-align: center;
+}
+
+
+.footer-bottom p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 40px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        padding: 45px 25px;
+
+        gap: 35px;
+    }
+
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+
+
+    .footer-bottom {
+        padding: 18px 20px;
+    }
+
+}

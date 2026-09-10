@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+<title>Edit Product | Second Chance Store</title>
+
+    
+
+<link
+    rel="stylesheet"
+    href="./css/header.css"
+>
+
+<!-- Global / shared styles -->
+<link
+    rel="stylesheet"
+    href="./css/home.css"
+>
+
+<!-- Edit product styles -->
+<link
+    rel="stylesheet"
+    href="./css/edit-product.css"
+>
+
+<link
+    rel="stylesheet"
+    href="./css/header-mobile.css"
+>
+<link rel="stylesheet" href="./css/bottom-nav.css">
+
+<!-- Material Symbols -->
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+>
+
+
+</head>
+
+<body>
+
+
+<div id="site-header"></div>
+
+
+<!-- ==========================================
+     MAIN
+=========================================== -->
+
+<main class="edit-product-page">
+
+    <nav
+    id="breadcrumb"
+    class="site-breadcrumb"
+    aria-label="Breadcrumb"
+></nav>
+
+    <div class="edit-product-container">
+
+
+        <!-- ======================================
+             BREADCRUMB
+        ======================================= -->
+
+        <nav
+            class="edit-product-breadcrumb"
+            aria-label="Breadcrumb"
+        >
+
+            <a href="account.html">
+                My Account
+            </a>
+
+            <span class="material-symbols-outlined">
+                chevron_right
+            </span>
+
+            <span>
+                Edit Product
+            </span>
+
+        </nav>
+
+
+        <!-- ======================================
+             PAGE HEADER
+        ======================================= -->
+
+        <div class="edit-product-header">
+
+            <div>
+
+                <p class="edit-product-eyebrow">
+                    My Product
+                </p>
+
+                <h1>
+                    Edit Product
+                </h1>
+
+                <p>
+                    Update your product information and save your changes.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ======================================
+             MESSAGE
+        ======================================= -->
+
+        <p
+            id="edit-product-message"
+            class="edit-product-message"
+            aria-live="polite"
+        ></p>
+
+
+        <!-- ======================================
+             EDIT FORM
+        ======================================= -->
+
+        <form
+            id="edit-product-form"
+            class="edit-product-form"
+        >
+
+
+            <!-- ==================================
+                 BASIC INFORMATION
+            =================================== -->
+
+            <section class="edit-form-section">
+
+                <div class="edit-section-heading">
+
+                    <span class="material-symbols-outlined">
+                        inventory_2
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Product Information
+                        </h2>
+
+                        <p>
+                            Keep the basic details of your product accurate.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Product Name -->
+
+                <div class="form-field">
+
+                    <label for="product-name">
+                        Product Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="product-name"
+                        placeholder="Enter product name"
+                        autocomplete="off"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Price -->
+
+                <div class="form-field">
+
+                    <label for="product-price">
+                        Price
+                    </label>
+
+                    <div class="input-with-prefix">
+
+                        <span>
+                            KSh
+                        </span>
+
+                        <input
+                            type="number"
+                            id="product-price"
+                            min="0"
+                            step="1"
+                            placeholder="0"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Category -->
+
+                <div class="form-field">
+
+                    <label for="product-category">
+                        Category
+                    </label>
+
+                    <select
+                        id="product-category"
+                        required
+                    >
+
+                        <option value="">
+                            Select category
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Condition -->
+
+                <div class="form-field">
+
+                    <label for="product-condition">
+                        Condition
+                    </label>
+
+                    <select
+                        id="product-condition"
+                        required
+                    >
+
+                        <option value="">
+                            Select condition
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================
+                 PRODUCT DESCRIPTION
+            =================================== -->
+
+            <section class="edit-form-section">
+
+                <div class="edit-section-heading">
+
+                    <span class="material-symbols-outlined">
+                        description
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Description
+                        </h2>
+
+                        <p>
+                            Tell buyers more about the product.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="product-description">
+                        Product Description
+                    </label>
+
+                    <textarea
+                        id="product-description"
+                        rows="7"
+                        placeholder="Describe the product, its condition, features, or anything buyers should know..."
+                        required
+                    ></textarea>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================
+                 ADDITIONAL DETAILS
+            =================================== -->
+
+            <section class="edit-form-section">
+
+                <div class="edit-section-heading">
+
+                    <span class="material-symbols-outlined">
+                        tune
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Additional Details
+                        </h2>
+
+                        <p>
+                            Add optional information that helps buyers.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Brand -->
+
+                <div class="form-field">
+
+                    <label for="product-brand">
+                        Brand
+                        <span class="optional">
+                            Optional
+                        </span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="product-brand"
+                        placeholder="e.g. Samsung, Nike, HP"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <!-- Negotiable -->
+
+                <div class="form-field">
+
+                    <label for="product-negotiable">
+                        Is the price negotiable?
+                    </label>
+
+                    <select
+                        id="product-negotiable"
+                    >
+
+                        <option value="true">
+                            Yes
+                        </option>
+
+                        <option value="false">
+                            No
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================
+                 PRODUCT IMAGES
+            =================================== -->
+
+            <section class="edit-form-section">
+
+                <div class="edit-section-heading">
+
+                    <span class="material-symbols-outlined">
+                        photo_library
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Product Images
+                        </h2>
+
+                        <p>
+                            Replace the current images if necessary.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="image-upload-box">
+
+                    <label
+                        for="product-images"
+                        class="image-upload-label"
+                    >
+
+                        <span class="material-symbols-outlined">
+                            cloud_upload
+                        </span>
+
+                        <strong>
+                            Replace Product Images
+                        </strong>
+
+                        <span>
+                            Choose up to 2 images from your device
+                        </span>
+
+                    </label>
+
+                    <input
+                        type="file"
+                        id="product-images"
+                        accept="image/*"
+                        multiple
+                    >
+
+                    <p class="image-upload-note">
+                        Uploading new images will replace the existing images.
+                        Maximum 2 images.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================
+                 FORM ACTIONS
+            =================================== -->
+
+            <div class="edit-form-actions">
+
+                <button
+                    type="button"
+                    id="cancel-edit-button"
+                    class="cancel-edit-button"
+                >
+
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+
+                    Cancel
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="save-edit-button"
+                >
+
+                    <span class="material-symbols-outlined">
+                        save
+                    </span>
+
+                    Save Changes
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</main>
+
+
+<div id="site-footer"></div>
+
+
+<!-- ==========================================
+     JAVASCRIPT
+=========================================== -->
+
+
+<script
+    type="module"
+    src="./js/header.js"
+></script>
+
+<script type="module" src="./js/footer.js"></script>
+
+<script
+    type="module"
+    src="./js/edit-product.js"
+></script>
+
+
+</body>
+
+</html>

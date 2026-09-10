@@ -1,0 +1,209 @@
+<header class="site-header">
+
+    <nav class="site-header-inner">
+
+        <!-- ==========================================
+             LOGO
+        =========================================== -->
+
+        <a
+            href="home.html"
+            class="site-logo"
+        >
+            <img
+                src="images/Gemini_Generated_Image_rynewvrynewvryne.png"
+                alt="Second Chance Store"
+            >
+        </a>
+
+
+        <!-- ==========================================
+             SEARCH
+        =========================================== -->
+
+        <form
+            id="header-search-form"
+            class="header-search"
+        >
+
+            <input
+                type="search"
+                id="header-search-input"
+                placeholder="Search products..."
+                autocomplete="off"
+            >
+
+            <button
+                type="submit"
+                id="home-search-button"
+                aria-label="Search"
+            >
+
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+
+            </button>
+
+        </form>
+
+
+        <!-- ==========================================
+             USER AREA
+        =========================================== -->
+
+        <div
+            id="user-account"
+            class="header-user-area"
+        >
+
+            <!-- Login button -->
+            <button
+                type="button"
+                id="login-button"
+            >
+                Login with Google
+            </button>
+
+
+            <!-- Logged-in user -->
+
+            <a
+                href="account.html"
+                id="user-name"
+                class="header-user-link"
+            >
+
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+
+                <span id="header-user-name"></span>
+
+            </a>
+
+
+           
+
+        </div>
+
+
+        <!-- ==========================================
+             CART
+        =========================================== -->
+
+        <a
+            href="cart.html"
+            id="cart-link"
+            aria-label="Shopping cart"
+        >
+
+            <span class="material-symbols-outlined">
+                shopping_cart
+            </span>
+
+            <span id="cart-count">
+                0
+            </span>
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ==========================================
+     MOBILE BOTTOM NAVIGATION
+========================================== -->
+
+<nav
+    id="mobile-bottom-nav"
+    class="mobile-bottom-nav"
+    aria-label="Mobile navigation"
+>
+
+    <!-- HOME -->
+    <a
+        href="home.html"
+        class="mobile-bottom-nav-item"
+        data-page="home"
+    >
+        <span class="material-symbols-outlined">
+            home
+        </span>
+
+        <span class="mobile-bottom-nav-label">
+            Home
+        </span>
+    </a>
+
+
+    <!-- SELL -->
+    <a
+        href="sell.html"
+        class="mobile-bottom-nav-item"
+        data-page="sell"
+    >
+        <span class="material-symbols-outlined">
+            sell
+        </span>
+
+        <span class="mobile-bottom-nav-label">
+            Sell
+        </span>
+    </a>
+
+
+    <!-- HOUSES -->
+    <a
+        href="house.html"
+        class="mobile-bottom-nav-item"
+        data-page="houses"
+    >
+        <span class="material-symbols-outlined">
+            home_work
+        </span>
+
+        <span class="mobile-bottom-nav-label">
+            Houses
+        </span>
+    </a>
+
+
+    <!-- PRODUCTS -->
+    <a
+        href="products.html"
+        class="mobile-bottom-nav-item"
+        data-page="products"
+    >
+        <span class="material-symbols-outlined">
+            shopping_bag
+        </span>
+
+        <span class="mobile-bottom-nav-label">
+            Products
+        </span>
+    </a>
+
+
+    <!-- ADMIN -->
+    <a
+        href="admin/dashboard.html"
+        id="mobile-admin-nav"
+        class="mobile-bottom-nav-item"
+        data-page="admin"
+        hidden
+    >
+        <span class="material-symbols-outlined">
+            admin_panel_settings
+        </span>
+
+        <span class="mobile-bottom-nav-label">
+            Admin
+        </span>
+    </a>
+
+</nav>
+

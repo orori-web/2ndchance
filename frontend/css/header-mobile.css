@@ -1,0 +1,229 @@
+/* =====================================================
+   SECOND CHANCE STORE
+   HOME — MOBILE HEADER
+===================================================== */
+
+@media (max-width: 600px) {
+
+    /* ================================================
+       HEADER
+    ================================================ */
+
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: #ffffff;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+
+    /* ================================================
+       HEADER INNER
+    ================================================ */
+
+    .site-header-inner {
+        width: 100%;
+        min-height: 60px;
+        padding: 8px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+
+    /* ================================================
+       LOGO
+    ================================================ */
+
+    .site-logo {
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+    }
+
+
+    .site-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    /* ================================================
+       SEARCH
+       Move search onto its own row
+    ================================================ */
+
+    .header-search {
+        order: 10;
+        width: 100%;
+        flex: none;
+        display: flex;
+        height: 42px;
+        margin: 0;
+    }
+
+
+    #header-search-input {
+        min-width: 0;
+        width: 100%;
+        height: 42px;
+        padding: 0 15px;
+        font-size: 14px;
+        border-radius: 21px 0 0 21px;
+        background: #f3f4f6;
+    }
+
+
+    #home-search-button {
+        height: 42px;
+        padding: 0 17px;
+        border-radius: 0 21px 21px 0;
+        background: #0050aa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    #home-search-button .material-symbols-outlined {
+        font-size: 21px;
+    }
+
+
+    /* ================================================
+       USER AREA
+    ================================================ */
+
+    .header-user-area {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-left: auto;
+    }
+
+
+    #login-button {
+        padding: 7px;
+        font-size: 0;
+    }
+
+
+    #login-button::before {
+        content: "person";
+        font-family: "Material Symbols Outlined";
+        font-size: 24px;
+    }
+
+
+    #user-name {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        overflow: hidden;
+        font-size: 0;
+        border-radius: 50%;
+    }
+
+
+    #user-name .material-symbols-outlined {
+        font-size: 23px;
+    }
+
+
+    #header-user-name {
+        display: none;
+    }
+
+
+    /* ================================================
+       CART
+    ================================================ */
+
+    #cart-link {
+        width: 42px;
+        height: 42px;
+        padding: 0;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        position: relative;
+        flex-shrink: 0;
+    }
+
+
+    #cart-link .material-symbols-outlined {
+        font-size: 23px;
+    }
+
+
+    #cart-count {
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        min-width: 18px;
+        width: 18px;
+        height: 18px;
+        padding: 0;
+        margin: 0;
+        font-size: 10px;
+        border: 2px solid #ffffff;
+    }
+
+
+    /* ================================================
+       HEADER LAYOUT
+       Search gets its own row
+    ================================================ */
+
+    .site-header-inner {
+        flex-wrap: wrap;
+    }
+
+
+    .header-search {
+        flex-basis: 100%;
+    }
+
+}
+
+
+
+/* =====================================================
+   MOBILE FOOTER
+   Minimal copyright only
+===================================================== */
+
+@media (max-width: 600px) {
+
+    /* Hide the full desktop footer content */
+    .footer-container {
+        display: none;
+    }
+
+    /* Keep only the copyright */
+    .site-footer {
+        margin-top: 30px;
+        background: transparent;
+        color: #6b7280;
+    }
+
+    .footer-bottom {
+        border-top: none;
+        padding: 18px 20px 82px;
+        text-align: center;
+    }
+
+    .footer-bottom p {
+        margin: 0;
+        color: #6b7280;
+        font-size: 11px;
+        line-height: 1.4;
+    }
+}

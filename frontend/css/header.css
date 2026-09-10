@@ -1,0 +1,681 @@
+body {
+    font-family:
+        "Poppins",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   GLOBAL RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   ROOT
+========================================== */
+
+:root {
+    --primary: #0b5e3c;
+    --primary-dark: #08452d;
+    --accent: #f5b400;
+
+    --text: #1f2937;
+    --muted: #6b7280;
+
+    --background: #f7f8f6;
+    --surface: #ffffff;
+
+    --border: #e5e7eb;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+
+    --container-width: 1280px;
+}
+
+
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        var(--background);
+
+    color:
+        var(--text);
+
+    line-height: 1.5;
+
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   LINKS
+========================================== */
+
+a {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+button {
+    font: inherit;
+
+    cursor: pointer;
+
+    border: none;
+}
+
+
+/* ==========================================
+   IMAGES
+========================================== */
+
+img {
+    max-width: 100%;
+
+    display: block;
+}
+
+
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+header {
+    background: var(--surface);
+
+    border-bottom:
+        1px solid var(--border);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+header nav {
+    max-width:
+        var(--container-width);
+
+    margin:
+        0 auto;
+
+    min-height:
+        72px;
+
+    padding:
+        0 24px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        32px;
+}
+
+
+/* ==========================================
+   BRAND
+========================================== */
+
+header nav > a {
+    font-size:
+        22px;
+
+    font-weight:
+        800;
+
+    color:
+        var(--primary);
+
+    white-space:
+        nowrap;
+}
+
+
+/* ==========================================
+   MAIN NAVIGATION
+========================================== */
+
+#main-navigation {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        28px;
+
+    flex:
+        1;
+
+    justify-content:
+        center;
+}
+
+
+#main-navigation a {
+    color:
+        var(--text);
+
+    font-size:
+        15px;
+
+    font-weight:
+        600;
+
+    position:
+        relative;
+
+    padding:
+        25px 0;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+#main-navigation a:hover {
+    color:
+        var(--primary);
+}
+
+
+/* ==========================================
+   NAVIGATION ACTIVE EFFECT
+========================================== */
+
+#main-navigation a::after {
+    content: "";
+
+    position:
+        absolute;
+
+    left: 0;
+
+    bottom: 16px;
+
+    width: 0;
+
+    height: 2px;
+
+    background:
+        var(--primary);
+
+    transition:
+        width 0.2s ease;
+}
+
+
+#main-navigation a:hover::after {
+    width:
+        100%;
+}
+
+
+/* ==========================================
+   USER NAVIGATION
+========================================== */
+
+#user-navigation {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+
+    white-space:
+        nowrap;
+}
+
+
+#user-navigation a {
+    color:
+        var(--text);
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+#user-navigation a:hover {
+    color:
+        var(--primary);
+}
+
+
+/* ==========================================
+   CART COUNT
+========================================== */
+
+#cart-count {
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-width:
+        20px;
+
+    height:
+        20px;
+
+    padding:
+        0 5px;
+
+    margin-left:
+        4px;
+
+    border-radius:
+        999px;
+
+    background:
+        var(--primary);
+
+    color:
+        white;
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+}
+
+.site-logo {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.site-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#search-section {
+    flex: 1;
+    max-width: 700px;
+    margin: 0 40px;
+}
+
+#header-search-form {
+    display: flex;
+    width: 100%;
+    height: 48px;
+}
+
+#header-search-input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 0 18px;
+    font-size: 15px;
+    background: #f5f5f5;
+    border-radius: 24px 0 0 24px;
+}
+
+#home-search-button {
+    border: none;
+    padding: 0 24px;
+    background: #0050aa;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0 24px 24px 0;
+}
+
+#header-search-input:focus {
+    background: #ffffff;
+    box-shadow: inset 0 0 0 1px #ddd;
+}
+
+#header-search-button:hover {
+    filter: brightness(0.95);
+}
+
+#user-account {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+#user-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+    white-space: nowrap;
+}
+
+#login-button {
+    border: none;
+    background: transparent;
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+
+
+#cart-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    height: 42px;
+    padding: 0 14px;
+
+    background: #0050aa;
+    color: #ffffff;
+
+    border-radius: 22px;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+#cart-link .material-symbols-outlined {
+    font-size: 23px;
+}
+
+
+#cart-count {
+    min-width: 22px;
+    height: 22px;
+
+    padding: 0 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ed1c24;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+#cart-link:hover {
+    background: #f2f6fb;
+}
+
+
+/* =====================================================
+   SECOND CHANCE STORE
+   FOOTER
+===================================================== */
+
+.site-footer {
+    background: #0050aa;
+    color: #ffffff;
+
+    margin-top: 80px;
+}
+
+
+/* =====================================================
+   FOOTER MAIN AREA
+===================================================== */
+
+.footer-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 60px 40px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 60px;
+}
+
+
+/* =====================================================
+   FOOTER COLUMNS
+===================================================== */
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.footer-brand h2 {
+    margin: 0 0 12px;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.3px;
+}
+
+
+.footer-brand p {
+    margin: 0;
+
+    max-width: 280px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   COLUMN HEADINGS
+===================================================== */
+
+.footer-column h3 {
+    margin: 0 0 10px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =====================================================
+   FOOTER LINKS
+===================================================== */
+
+.footer-column a {
+    width: fit-content;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.footer-column a:hover {
+    color: #ffffff;
+
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+
+    padding: 20px 40px;
+
+    text-align: center;
+}
+
+
+.footer-bottom p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 40px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   BREADCRUMB
+========================================== */
+
+.site-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    max-width: 1280px;
+    margin: 0 auto;
+
+    padding: 18px 24px;
+
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.site-breadcrumb a {
+    color: #374327;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.site-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.site-breadcrumb .material-symbols-outlined {
+    font-size: 18px;
+    color: #989b7d;
+}
+
+.site-breadcrumb span:last-child {
+    color: #6b7280;
+    font-weight: 500;
+}

@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+
+
+
+
+      <link
+        rel="stylesheet"
+        href="./css/user.css"
+    >
+
+    <!-- ==========================================
+         MATERIAL SYMBOLS
+    =========================================== -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        rel="stylesheet"
+    >
+
+
+    <!-- ==========================================
+         SHARED ADMIN CSS
+    =========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="./css/admin.css"
+    >
+
+
+    <!-- ==========================================
+         USERS PAGE CSS
+    =========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="./css/users.css"
+    >
+
+
+    <title>Admin - Users | Second Chance Store</title>
+    <link rel="stylesheet" href="./css/admin-mobile.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         ADMIN LAYOUT
+    =========================================== -->
+
+    <div class="admin-layout">
+
+
+        <!-- ======================================
+             SHARED ADMIN HEADER
+             Rendered by admin-layout.js
+        ======================================= -->
+
+        <div id="admin-header"></div>
+
+
+        <!-- ======================================
+             SHARED ADMIN SIDEBAR
+             Rendered by admin-layout.js
+        ======================================= -->
+
+        <div id="admin-sidebar"></div>
+
+
+        <!-- ======================================
+             USERS PAGE
+        ======================================= -->
+
+        <main class="admin-page">
+
+
+            <div class="admin-page-content">
+
+
+                <!-- ==================================
+                     PAGE HEADER
+                =================================== -->
+
+                <section class="users-page-header">
+
+                    <div>
+
+                        <p class="users-eyebrow">
+                            Account Management
+                        </p>
+
+                        <h1>
+                            Users
+                        </h1>
+
+                        <p>
+                            Manage registered users and
+                            their account status.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================
+                     SEARCH
+                =================================== -->
+
+                <section class="users-search-section">
+
+                    <div class="users-search-box">
+
+                        <span class="material-symbols-outlined">
+                            search
+                        </span>
+
+                        <input
+                            type="text"
+                            id="user-search"
+                            placeholder="Search name or email..."
+                            autocomplete="off"
+                        >
+
+                        <button
+                            type="button"
+                            id="search-button"
+                        >
+                            <span class="material-symbols-outlined">
+                                search
+                            </span>
+
+                            <span>
+                                Search
+                            </span>
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================
+                     FILTERS
+                =================================== -->
+
+                <section class="users-filter-bar">
+
+
+                    <!-- ROLE -->
+
+                    <div class="users-filter">
+
+                        <label for="role-filter">
+                            Role
+                        </label>
+
+                        <div class="users-select-wrapper">
+
+                            <span class="material-symbols-outlined">
+                                manage_accounts
+                            </span>
+
+                            <select id="role-filter">
+
+                                <option value="">
+                                    All Roles
+                                </option>
+
+                                <option value="admin">
+                                    Admin
+                                </option>
+
+                                <option value="waiter">
+                                    Waiter
+                                </option>
+
+                                <option value="customer">
+                                    Customer
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STATUS -->
+
+                    <div class="users-filter">
+
+                        <label for="status-filter">
+                            Status
+                        </label>
+
+                        <div class="users-select-wrapper">
+
+                            <span class="material-symbols-outlined">
+                                toggle_on
+                            </span>
+
+                            <select id="status-filter">
+
+                                <option value="">
+                                    All Statuses
+                                </option>
+
+                                <option value="active">
+                                    Active
+                                </option>
+
+                                <option value="disabled">
+                                    Disabled
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- REFRESH -->
+
+                    <button
+                        type="button"
+                        id="refresh-button"
+                        class="users-refresh-button"
+                        title="Refresh users"
+                        aria-label="Refresh users"
+                    >
+
+                        <span class="material-symbols-outlined">
+                            refresh
+                        </span>
+
+                    </button>
+
+
+                </section>
+
+
+                <!-- ==================================
+                     MESSAGE
+                =================================== -->
+
+                <div
+                    id="users-message"
+                    class="users-message"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- ==================================
+                     USERS
+                =================================== -->
+
+                <section
+                    id="users-container"
+                    class="users-container"
+                >
+
+                    <!--
+                        User cards are rendered
+                        by users.js
+                    -->
+
+                </section>
+
+
+                <!-- ==================================
+                     PAGINATION
+                =================================== -->
+
+                <nav
+                    id="pagination-container"
+                    class="users-pagination"
+                    aria-label="Users pagination"
+                >
+
+                    <!--
+                        Pagination is rendered
+                        by users.js
+                    -->
+
+                </nav>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- ==========================================
+         SHARED ADMIN LAYOUT
+    =========================================== -->
+
+    <script
+        type="module"
+        src="./js/admin-layout.js"
+    ></script>
+
+
+    <!-- ==========================================
+         USERS PAGE JAVASCRIPT
+    =========================================== -->
+
+    <script
+        type="module"
+        src="./js/users.js"
+    ></script>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin - Products</title>
+
+    <!-- MATERIAL SYMBOLS -->
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+
+    <!-- SHARED ADMIN CSS -->
+    <link
+        rel="stylesheet"
+        href="./css/admin.css"
+    >
+
+        <link
+        rel="stylesheet"
+        href="./css/products.css"
+    >
+
+    <link rel="stylesheet" href="./css/admin-mobile.css">
+
+    <link rel="stylesheet" href="./css/products-mobile.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+         SHARED ADMIN HEADER
+    ========================================== -->
+
+    <div id="admin-header"></div>
+
+
+    <!-- ==========================================
+         ADMIN LAYOUT
+    ========================================== -->
+
+    <div class="admin-layout">
+
+        <!-- SHARED SIDEBAR -->
+
+        <div id="admin-sidebar"></div>
+
+
+        <!-- ======================================
+             PRODUCTS PAGE
+        ====================================== -->
+
+        <main class="admin-page">
+
+            <div class="admin-page-content">
+
+        
+
+
+                <!-- ==================================
+                     SEARCH / ACTIONS
+                ================================== -->
+
+                <div>
+
+                    <input
+                        type="text"
+                        id="product-search"
+                        placeholder="Search products..."
+                    >
+
+                    <button
+                        type="button"
+                        id="search-button"
+                    >
+                        Search
+                    </button>
+
+                    <button
+                        type="button"
+                        id="load-products-button"
+                    >
+                        Refresh
+                    </button>
+
+                </div>
+
+
+                <hr>
+
+
+                <!-- ==================================
+                     MESSAGE
+                ================================== -->
+
+                <p id="products-message"></p>
+
+
+                <!-- ==================================
+                     PRODUCTS
+                ================================== -->
+
+                <div id="products-container"></div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- ==========================================
+         SHARED ADMIN LAYOUT
+    ========================================== -->
+
+    <script
+        type="module"
+        src="./js/admin-layout.js"
+    ></script>
+
+
+    <!-- ==========================================
+         PRODUCTS PAGE JAVASCRIPT
+    ========================================== -->
+
+    <script
+        type="module"
+        src="./js/products.js"
+    ></script>
+
+</body>
+
+</html>

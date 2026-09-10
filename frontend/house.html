@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+  
+
+    <link
+    rel="stylesheet"
+    href="./css/products.css"
+> 
+
+<link
+    rel="stylesheet"
+    href="./css/house-header.css"
+> 
+
+<link
+    rel="stylesheet"
+    href="./css/houses.css"
+>
+
+<link
+    rel="stylesheet"
+    href="./css/house-modal.css"
+>
+
+  <link
+    rel="stylesheet"
+    href="./css/header-mobile.css"
+>
+
+<link
+    rel="stylesheet"
+    href="./css/house-mobile.css"
+>
+
+
+<title>Houses</title>
+
+
+</head>
+
+<body>
+
+
+<div id="house-site-header"></div>
+
+<hr>
+
+<!-- ==========================================
+     HOUSES PAGE CONTENT
+=========================================== -->
+
+<main class="houses-page">
+
+    <nav
+    id="breadcrumb"
+    class="site-breadcrumb"
+    aria-label="Breadcrumb"
+></nav>
+
+    <div class="houses-layout">
+
+        <!-- ==========================================
+             FILTER SIDEBAR
+        =========================================== -->
+
+        <aside class="houses-sidebar">
+
+            <div class="houses-sidebar-inner">
+
+                <div class="houses-filter-header">
+                    <h2>Filter Houses</h2>
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <div class="house-filter-group">
+
+                    <label for="house-search">
+                        Search
+                    </label>
+
+                    <input
+                        type="text"
+                        id="house-search"
+                        placeholder="Search houses..."
+                    >
+
+                </div>
+
+
+                <!-- HOUSE TYPE -->
+
+                <div class="house-filter-group">
+
+                    <label for="house-type">
+                        House Type
+                    </label>
+
+                    <select id="house-type">
+
+                        <option value="">
+                            All House Types
+                        </option>
+
+                        <option value="Single Room">
+                            Single Room
+                        </option>
+
+                        <option value="Bedsitter">
+                            Bedsitter
+                        </option>
+
+                        <option value="1 Bedroom">
+                            1 Bedroom
+                        </option>
+
+                        <option value="2 Bedroom">
+                            2 Bedroom
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- AREA -->
+
+                <div class="house-filter-group">
+
+                    <label for="house-area">
+                        Area
+                    </label>
+
+                    <input
+                        type="text"
+                        id="house-area"
+                        placeholder="e.g. Kangaru"
+                    >
+
+                </div>
+
+
+                <!-- RENT -->
+
+                <div class="house-filter-group">
+
+                    <label>
+                        Rent
+                    </label>
+
+                    <div class="rent-inputs">
+
+                        <input
+                            type="number"
+                            id="min-rent"
+                            placeholder="Min"
+                            min="0"
+                        >
+
+                        <input
+                            type="number"
+                            id="max-rent"
+                            placeholder="Max"
+                            min="0"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- SORT -->
+
+                <div class="house-filter-group">
+
+                    <label for="house-sort">
+                        Sort By
+                    </label>
+
+                    <select id="house-sort">
+
+                        <option value="latest">
+                            Latest
+                        </option>
+
+                        <option value="rentLow">
+                            Rent: Low to High
+                        </option>
+
+                        <option value="rentHigh">
+                            Rent: High to Low
+                        </option>
+
+                        <option value="oldest">
+                            Oldest
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ACTIONS -->
+
+                <div class="house-filter-actions">
+
+                    <button
+                        type="button"
+                        id="search-houses-button"
+                    >
+                        Search
+                    </button>
+
+                    <button
+                        type="button"
+                        id="reset-houses-button"
+                    >
+                        Reset
+                    </button>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==========================================
+             HOUSES CONTENT
+        =========================================== -->
+
+        <section class="houses-content">
+
+            <div class="houses-results-header">
+
+                <p id="houses-message"></p>
+
+            </div>
+
+            <section
+                id="houses-container"
+            ></section>
+
+        </section>
+
+    </div>
+
+</main>
+
+<!-- ==========================================
+     HOUSES
+=========================================== -->
+
+<section id="houses-container"></section>
+
+<!-- ==========================================
+     HOUSE DETAILS MODAL
+=========================================== -->
+
+<div
+    id="house-modal"
+    hidden
+>
+
+    <div>
+
+        <button
+    type="button"
+    id="close-house-modal"
+    aria-label="Close house details"
+>
+    <span class="material-symbols-outlined">
+        close
+    </span>
+</button>
+
+        <div id="house-modal-content"></div>
+
+    </div>
+
+</div>
+
+<div id="site-footer"></div>
+
+
+<script
+    type="module"
+    src="./js/house-header.js"
+></script>
+
+<script type="module" src="./js/footer.js"></script>
+
+<script
+    type="module"
+    src="./js/houses.js"
+></script>
+
+<script
+    type="module"
+    src="./js/houses-mobile.js"
+></script>
+
+<link rel="stylesheet" href="./css/bottom-nav.css">
+
+
+</body>
+
+</html>

@@ -1,0 +1,736 @@
+
+/* =====================================================
+   MOBILE HOUSES PAGE
+   COMPACT FILTER SIDEBAR
+===================================================== */
+
+@media (max-width: 600px) {
+
+    /* =================================================
+       HOUSES PAGE
+    ================================================= */
+
+    .houses-page {
+        width: 100%;
+        padding: 14px 0 50px;
+    }
+
+
+    /* =================================================
+       HOUSES LAYOUT
+    ================================================= */
+
+    .houses-layout {
+        width: 100%;
+        margin: 0;
+
+        display: flex;
+        align-items: flex-start;
+
+        gap: 0;
+    }
+
+
+    /* =================================================
+       NARROW FILTER SIDEBAR
+    ================================================= */
+
+    .houses-sidebar {
+        width: 52px;
+        min-width: 52px;
+
+        position: sticky;
+        top: 72px;
+
+        align-self: flex-start;
+
+        z-index: 50;
+
+        box-sizing: border-box;
+
+        transition:
+            width 0.25s ease,
+            min-width 0.25s ease;
+    }
+
+
+    /* =================================================
+       SIDEBAR INNER
+    ================================================= */
+
+    .houses-sidebar-inner {
+        width: 100%;
+
+        padding: 12px 6px;
+
+        background: #ffffff;
+
+        border: none;
+        border-right: 1px solid #e5e7eb;
+        border-radius: 0;
+
+        box-shadow: none;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 12px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =================================================
+       FILTER HEADER
+    ================================================= */
+
+    .houses-filter-header {
+        width: 40px;
+
+        margin: 0;
+        padding: 0 0 10px;
+
+        border-bottom: 1px solid #e5e7eb;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-shrink: 0;
+    }
+
+    .houses-filter-header h2 {
+        width: 40px;
+
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 4px;
+
+        font-size: 0;
+        line-height: 1;
+
+        text-align: center;
+    }
+
+
+    /* =================================================
+       FILTER HEADER ICON
+    ================================================= */
+
+    .houses-filter-header h2::before {
+        content: "tune";
+
+        font-family: "Material Symbols Outlined";
+
+        font-size: 22px;
+        line-height: 1;
+
+        color: #374151;
+    }
+
+
+    /* =================================================
+       FILTER HEADER NAME
+    ================================================= */
+
+    .houses-filter-header h2::after {
+        content: "Filters";
+
+        font-family: "Poppins", Arial, sans-serif;
+
+        font-size: 8px;
+        font-weight: 600;
+
+        line-height: 1;
+
+        color: #374151;
+
+        white-space: nowrap;
+    }
+
+
+    /* =================================================
+       FILTER GROUP
+    ================================================= */
+
+    .house-filter-group {
+        width: 40px;
+        min-width: 40px;
+
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 4px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =================================================
+       FILTER LABEL
+    ================================================= */
+
+    .house-filter-group > label {
+        width: 40px;
+        height: 58px;
+
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 4px;
+
+        border-radius: 10px;
+
+        background: #f5f6f7;
+
+        font-size: 0;
+        line-height: 1;
+
+        cursor: pointer;
+
+        text-align: center;
+
+        box-sizing: border-box;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =================================================
+       FILTER ICONS
+    ================================================= */
+
+    .house-filter-group:nth-of-type(2) > label::before {
+        content: "search";
+    }
+
+    .house-filter-group:nth-of-type(3) > label::before {
+        content: "home";
+    }
+
+    .house-filter-group:nth-of-type(4) > label::before {
+        content: "location_on";
+    }
+
+    .house-filter-group:nth-of-type(5) > label::before {
+        content: "payments";
+    }
+
+    .house-filter-group:nth-of-type(6) > label::before {
+        content: "sort";
+    }
+
+    .house-filter-group > label::before {
+        font-family: "Material Symbols Outlined";
+
+        font-size: 21px;
+        line-height: 1;
+
+        color: #374151;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =================================================
+       FILTER NAMES
+    ================================================= */
+
+    .house-filter-group:nth-of-type(2) > label::after {
+        content: "Search";
+    }
+
+    .house-filter-group:nth-of-type(3) > label::after {
+        content: "Type";
+    }
+
+    .house-filter-group:nth-of-type(4) > label::after {
+        content: "Area";
+    }
+
+    .house-filter-group:nth-of-type(5) > label::after {
+        content: "Rent";
+    }
+
+    .house-filter-group:nth-of-type(6) > label::after {
+        content: "Sort";
+    }
+
+    .house-filter-group > label::after {
+        font-family: "Poppins", Arial, sans-serif;
+
+        font-size: 7px;
+        font-weight: 600;
+
+        line-height: 1;
+
+        color: #374151;
+
+        white-space: nowrap;
+    }
+
+
+    /* =================================================
+       HIDE FILTER CONTROLS INITIALLY
+    ================================================= */
+
+    .house-filter-group input,
+    .house-filter-group select,
+    .rent-inputs {
+        display: none;
+    }
+
+
+    /* =================================================
+       FILTER ACTIONS
+    ================================================= */
+
+    .house-filter-actions {
+        width: 40px;
+        min-width: 40px;
+
+        margin-top: 0;
+        padding-top: 10px;
+
+        border-top: 1px solid #e5e7eb;
+
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =================================================
+       SEARCH / RESET BUTTONS
+    ================================================= */
+
+    #search-houses-button,
+    #reset-houses-button {
+        width: 40px;
+        height: 58px;
+
+        min-height: 58px;
+
+        padding: 0;
+
+        border: none;
+        border-radius: 10px;
+
+        background: #f5f6f7;
+        color: #374151;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 4px;
+
+        font-size: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =================================================
+       SEARCH ICON
+    ================================================= */
+
+    #search-houses-button::before {
+        content: "search";
+
+        font-family: "Material Symbols Outlined";
+
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    #search-houses-button::after {
+        content: "Search";
+
+        font-family: "Poppins", Arial, sans-serif;
+
+        font-size: 8px;
+        font-weight: 600;
+
+        line-height: 1;
+    }
+
+
+    /* =================================================
+       RESET ICON
+    ================================================= */
+
+    #reset-houses-button::before {
+        content: "restart_alt";
+
+        font-family: "Material Symbols Outlined";
+
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    #reset-houses-button::after {
+        content: "Reset";
+
+        font-family: "Poppins", Arial, sans-serif;
+
+        font-size: 8px;
+        font-weight: 600;
+
+        line-height: 1;
+    }
+
+
+    /* =================================================
+       HOUSES CONTENT
+    ================================================= */
+
+    .houses-content {
+        flex: 1;
+        min-width: 0;
+
+        padding: 0 10px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =================================================
+       HOUSE GRID
+    ================================================= */
+
+    #houses-container {
+        width: 100%;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        column-gap: 10px;
+        row-gap: 24px;
+    }
+
+
+    /* =================================================
+       HOUSE CARD IMAGE
+    ================================================= */
+
+    .house-card-image {
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 1 / 1;
+
+        border-radius: 10px;
+    }
+
+
+    /* =================================================
+       HOUSE CARD CONTENT
+    ================================================= */
+
+    .house-card-content {
+        padding: 8px 1px 0;
+    }
+
+    .house-card-type {
+        font-size: 12px;
+        line-height: 1.3;
+
+        margin-bottom: 5px;
+    }
+
+    .house-card-rent {
+        font-size: 15px;
+
+        margin-bottom: 6px;
+    }
+
+    .house-card-location {
+        font-size: 11px;
+    }
+
+    .house-card-location .material-symbols-outlined {
+        font-size: 16px;
+    }
+
+    .house-interest-button {
+        margin-top: 8px;
+
+        padding: 8px 10px;
+
+        font-size: 12px;
+    }
+
+
+    /* =================================================
+       EXPANDED SIDEBAR
+    ================================================= */
+
+    .houses-sidebar.is-expanded {
+        width: 230px;
+        min-width: 230px;
+
+        transition:
+            width 0.25s ease,
+            min-width 0.25s ease;
+    }
+
+
+    .houses-sidebar.is-expanded
+    .houses-sidebar-inner {
+        align-items: stretch;
+    }
+
+
+    /* =================================================
+       EXPANDED FILTER HEADER
+    ================================================= */
+
+    .houses-sidebar.is-expanded
+    .houses-filter-header {
+        width: 100%;
+
+        justify-content: flex-start;
+
+        padding-left: 10px;
+    }
+
+    .houses-sidebar.is-expanded
+    .houses-filter-header h2 {
+        width: auto;
+
+        flex-direction: row;
+
+        justify-content: flex-start;
+
+        gap: 8px;
+    }
+
+    .houses-sidebar.is-expanded
+    .houses-filter-header h2::after {
+        font-size: 13px;
+    }
+
+
+    /* =================================================
+       EXPANDED FILTER GROUP
+    ================================================= */
+
+    .houses-sidebar.is-expanded
+    .house-filter-group {
+        width: 100%;
+        min-width: 0;
+
+        align-items: stretch;
+    }
+
+
+    /* =================================================
+       OPEN FILTER LABEL
+    ================================================= */
+
+    .houses-sidebar.is-expanded
+    .house-filter-group.is-open
+    > label {
+
+        width: 100%;
+        height: 42px;
+
+        flex-direction: row;
+
+        justify-content: flex-start;
+
+        padding: 0 12px;
+
+        gap: 9px;
+
+        border-radius: 8px;
+
+        background: #f5f6f7;
+
+        font-size: 13px;
+        font-weight: 600;
+
+        text-align: left;
+    }
+
+
+    /* =================================================
+       OPEN FILTER ICON
+    ================================================= */
+
+    .houses-sidebar.is-expanded
+    .house-filter-group.is-open
+    > label::before {
+
+        font-size: 20px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =================================================
+       HIDE GENERATED NAME WHEN OPEN
+    ================================================= */
+
+    .houses-sidebar.is-expanded
+    .house-filter-group.is-open
+    > label::after {
+
+        display: none;
+    }
+
+
+    /* =================================================
+       SHOW INPUT / SELECT
+    ================================================= */
+
+    .houses-sidebar.is-expanded
+    .house-filter-group.is-open
+    input,
+    .houses-sidebar.is-expanded
+    .house-filter-group.is-open
+    select {
+
+        display: block;
+
+        width: 100%;
+        height: 42px;
+
+        margin-top: 8px;
+
+        padding: 0 10px;
+
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+
+        background: #ffffff;
+        color: #374151;
+
+        font-family: "Poppins", Arial, sans-serif;
+        font-size: 13px;
+
+        outline: none;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =================================================
+       SHOW RENT INPUTS
+    ================================================= */
+
+    .houses-sidebar.is-expanded
+    .house-filter-group.is-open
+    .rent-inputs {
+
+        display: grid;
+
+        width: 100%;
+
+        margin-top: 8px;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 6px;
+    }
+
+
+    .houses-sidebar.is-expanded
+    .house-filter-group.is-open
+    .rent-inputs input {
+
+        width: 100%;
+
+        margin-top: 0;
+
+        height: 40px;
+
+        padding: 0 8px;
+
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+
+        background: #ffffff;
+
+        font-family: "Poppins", Arial, sans-serif;
+        font-size: 12px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =================================================
+       EXPANDED ACTIONS
+    ================================================= */
+
+    .houses-sidebar.is-expanded
+    .house-filter-actions {
+
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .houses-sidebar.is-expanded
+    #search-houses-button,
+    .houses-sidebar.is-expanded
+    #reset-houses-button {
+
+        width: 100%;
+        height: 42px;
+
+        min-height: 42px;
+
+        flex-direction: row;
+
+        justify-content: flex-start;
+
+        padding: 0 12px;
+
+        gap: 9px;
+
+        border-radius: 8px;
+
+        font-size: 13px;
+        font-weight: 600;
+
+        text-align: left;
+    }
+
+
+    .houses-sidebar.is-expanded
+    #search-houses-button::before,
+    .houses-sidebar.is-expanded
+    #reset-houses-button::before {
+
+        font-size: 20px;
+    }
+
+
+    .houses-sidebar.is-expanded
+    #search-houses-button::after,
+    .houses-sidebar.is-expanded
+    #reset-houses-button::after {
+
+        display: none;
+    }
+}
+

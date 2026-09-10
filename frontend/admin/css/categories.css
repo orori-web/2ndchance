@@ -1,0 +1,712 @@
+body {
+    font-family:
+        "Poppins",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+/* ==========================================
+   SECOND CHANCE STORE
+   ADMIN CATEGORIES PAGE
+========================================== */
+
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.categories-page-header {
+
+    margin-bottom: 26px;
+
+}
+
+
+.categories-eyebrow {
+
+    margin-bottom: 5px;
+
+    color:
+        var(--admin-primary);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+}
+
+
+.categories-page-header h1 {
+
+    color:
+        var(--admin-text);
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+}
+
+
+.categories-page-header p:last-child {
+
+    margin-top: 7px;
+
+    color:
+        var(--admin-muted);
+
+    font-size: 14px;
+
+}
+
+
+/* ==========================================
+   ADD CATEGORY PANEL
+========================================== */
+
+.category-add-panel {
+
+    padding: 20px;
+
+    background:
+        var(--admin-surface);
+
+    border:
+        1px solid var(--admin-border);
+
+    border-radius:
+        var(--admin-radius-md);
+
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.03);
+
+}
+
+
+.category-add-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 16px;
+
+}
+
+
+.category-add-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background:
+        #eaf2fb;
+
+    color:
+        var(--admin-primary);
+
+}
+
+
+.category-add-icon
+.material-symbols-outlined {
+
+    font-size: 21px;
+
+}
+
+
+.category-add-heading h2 {
+
+    color:
+        var(--admin-text);
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+}
+
+
+.category-add-heading p {
+
+    margin-top: 2px;
+
+    color:
+        var(--admin-muted);
+
+    font-size: 12px;
+
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+.category-form {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.category-input-wrapper {
+
+    height: 44px;
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding:
+        0 12px;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid var(--admin-border);
+
+    border-radius: 8px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.category-input-wrapper:focus-within {
+
+    border-color:
+        var(--admin-primary);
+
+    box-shadow:
+        0 0 0 3px rgba(0, 80, 170, 0.08);
+
+}
+
+
+.category-input-wrapper
+.material-symbols-outlined {
+
+    color:
+        #9ca3af;
+
+    font-size: 20px;
+
+}
+
+
+.category-input-wrapper input {
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 0;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color:
+        var(--admin-text);
+
+    font-size: 13px;
+
+}
+
+
+.category-input-wrapper input::placeholder {
+
+    color:
+        #9ca3af;
+
+}
+
+
+.category-add-button {
+
+    height: 44px;
+
+    padding:
+        0 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        var(--admin-primary);
+
+    color:
+        #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease;
+
+}
+
+
+.category-add-button:hover {
+
+    background:
+        var(--admin-primary-dark);
+
+}
+
+
+.category-add-button:active {
+
+    transform:
+        scale(0.98);
+
+}
+
+
+.category-add-button
+.material-symbols-outlined {
+
+    font-size: 18px;
+
+}
+
+
+/* ==========================================
+   MESSAGE
+========================================== */
+
+.categories-message {
+
+    min-height: 20px;
+
+    margin:
+        12px 2px;
+
+    color:
+        var(--admin-muted);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================
+   SECTION HEADER
+========================================== */
+
+.categories-section-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin:
+        26px 0 12px;
+
+}
+
+
+.categories-section-header h2 {
+
+    color:
+        var(--admin-text);
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+}
+
+
+.categories-section-header p {
+
+    margin-top: 2px;
+
+    color:
+        var(--admin-muted);
+
+    font-size: 12px;
+
+}
+
+
+/* ==========================================
+   CATEGORIES GRID
+========================================== */
+
+.categories-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(230px, 1fr)
+        );
+
+    gap: 12px;
+
+}
+
+
+/* ==========================================
+   CATEGORY CARD
+
+   Designed to work with simple category
+   elements rendered by categories.js.
+========================================== */
+
+.categories-container > div {
+
+    min-height: 74px;
+
+    padding:
+        13px 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    background:
+        var(--admin-surface);
+
+    border:
+        1px solid var(--admin-border);
+
+    border-radius:
+        var(--admin-radius-md);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.15s ease;
+
+}
+
+
+.categories-container > div:hover {
+
+    border-color:
+        #cfd8e3;
+
+    box-shadow:
+        0 4px 12px rgba(15, 23, 42, 0.06);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* ==========================================
+   CATEGORY NAME
+========================================== */
+
+.categories-container h3 {
+
+    margin: 0;
+
+    color:
+        var(--admin-text);
+
+    font-size: 14px;
+
+    font-weight: 750;
+
+}
+
+
+/* ==========================================
+   CATEGORY TEXT / PARAGRAPHS
+========================================== */
+
+.categories-container p {
+
+    margin: 2px 0 0;
+
+    color:
+        var(--admin-muted);
+
+    font-size: 11px;
+
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.categories-container button {
+
+    min-width: 34px;
+
+    height: 34px;
+
+    padding:
+        0 9px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    border:
+        1px solid var(--admin-border);
+
+    border-radius: 7px;
+
+    background:
+        #ffffff;
+
+    color:
+        #5f6877;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+
+}
+
+
+.categories-container button:hover {
+
+    background:
+        #f5f8fc;
+
+    border-color:
+        #cbd5e1;
+
+    color:
+        var(--admin-primary);
+
+}
+
+
+.categories-container button
+.material-symbols-outlined {
+
+    font-size: 17px;
+
+}
+
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.categories-empty {
+
+    grid-column: 1 / -1;
+
+    padding:
+        55px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        var(--admin-surface);
+
+    border:
+        1px dashed #d5dce5;
+
+    border-radius:
+        var(--admin-radius-md);
+
+}
+
+
+.categories-empty
+.material-symbols-outlined {
+
+    margin-bottom: 10px;
+
+    color:
+        #9ca3af;
+
+    font-size: 38px;
+
+}
+
+
+.categories-empty h3 {
+
+    color:
+        var(--admin-text);
+
+    font-size: 15px;
+
+}
+
+
+.categories-empty p {
+
+    margin-top: 5px;
+
+    color:
+        var(--admin-muted);
+
+    font-size: 12px;
+
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 700px) {
+
+    .categories-page-header h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .category-add-panel {
+
+        padding: 16px;
+
+    }
+
+
+    .category-form {
+
+        align-items: stretch;
+
+        flex-direction: column;
+
+    }
+
+
+    .category-add-button {
+
+        width: 100%;
+
+    }
+
+
+    .categories-container {
+
+        grid-template-columns:
+            repeat(
+                auto-fill,
+                minmax(200px, 1fr)
+            );
+
+    }
+
+}
+
+
+/* ==========================================
+   PHONE
+========================================== */
+
+@media (max-width: 480px) {
+
+    .categories-page-header {
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .categories-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .categories-container > div {
+
+        min-height: 68px;
+
+    }
+
+
+    .category-add-heading {
+
+        align-items: flex-start;
+
+    }
+
+}
+

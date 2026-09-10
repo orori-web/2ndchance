@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin - Edit Product</title>
+
+    <!-- MATERIAL SYMBOLS -->
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    >
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+    <!-- SHARED ADMIN CSS -->
+    <link
+        rel="stylesheet"
+        href="./css/admin.css"
+    >
+
+    <!-- PRODUCT EDIT CSS -->
+    <link
+        rel="stylesheet"
+        href="./css/product-edit.css"
+    >
+
+    <link rel="stylesheet" href="./css/admin-mobile.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+         SHARED ADMIN HEADER
+    ========================================== -->
+
+    <div id="admin-header"></div>
+
+
+    <!-- ==========================================
+         ADMIN LAYOUT
+    ========================================== -->
+
+    <div class="admin-layout">
+
+        <!-- SHARED SIDEBAR -->
+
+        <div id="admin-sidebar"></div>
+
+
+        <!-- ======================================
+             PRODUCT EDIT PAGE
+        ====================================== -->
+
+        <main class="admin-page">
+
+            <div class="admin-page-content">
+
+                <!-- PAGE HEADER -->
+
+                <div class="admin-page-header">
+
+                    <div>
+
+                        <a
+                            href="products.html"
+                            class="admin-back-link"
+                        >
+                            <span class="material-symbols-outlined">
+                                arrow_back
+                            </span>
+
+                            Back to Products
+                        </a>
+
+                        <h1>
+                            Edit Product
+                        </h1>
+
+                        <p>
+                            Update the product information below.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==================================
+                     MESSAGE
+                ================================== -->
+
+                <div
+                    id="product-edit-message"
+                    class="product-edit-message"
+                ></div>
+
+
+                <!-- ==================================
+                     EDIT FORM
+                ================================== -->
+
+                <form
+                    id="product-edit-form"
+                    class="product-edit-form"
+                >
+
+                    <!-- PRODUCT INFORMATION -->
+
+                    <section class="admin-edit-section">
+
+                        <div class="admin-edit-section-header">
+
+                            <div>
+
+                                <h2>
+                                    Product Information
+                                </h2>
+
+                                <p>
+                                    Basic information about this listing.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-edit-grid">
+
+                            <!-- PRODUCT NAME -->
+
+                            <div class="admin-form-group">
+
+                                <label for="product-name">
+                                    Product Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="product-name"
+                                    name="name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- PRICE -->
+
+                            <div class="admin-form-group">
+
+                                <label for="product-price">
+                                    Price
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="product-price"
+                                    name="price"
+                                    min="0"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- BRAND -->
+
+                            <div class="admin-form-group">
+
+                                <label for="product-brand">
+                                    Brand
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="product-brand"
+                                    name="brand"
+                                >
+
+                            </div>
+
+
+                            <!-- CONDITION -->
+
+                            <div class="admin-form-group">
+
+                                <label for="product-condition">
+                                    Condition
+                                </label>
+
+                                <select
+                                    id="product-condition"
+                                    name="condition"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select condition
+                                    </option>
+
+                                    <option value="New">
+                                        New
+                                    </option>
+
+                                    <option value="Like New">
+                                        Like New
+                                    </option>
+
+                                    <option value="Good">
+                                        Good
+                                    </option>
+
+                                    <option value="Fair">
+                                        Fair
+                                    </option>
+
+                                    <option value="Poor">
+                                        Poor
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- CATEGORY -->
+
+                            <div class="admin-form-group">
+
+                                <label for="product-category">
+                                    Category
+                                </label>
+
+                                <select
+                                    id="product-category"
+                                    name="category"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Loading categories...
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- LISTING CODE -->
+
+                            <div class="admin-form-group">
+
+                                <label for="product-listing-code">
+                                    Listing Code
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="product-listing-code"
+                                    name="listingCode"
+                                    readonly
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DESCRIPTION -->
+
+                        <div class="admin-form-group">
+
+                            <label for="product-description">
+                                Description
+                            </label>
+
+                            <textarea
+                                id="product-description"
+                                name="description"
+                                rows="6"
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- NEGOTIABLE -->
+
+                        <div class="admin-form-checkbox">
+
+                            <input
+                                type="checkbox"
+                                id="product-negotiable"
+                                name="isNegotiable"
+                            >
+
+                            <label for="product-negotiable">
+
+                                Price is negotiable
+
+                            </label>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ==================================
+                         SELLER INFORMATION
+                    ================================== -->
+
+                    <section class="admin-edit-section">
+
+                        <div class="admin-edit-section-header">
+
+                            <div>
+
+                                <h2>
+                                    Seller Information
+                                </h2>
+
+                                <p>
+                                    Seller details attached to this listing.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-edit-grid">
+
+                            <!-- SELLER NAME -->
+
+                            <div class="admin-form-group">
+
+                                <label for="seller-name">
+                                    Seller Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="seller-name"
+                                    readonly
+                                >
+
+                            </div>
+
+
+                            <!-- SELLER PHONE -->
+
+                            <div class="admin-form-group">
+
+                                <label for="seller-phone">
+                                    Seller Phone
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="seller-phone"
+                                    name="sellerPhone"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ==================================
+                         PRODUCT STATUS
+                    ================================== -->
+
+                    <section class="admin-edit-section">
+
+                        <div class="admin-edit-section-header">
+
+                            <div>
+
+                                <h2>
+                                    Product Status
+                                </h2>
+
+                                <p>
+                                    Control whether this product is visible on the marketplace.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-form-checkbox">
+
+                            <input
+                                type="checkbox"
+                                id="product-active"
+                                name="isActive"
+                            >
+
+                            <label for="product-active">
+
+                                Product is active
+
+                            </label>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ==================================
+                         FORM ACTIONS
+                    ================================== -->
+
+                    <div class="admin-edit-actions">
+
+                        <a
+                            href="products.html"
+                            class="admin-cancel-button"
+                        >
+                            Cancel
+                        </a>
+
+                        <button
+                            type="submit"
+                            class="admin-save-button"
+                        >
+
+                            <span class="material-symbols-outlined">
+                                save
+                            </span>
+
+                            Save Changes
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- ==========================================
+         SHARED ADMIN LAYOUT
+    ========================================== -->
+
+    <script
+        type="module"
+        src="./js/admin-layout.js"
+    ></script>
+
+
+    <!-- ==========================================
+         PRODUCT EDIT JAVASCRIPT
+    ========================================== -->
+
+    <script
+        type="module"
+        src="./js/product-edit.js"
+    ></script>
+
+</body>
+
+</html>
+

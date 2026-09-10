@@ -1,0 +1,352 @@
+
+/* ==========================================
+   PRODUCT MODAL — MOBILE
+   Bottom-sheet / comments-panel style
+========================================== */
+
+@media (max-width: 600px) {
+
+    /* ==========================================
+       MODAL CONTAINER
+    ========================================== */
+
+    .product-modal {
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+
+    /* ==========================================
+       DARK BACKDROP
+    ========================================== */
+
+    .product-modal-overlay {
+        padding: 0;
+        align-items: flex-end;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.55);
+    }
+
+
+    /* ==========================================
+       BOTTOM SHEET
+    ========================================== */
+
+    .product-modal-content {
+        width: 100%;
+        max-width: none;
+        max-height: 92vh;
+
+        border-radius: 18px 18px 0 0;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.22);
+
+        animation: productModalSlideUp 0.28s ease-out;
+    }
+
+
+    /* ==========================================
+       SMALL DRAG HANDLE
+    ========================================== */
+
+    .product-modal-content::before {
+        content: "";
+        position: absolute;
+
+        top: 8px;
+        left: 50%;
+
+        width: 42px;
+        height: 4px;
+
+        transform: translateX(-50%);
+
+        border-radius: 999px;
+
+        background: #d1d5db;
+
+        z-index: 30;
+    }
+
+
+    /* ==========================================
+       CLOSE BUTTON
+    ========================================== */
+
+    .product-modal-close {
+        top: 14px;
+        right: 14px;
+
+        width: 36px;
+        height: 36px;
+
+        border: none;
+        background: rgba(255, 255, 255, 0.95);
+
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+
+        z-index: 40;
+    }
+
+    .product-modal-close .material-symbols-outlined {
+        font-size: 20px;
+    }
+
+
+    /* ==========================================
+       MODAL BODY
+    ========================================== */
+
+    #product-modal-body {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 0;
+
+        padding: 0;
+
+        max-height: none;
+
+        overflow: visible;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ==========================================
+       IMAGE GALLERY
+    ========================================== */
+
+    #product-modal-body > .product-image-gallery {
+        width: 100%;
+
+        min-width: 0;
+        min-height: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        padding: 26px 12px 14px;
+
+        box-sizing: border-box;
+
+        background: #f7f7f7;
+
+        border-right: none;
+    }
+
+
+
+/* ==========================================
+   MAIN PRODUCT IMAGE
+========================================== */
+
+.product-main-image-container {
+    width: 100%;
+    max-width: 360px;
+
+    height: 250px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+
+   
+
+    .product-main-image {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        display: block;
+    }
+
+
+    /* ==========================================
+       IMAGE THUMBNAILS
+    ========================================== */
+
+    .product-image-thumbnails {
+        width: 100%;
+        max-width: 360px;
+
+        display: flex;
+        align-items: center;
+
+        gap: 8px;
+
+        margin-top: 10px;
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        padding: 2px 0;
+
+        scrollbar-width: none;
+    }
+
+    .product-image-thumbnails::-webkit-scrollbar {
+        display: none;
+    }
+
+    .product-image-thumbnail {
+        flex: 0 0 auto;
+
+        width: 58px;
+        height: 58px;
+
+        padding: 3px;
+
+        border-radius: 7px;
+    }
+
+
+    /* ==========================================
+       PRODUCT DETAILS
+    ========================================== */
+
+    .product-modal-details {
+        width: 100%;
+        min-width: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 18px 16px 28px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ==========================================
+       PRIMARY DETAILS
+    ========================================== */
+
+    .product-primary-details {
+        padding-bottom: 16px;
+
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .product-primary-details h2 {
+        margin: 0 0 8px;
+
+        font-size: 20px;
+        line-height: 1.3;
+        font-weight: 700;
+    }
+
+    .product-primary-details p {
+        margin: 0;
+
+        font-size: 22px;
+        line-height: 1.2;
+        font-weight: 800;
+    }
+
+
+    /* ==========================================
+       DESCRIPTION
+    ========================================== */
+
+    .product-modal-description {
+        margin: 18px 0 0;
+    }
+
+    .product-modal-description-title {
+        margin: 0 0 7px;
+
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .product-modal-description-text {
+        margin: 0;
+
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+
+    /* ==========================================
+       PRODUCT INFORMATION
+    ========================================== */
+
+    .product-info-grid {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 7px;
+
+        margin-top: 16px;
+    }
+
+    .product-modal-info,
+    .product-modal-negotiable {
+        margin: 0;
+
+        padding: 7px 10px;
+
+        font-size: 11px;
+        line-height: 1.3;
+
+        border-radius: 6px;
+    }
+
+
+    /* ==========================================
+       ADD TO CART
+    ========================================== */
+
+    .product-modal-details .add-to-cart-button {
+        width: 100%;
+        height: 46px;
+
+        margin-top: 20px;
+
+        border-radius: 8px;
+
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .product-modal-details .add-to-cart-button
+    .material-symbols-outlined {
+        font-size: 21px;
+    }
+
+
+    /* ==========================================
+       SLIDE-UP ANIMATION
+    ========================================== */
+
+    @keyframes productModalSlideUp {
+
+        from {
+            transform: translateY(100%);
+            opacity: 0.7;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+    }
+
+}

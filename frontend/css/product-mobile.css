@@ -1,0 +1,650 @@
+
+/* =====================================================
+   MOBILE PRODUCT PAGE
+   COMPACT FILTER SIDEBAR
+===================================================== */
+
+@media (max-width: 600px) {
+
+    /* =================================================
+       PRODUCT PAGE
+    ================================================= */
+
+    .products-page {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0;
+    }
+
+
+    /* =================================================
+       NARROW FILTER SIDEBAR
+    ================================================= */
+
+    .filters-section {
+        width: 52px;
+        min-width: 52px;
+
+        padding: 12px 6px;
+
+        background: #ffffff;
+        border-right: 1px solid #e5e7eb;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 12px;
+
+        /*
+         * Sticky instead of fixed.
+         *
+         * This means the sidebar remains part of the
+         * page layout and will never cover the breadcrumb
+         * or header.
+         */
+        position: sticky;
+        top: 72px;
+
+        z-index: 50;
+
+        box-sizing: border-box;
+
+        transition:
+            width 0.25s ease,
+            min-width 0.25s ease;
+    }
+
+
+    /* =================================================
+       FILTER HEADER
+    ================================================= */
+
+    .filters-header {
+        width: 40px;
+
+        padding: 0 0 10px;
+
+        border-bottom: 1px solid #e5e7eb;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-shrink: 0;
+    }
+
+    .filters-header h2 {
+        width: 40px;
+
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 4px;
+
+        font-size: 0;
+        line-height: 1;
+
+        text-align: center;
+    }
+
+    /* Filters icon */
+
+    .filters-header h2::before {
+        content: "tune";
+
+        font-family: "Material Symbols Outlined";
+
+        font-size: 22px;
+        line-height: 1;
+
+        color: #374151;
+    }
+
+    /* Filters name */
+
+    .filters-header h2::after {
+        content: "Filters";
+
+        font-family: "Poppins", Arial, sans-serif;
+
+        font-size: 8px;
+        font-weight: 600;
+
+        line-height: 1;
+
+        color: #374151;
+
+        white-space: nowrap;
+    }
+
+
+    /* =================================================
+       FILTER GROUPS
+    ================================================= */
+
+    .filter-group {
+        width: 40px;
+        min-width: 40px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 4px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =================================================
+       FILTER ICON + NAME
+    ================================================= */
+
+    .filter-group-title {
+        width: 40px;
+        height: 58px;
+
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 4px;
+
+        border-radius: 10px;
+
+        background: #f5f6f7;
+
+        font-size: 0;
+        line-height: 1;
+
+        cursor: pointer;
+
+        text-align: center;
+
+        box-sizing: border-box;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =================================================
+       FILTER ICONS
+    ================================================= */
+
+    .category-filter-group .filter-group-title::before {
+        content: "category";
+    }
+
+    .condition-filter-group .filter-group-title::before {
+        content: "verified";
+    }
+
+    .price-filter-group .filter-group-title::before {
+        content: "payments";
+    }
+
+    .sort-filter-group .filter-group-title::before {
+        content: "sort";
+    }
+
+    .filter-group-title::before {
+        font-family: "Material Symbols Outlined";
+
+        font-size: 21px;
+        line-height: 1;
+
+        color: #374151;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =================================================
+       FILTER NAMES
+    ================================================= */
+
+    .category-filter-group .filter-group-title::after {
+        content: "Category";
+    }
+
+    .condition-filter-group .filter-group-title::after {
+        content: "Condition";
+    }
+
+    .price-filter-group .filter-group-title::after {
+        content: "Price";
+    }
+
+    .sort-filter-group .filter-group-title::after {
+        content: "Sort";
+    }
+
+    .filter-group-title::after {
+        font-family: "Poppins", Arial, sans-serif;
+
+        font-size: 7px;
+        font-weight: 600;
+
+        line-height: 1;
+
+        color: #374151;
+
+        white-space: nowrap;
+    }
+
+
+    /* =================================================
+       HIDE FILTER CONTROLS INITIALLY
+    ================================================= */
+
+    .filter-group select,
+    .price-inputs {
+        display: none;
+    }
+
+
+    /* =================================================
+       CLEAR FILTERS
+    ================================================= */
+
+    .filter-actions {
+        width: 40px;
+        min-width: 40px;
+
+        /*
+         * IMPORTANT:
+         * Do NOT use margin-top: auto.
+         *
+         * Clear Filters should sit immediately below
+         * the filter options.
+         */
+        margin-top: 0;
+
+        padding-top: 10px;
+
+        border-top: 1px solid #e5e7eb;
+
+        flex-shrink: 0;
+    }
+
+    #clear-filters-button {
+        width: 40px;
+        height: 58px;
+
+        padding: 0;
+
+        border: none;
+
+        border-radius: 10px;
+
+        background: #f5f6f7;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 4px;
+
+        font-family: "Poppins", Arial, sans-serif;
+
+        font-size: 0;
+
+        cursor: pointer;
+
+        box-sizing: border-box;
+    }
+
+    #clear-filters-button::before {
+        content: "filter_alt_off";
+
+        font-family: "Material Symbols Outlined";
+
+        font-size: 20px;
+        line-height: 1;
+
+        color: #374151;
+    }
+
+    #clear-filters-button::after {
+        content: "Clear";
+
+        font-family: "Poppins", Arial, sans-serif;
+
+        font-size: 8px;
+        font-weight: 600;
+
+        line-height: 1;
+
+        color: #374151;
+
+        white-space: nowrap;
+    }
+
+
+    /* =================================================
+       PRODUCTS CONTENT
+    ================================================= */
+
+    .products-content {
+        flex: 1;
+        min-width: 0;
+
+        /*
+         * Sidebar remains part of normal layout,
+         * so we don't need margin-left anymore.
+         */
+        margin-left: 0;
+
+        padding: 14px 10px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =================================================
+       PRODUCT GRID
+    ================================================= */
+
+    .products-grid {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 18px 10px;
+
+        width: 100%;
+    }
+
+
+    /* =================================================
+       PRODUCT CARD
+    ================================================= */
+
+    .product-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .product-card-image {
+        width: 100%;
+
+        aspect-ratio: 1 / 1;
+
+        border-radius: 10px;
+    }
+
+    .product-card-content {
+        padding: 8px 1px 0;
+    }
+
+    .product-card-content h2 {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+
+    .product-price {
+        margin: 5px 0;
+    }
+
+    .price-amount {
+        font-size: 18px;
+    }
+
+    .product-condition {
+        font-size: 11px;
+    }
+
+
+    /* =================================================
+       ADD TO CART
+    ================================================= */
+
+    .add-to-cart-button {
+        width: 32px;
+        height: 32px;
+
+        margin-top: 6px;
+    }
+
+
+    /* =================================================
+       EXPANDED FILTER SIDEBAR
+    ================================================= */
+
+    .filters-section.is-expanded {
+        width: 230px;
+        min-width: 230px;
+
+        align-items: stretch;
+
+        transition:
+            width 0.25s ease,
+            min-width 0.25s ease;
+    }
+
+
+    /* =================================================
+       EXPANDED FILTER GROUP
+    ================================================= */
+
+    .filters-section.is-expanded .filter-group {
+        width: 100%;
+        min-width: 0;
+
+        align-items: stretch;
+    }
+
+
+    /* =================================================
+       EXPANDED FILTER HEADER
+    ================================================= */
+
+    .filters-section.is-expanded .filters-header {
+        width: 100%;
+
+        justify-content: flex-start;
+
+        padding-left: 10px;
+    }
+
+    .filters-section.is-expanded .filters-header h2 {
+        width: auto;
+
+        flex-direction: row;
+
+        justify-content: flex-start;
+
+        gap: 8px;
+    }
+
+    .filters-section.is-expanded .filters-header h2::after {
+        font-size: 13px;
+    }
+
+
+    /* =================================================
+       OPEN FILTER TITLE
+    ================================================= */
+
+    .filters-section.is-expanded
+    .filter-group.is-open
+    .filter-group-title {
+
+        width: 100%;
+
+        height: 42px;
+
+        flex-direction: row;
+
+        justify-content: flex-start;
+
+        padding: 0 12px;
+
+        gap: 9px;
+
+        border-radius: 8px;
+
+        background: #f5f6f7;
+
+        font-size: 13px;
+        font-weight: 600;
+
+        text-align: left;
+    }
+
+
+    /* =================================================
+       OPEN FILTER ICON
+    ================================================= */
+
+    .filters-section.is-expanded
+    .filter-group.is-open
+    .filter-group-title::before {
+
+        font-size: 20px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =================================================
+       HIDE GENERATED LABEL WHEN OPEN
+    ================================================= */
+
+    .filters-section.is-expanded
+    .filter-group.is-open
+    .filter-group-title::after {
+
+        display: none;
+    }
+
+
+    /* =================================================
+       SHOW SELECT
+    ================================================= */
+
+    .filters-section.is-expanded
+    .filter-group.is-open
+    select {
+
+        display: block;
+
+        width: 100%;
+
+        height: 42px;
+
+        margin-top: 8px;
+
+        padding: 0 10px;
+
+        border: 1px solid #d1d5db;
+
+        border-radius: 8px;
+
+        background: #ffffff;
+
+        color: #374151;
+
+        font-family: "Poppins", Arial, sans-serif;
+
+        font-size: 13px;
+
+        outline: none;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =================================================
+       SHOW PRICE INPUTS
+    ================================================= */
+
+    .filters-section.is-expanded
+    .filter-group.is-open
+    .price-inputs {
+
+        display: flex;
+
+        width: 100%;
+
+        margin-top: 8px;
+
+        gap: 6px;
+    }
+
+    .filters-section.is-expanded
+    .filter-group.is-open
+    .price-inputs input {
+
+        width: 0;
+
+        flex: 1;
+
+        height: 40px;
+
+        padding: 0 8px;
+
+        border: 1px solid #d1d5db;
+
+        border-radius: 8px;
+
+        background: #ffffff;
+
+        font-family: "Poppins", Arial, sans-serif;
+
+        font-size: 12px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =================================================
+       EXPANDED CLEAR FILTERS
+    ================================================= */
+
+    .filters-section.is-expanded .filter-actions {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .filters-section.is-expanded #clear-filters-button {
+        width: 100%;
+
+        height: 42px;
+
+        flex-direction: row;
+
+        justify-content: flex-start;
+
+        padding: 0 12px;
+
+        gap: 9px;
+
+        border-radius: 8px;
+
+        font-size: 13px;
+        font-weight: 600;
+
+        text-align: left;
+    }
+
+    .filters-section.is-expanded #clear-filters-button::before {
+        font-size: 20px;
+    }
+
+    .filters-section.is-expanded #clear-filters-button::after {
+        display: none;
+    }
+}
+

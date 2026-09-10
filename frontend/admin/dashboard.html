@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+ 
+
+
+
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+<link rel="stylesheet" href="./css/admin.css" >
+
+    <link
+        rel="stylesheet"
+        href="./css/dashboard.css"
+    >
+
+<link rel="stylesheet" href="./css/admin-mobile.css">
+
+<link rel="stylesheet" href="./css/dashboard-mobile.css">
+
+
+
+    <title>Dashboard | Second Chance Store</title>
+
+</head>
+
+<body>
+
+
+   
+
+    <div class="admin-app">
+
+        <!-- ======================================
+             SIDEBAR
+        ======================================= -->
+<div id="admin-header"></div>
+       <!-- ======================================
+     SHARED ADMIN SIDEBAR
+======================================= -->
+
+<div id="admin-sidebar"></div>
+
+
+        <!-- ======================================
+             MAIN AREA
+        ======================================= -->
+
+        <main class="admin-main">
+
+
+            
+
+            
+
+
+            <!-- ==================================
+                 DASHBOARD CONTENT
+            =================================== -->
+
+            <div class="admin-content">
+
+
+                <!-- PAGE HEADING -->
+
+                <section class="dashboard-heading">
+
+                    <div>
+
+                        <p class="dashboard-eyebrow">
+                            Overview
+                        </p>
+
+                        <h1>
+                            Dashboard
+                        </h1>
+
+                        <p>
+                            Monitor your marketplace activity
+                            and performance.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================
+                     STATISTICS
+                =================================== -->
+
+                <section class="dashboard-stats">
+
+
+                    <!-- TOTAL USERS -->
+
+                    <article class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <span class="stat-card-label">
+                                Total Users
+                            </span>
+
+                            <span class="stat-card-icon">
+
+                                <span class="material-symbols-outlined">
+                                    group
+                                </span>
+
+                            </span>
+
+                        </div>
+
+                        <strong
+                            id="total-users"
+                            class="stat-card-value"
+                        >
+                            -
+                        </strong>
+
+                        <span class="stat-card-description">
+                            Registered users
+                        </span>
+
+                    </article>
+
+
+                    <!-- TOTAL PRODUCTS -->
+
+                    <article class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <span class="stat-card-label">
+                                Total Products
+                            </span>
+
+                            <span class="stat-card-icon">
+
+                                <span class="material-symbols-outlined">
+                                    inventory_2
+                                </span>
+
+                            </span>
+
+                        </div>
+
+                        <strong
+                            id="total-products"
+                            class="stat-card-value"
+                        >
+                            -
+                        </strong>
+
+                        <span class="stat-card-description">
+                            Marketplace listings
+                        </span>
+
+                    </article>
+
+
+                    <!-- ACTIVE PRODUCTS -->
+
+                    <article class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <span class="stat-card-label">
+                                Active Products
+                            </span>
+
+                            <span class="stat-card-icon">
+
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+
+                            </span>
+
+                        </div>
+
+                        <strong
+                            id="active-products"
+                            class="stat-card-value"
+                        >
+                            -
+                        </strong>
+
+                        <span class="stat-card-description">
+                            Currently available
+                        </span>
+
+                    </article>
+
+
+                    <!-- TODAY'S PRODUCTS -->
+
+                    <article class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <span class="stat-card-label">
+                                Today's Products
+                            </span>
+
+                            <span class="stat-card-icon">
+
+                                <span class="material-symbols-outlined">
+                                    today
+                                </span>
+
+                            </span>
+
+                        </div>
+
+                        <strong
+                            id="products-today"
+                            class="stat-card-value"
+                        >
+                            -
+                        </strong>
+
+                        <span class="stat-card-description">
+                            Added today
+                        </span>
+
+                    </article>
+
+
+                </section>
+
+
+                <!-- ==================================
+                     DASHBOARD LISTS
+                =================================== -->
+
+                <section class="dashboard-grid">
+
+
+                    <!-- RECENT PRODUCTS -->
+
+                    <article class="dashboard-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h2>
+                                    Recent Products
+                                </h2>
+
+                                <p>
+                                    Latest marketplace listings
+                                </p>
+
+                            </div>
+
+                            <a
+                                href="products.html"
+                                class="panel-link"
+                            >
+                                View all
+                            </a>
+
+                        </div>
+
+
+                        <div
+                            id="recent-products"
+                            class="panel-content"
+                        >
+
+                            <div class="panel-empty">
+                                Loading products...
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- MOST VIEWED -->
+
+                    <article class="dashboard-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h2>
+                                    Most Viewed
+                                </h2>
+
+                                <p>
+                                    Popular marketplace listings
+                                </p>
+
+                            </div>
+
+                            <a
+                                href="products.html"
+                                class="panel-link"
+                            >
+                                View all
+                            </a>
+
+                        </div>
+
+
+                        <div
+                            id="most-viewed"
+                            class="panel-content"
+                        >
+
+                            <div class="panel-empty">
+                                Loading products...
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </section>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- ==========================================
+         DASHBOARD SCRIPT
+    =========================================== -->
+
+<script
+    type="module"
+    src="./js/admin-layout.js"
+></script>
+
+<script
+    type="module"
+    src="./js/dashboard.js"
+></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,22 @@
+{
+  "id": "/home.html",
+  "name": "Second Chance Store",
+  "short_name": "2nd Chance",
+  "description": "A marketplace for buying and selling second-hand products.",
+  "start_url": "./home.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0050aa",
+  "icons": [
+    {
+      "src": "./images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

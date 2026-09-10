@@ -1,0 +1,1286 @@
+/* ==========================================
+   SECOND CHANCE STORE
+   ADMIN POSTERS
+   BASE STYLES
+========================================== */
+
+
+/* ==========================================
+   PAGE
+========================================== */
+
+.admin-posters-page {
+    position: fixed;
+
+    top: var(--admin-topbar-height);
+    right: 0;
+    bottom: 0;
+    left: var(--admin-sidebar-width);
+
+    width: calc(100% - var(--admin-sidebar-width));
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background: var(--admin-background);
+
+    padding: 28px;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.admin-page-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 24px;
+}
+
+.admin-page-header h1 {
+    margin: 0;
+
+    color: var(--admin-text);
+
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.admin-page-header p {
+    margin: 6px 0 0;
+
+    color: var(--admin-muted);
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   POSTERS SECTION
+========================================== */
+
+.admin-posters-section {
+    width: 100%;
+}
+
+
+/* ==========================================
+   POSTERS GRID
+========================================== */
+
+.admin-posters-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(210px, 1fr));
+
+    gap: 24px 16px;
+}
+
+
+/* ==========================================
+   POSTER CARD
+   Consistent with Products & Houses
+========================================== */
+
+.admin-poster-card {
+    min-width: 0;
+
+    background: transparent;
+
+    border: none;
+    border-radius: 0;
+
+    overflow: visible;
+
+    box-shadow: none;
+
+    transition:
+        transform 0.2s ease;
+}
+
+.admin-poster-card:hover {
+    transform: translateY(-2px);
+
+    border-color: transparent;
+
+    box-shadow: none;
+}
+
+
+/* ==========================================
+   POSTER IMAGE
+========================================== */
+
+.admin-poster-image-container {
+    position: relative;
+
+    width: 100%;
+    height: 170px;
+
+    background: #f3f5f8;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 2px 7px rgba(0, 0, 0, 0.06);
+}
+
+.admin-poster-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.admin-poster-card:hover .admin-poster-image {
+    transform: scale(1.02);
+}
+
+
+/* ==========================================
+   POSTER CONTENT
+========================================== */
+
+.admin-poster-content {
+    min-width: 0;
+
+    padding: 10px 2px 0;
+}
+
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.admin-poster-content h3 {
+    margin: 0;
+
+    color: var(--admin-text);
+
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.3;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   PLACEMENT
+========================================== */
+
+.admin-poster-placement {
+    margin: 5px 0 0;
+
+    color: var(--admin-muted);
+
+    font-size: 9px;
+    line-height: 1.3;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* ==========================================
+   DISPLAY ORDER
+========================================== */
+
+.admin-poster-order {
+    margin: 3px 0 0;
+
+    color: var(--admin-muted);
+
+    font-size: 9px;
+    line-height: 1.3;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.poster-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-top: 7px;
+
+    padding: 4px 7px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: 0.04em;
+}
+
+.poster-status.active {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.poster-status.inactive {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+
+/* ==========================================
+   ACTIONS
+========================================== */
+
+.admin-poster-actions {
+    display: flex;
+
+    gap: 6px;
+
+    margin-top: 11px;
+
+    padding: 0;
+
+    border: none;
+}
+
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.admin-poster-actions button {
+    min-width: 0;
+    min-height: 32px;
+
+    flex: 1;
+
+    padding: 0 7px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    border-radius: 6px;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.admin-poster-actions button
+.material-symbols-outlined {
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   SECONDARY BUTTON
+========================================== */
+
+.admin-poster-actions
+.admin-secondary-button {
+    border: 1px solid var(--admin-border);
+
+    background: #ffffff;
+
+    color: #4b5563;
+}
+
+.admin-poster-actions
+.admin-secondary-button:hover {
+    background: #f3f6fa;
+
+    color: var(--admin-primary);
+}
+
+
+/* ==========================================
+   PRIMARY BUTTON
+========================================== */
+
+.admin-poster-actions
+.admin-primary-button {
+    border: 1px solid var(--admin-primary);
+
+    background: var(--admin-primary);
+
+    color: #ffffff;
+}
+
+.admin-poster-actions
+.admin-primary-button:hover {
+    background: var(--admin-primary-dark);
+
+    border-color: var(--admin-primary-dark);
+}
+
+
+/* ==========================================
+   DANGER BUTTON
+========================================== */
+
+.admin-poster-actions
+.admin-danger-button {
+    border: 1px solid var(--admin-border);
+
+    background: #ffffff;
+
+    color: #dc2626;
+}
+
+.admin-poster-actions
+.admin-danger-button:hover {
+    background: #fff1f2;
+
+    border-color: #fecaca;
+
+    color: #b91c1c;
+}
+
+
+/* ==========================================
+   HIDDEN STATES
+========================================== */
+
+.admin-posters-page [hidden] {
+    display: none !important;
+}
+
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.admin-loading {
+    min-height: 240px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: var(--admin-muted);
+}
+
+.admin-loading .material-symbols-outlined {
+    font-size: 34px;
+
+    animation:
+        poster-spin 1s linear infinite;
+}
+
+.admin-loading p {
+    margin: 10px 0 0;
+
+    font-size: 12px;
+}
+
+@keyframes poster-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.admin-error {
+    min-height: 200px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    background: var(--admin-surface);
+
+    border: 1px solid var(--admin-border);
+
+    border-radius: var(--admin-radius-md);
+
+    box-sizing: border-box;
+}
+
+.admin-error .material-symbols-outlined {
+    color: #dc2626;
+
+    font-size: 36px;
+}
+
+.admin-error p {
+    margin: 10px 0 15px;
+
+    color: var(--admin-muted);
+
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.admin-empty {
+    min-height: 240px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    background: var(--admin-surface);
+
+    border: 1px solid var(--admin-border);
+
+    border-radius: var(--admin-radius-md);
+
+    box-sizing: border-box;
+}
+
+.admin-empty .material-symbols-outlined {
+    color: #9ca3af;
+
+    font-size: 40px;
+}
+
+.admin-empty h2 {
+    margin: 10px 0 0;
+
+    color: var(--admin-text);
+
+    font-size: 16px;
+}
+
+.admin-empty p {
+    margin: 5px 0 15px;
+
+    color: var(--admin-muted);
+
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   PRIMARY BUTTON
+========================================== */
+
+.admin-primary-button {
+    min-height: 40px;
+
+    padding: 0 15px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border: 1px solid var(--admin-primary);
+
+    border-radius: 7px;
+
+    background: var(--admin-primary);
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.admin-primary-button:hover {
+    background: var(--admin-primary-dark);
+
+    border-color: var(--admin-primary-dark);
+}
+
+.admin-primary-button:active {
+    transform: translateY(1px);
+}
+
+.admin-primary-button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+.admin-primary-button
+.material-symbols-outlined {
+    font-size: 18px;
+}
+
+
+/* ==========================================
+   SECONDARY BUTTON
+========================================== */
+
+.admin-secondary-button {
+    min-height: 40px;
+
+    padding: 0 15px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border: 1px solid var(--admin-border);
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #4b5563;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.admin-secondary-button:hover {
+    background: #f5f7fa;
+
+    border-color: #c7ced8;
+
+    color: var(--admin-primary);
+}
+
+.admin-secondary-button
+.material-symbols-outlined {
+    font-size: 17px;
+}
+
+
+/* ==========================================
+   DANGER BUTTON
+========================================== */
+
+.admin-danger-button {
+    min-height: 40px;
+
+    padding: 0 15px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #dc2626;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.admin-danger-button:hover {
+    background: #fff1f2;
+
+    border-color: #fca5a5;
+
+    color: #b91c1c;
+}
+
+
+/* ==========================================
+   MODAL
+========================================== */
+
+.admin-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 3000;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+.admin-modal[hidden] {
+    display: none !important;
+}
+
+.admin-modal-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(15, 23, 42, 0.55);
+
+    backdrop-filter: blur(2px);
+}
+
+.admin-modal-content {
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    max-width: 560px;
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 24px;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.18);
+
+    box-sizing: border-box;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   MODAL HEADER
+========================================== */
+
+.admin-modal-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+.admin-modal-header h2 {
+    margin: 0;
+
+    color: var(--admin-text);
+
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.admin-modal-header p {
+    margin: 5px 0 0;
+
+    color: var(--admin-muted);
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.admin-modal-close {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #f3f4f6;
+
+    color: #6b7280;
+
+    cursor: pointer;
+}
+
+.admin-modal-close:hover {
+    background: #e5e7eb;
+
+    color: #374151;
+}
+
+.admin-modal-close
+.material-symbols-outlined {
+    font-size: 19px;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+.admin-form-group {
+    margin-bottom: 17px;
+}
+
+.admin-form-group label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--admin-text);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.admin-form-group input,
+.admin-form-group select {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 11px;
+
+    border: 1px solid var(--admin-border);
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: var(--admin-text);
+
+    font-size: 12px;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-form-group input:focus,
+.admin-form-group select:focus {
+    border-color: var(--admin-primary);
+
+    box-shadow:
+        0 0 0 3px rgba(0, 80, 170, 0.08);
+}
+
+.admin-form-group input[type="file"] {
+    height: auto;
+
+    padding: 10px;
+}
+
+.admin-form-group small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--admin-muted);
+
+    font-size: 9px;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================
+   IMAGE PREVIEW
+========================================== */
+
+.poster-image-preview {
+    width: 100%;
+
+    margin-top: 10px;
+}
+
+.poster-image-preview img {
+    display: block;
+
+    width: 100%;
+    max-height: 220px;
+
+    object-fit: contain;
+
+    background: #f3f5f8;
+
+    border-radius: 8px;
+}
+
+
+/* ==========================================
+   FORM ERROR
+========================================== */
+
+.admin-form-error {
+    margin-bottom: 15px;
+
+    padding: 10px 12px;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 7px;
+
+    background: #fff1f2;
+
+    color: #b91c1c;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+.admin-form-error[hidden] {
+    display: none !important;
+}
+
+
+/* ==========================================
+   FORM ACTIONS
+========================================== */
+
+.admin-form-actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+
+/* ==========================================
+   CONFIRM MODAL
+========================================== */
+
+.admin-confirm-modal {
+    max-width: 420px;
+
+    text-align: center;
+}
+
+.admin-danger-icon {
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    font-size: 25px;
+}
+
+.admin-confirm-modal h2 {
+    margin: 0;
+
+    color: var(--admin-text);
+
+    font-size: 18px;
+}
+
+.admin-confirm-modal p {
+    margin: 8px 0 0;
+
+    color: var(--admin-muted);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+.admin-confirm-modal .admin-form-actions {
+    justify-content: center;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .admin-posters-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 18px 14px;
+    }
+
+    .admin-poster-image-container {
+        height: 165px;
+    }
+
+}
+
+
+/* ==========================================
+   PHONE — SMALL SCREENS
+========================================== */
+
+@media (max-width: 600px) {
+
+    .admin-posters-page {
+        padding: 14px 10px 28px;
+    }
+
+    .admin-posters-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 10px;
+    }
+
+
+    /* ------------------------------------------
+       POSTER CARD
+    ------------------------------------------ */
+
+    .admin-poster-card {
+        min-width: 0;
+
+        background: transparent;
+        border: none;
+        border-radius: 0;
+
+        box-shadow: none;
+    }
+
+    .admin-poster-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+
+    /* ------------------------------------------
+       IMAGE
+    ------------------------------------------ */
+
+    .admin-poster-image-container {
+        width: 100%;
+        height: 145px;
+
+        border-radius: 9px;
+
+        overflow: hidden;
+
+        box-shadow:
+            0 1px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .admin-poster-image {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    /* ------------------------------------------
+       CONTENT
+    ------------------------------------------ */
+
+    .admin-poster-content {
+        padding: 8px 2px 0;
+    }
+
+
+    /* ------------------------------------------
+       TITLE
+    ------------------------------------------ */
+
+    .admin-poster-content h3 {
+        font-size: 11px;
+        line-height: 1.3;
+
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+
+        overflow: hidden;
+    }
+
+
+    /* ------------------------------------------
+       PLACEMENT
+    ------------------------------------------ */
+
+    .admin-poster-placement {
+        margin: 4px 0 0;
+
+        font-size: 8px;
+        line-height: 1.2;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    /* ------------------------------------------
+       DISPLAY ORDER
+    ------------------------------------------ */
+
+    .admin-poster-order {
+        margin: 3px 0 0;
+
+        font-size: 8px;
+        line-height: 1.2;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    /* ------------------------------------------
+       STATUS
+    ------------------------------------------ */
+
+    .poster-status {
+        margin-top: 6px;
+
+        padding: 4px 6px;
+
+        border-radius: 20px;
+
+        font-size: 7px;
+        line-height: 1;
+    }
+
+
+    /* ------------------------------------------
+       ACTIONS
+    ------------------------------------------ */
+
+    .admin-poster-actions {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 5px;
+
+        margin-top: 8px;
+
+        padding: 0;
+
+        border: none;
+    }
+
+    .admin-poster-actions button {
+        min-width: 0;
+        min-height: 29px;
+
+        padding: 0 5px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 3px;
+
+        border-radius: 5px;
+
+        font-size: 7px;
+        font-weight: 700;
+    }
+
+    .admin-poster-actions button
+    .material-symbols-outlined {
+        font-size: 13px;
+    }
+
+    .admin-poster-actions
+    .admin-danger-button {
+        grid-column: span 2;
+    }
+}
+
+
+/* ==========================================
+   VERY SMALL SCREENS
+========================================== */
+
+@media (max-width: 430px) {
+
+    .admin-posters-grid {
+        gap: 16px 8px;
+    }
+
+    .admin-poster-image-container {
+        height: 130px;
+        border-radius: 8px;
+    }
+
+    .admin-poster-content {
+        padding-top: 7px;
+    }
+
+    .admin-poster-content h3 {
+        font-size: 10px;
+    }
+
+    .admin-poster-placement,
+    .admin-poster-order {
+        font-size: 7px;
+    }
+
+    .poster-status {
+        padding: 3px 5px;
+        font-size: 6px;
+    }
+
+    .admin-poster-actions {
+        gap: 4px;
+        margin-top: 7px;
+    }
+
+    .admin-poster-actions button {
+        min-height: 27px;
+        font-size: 6.5px;
+    }
+
+    .admin-poster-actions button
+    .material-symbols-outlined {
+        font-size: 12px;
+    }
+}
+
+
+/* ==========================================
+   EXTRA SMALL PHONES
+========================================== */
+
+@media (max-width: 360px) {
+
+    .admin-posters-page {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .admin-posters-grid {
+        gap: 14px 7px;
+    }
+
+    .admin-poster-image-container {
+        height: 115px;
+    }
+
+    .admin-poster-content h3 {
+        font-size: 9px;
+    }
+
+    .admin-poster-placement,
+    .admin-poster-order {
+        font-size: 6.5px;
+    }
+
+    .poster-status {
+        font-size: 6px;
+    }
+
+    .admin-poster-actions button {
+        min-height: 25px;
+        font-size: 6px;
+    }
+}

@@ -1,0 +1,512 @@
+
+/* ==========================================
+   SECOND CHANCE STORE
+   SHARED ADMIN SYSTEM
+========================================== */
+
+
+/* ==========================================
+   VARIABLES
+========================================== */
+
+:root {
+    --admin-primary: #0050aa;
+    --admin-primary-dark: #003d82;
+
+    --admin-background: #f5f7fa;
+    --admin-surface: #ffffff;
+
+    --admin-text: #172033;
+    --admin-muted: #6b7280;
+    --admin-border: #e5e7eb;
+
+    --admin-sidebar-width: 250px;
+    --admin-topbar-height: 76px;
+
+    --admin-radius-sm: 8px;
+    --admin-radius-md: 12px;
+}
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--admin-background);
+    color: var(--admin-text);
+
+    font-family:
+        "Poppins",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ==========================================
+   TOP BAR
+========================================== */
+
+.admin-topbar {
+    width: 100%;
+    height: var(--admin-topbar-height);
+
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--admin-surface);
+    border-bottom: 1px solid var(--admin-border);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.admin-logo {
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+}
+
+.admin-logo img {
+    max-height: 48px;
+    width: auto;
+    display: block;
+}
+
+
+/* ==========================================
+   TOPBAR ACTIONS
+========================================== */
+
+.admin-topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+/* ==========================================
+   NOTIFICATIONS
+========================================== */
+
+.admin-icon-button {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--admin-border);
+    border-radius: 50%;
+
+    background: #ffffff;
+    color: #4b5563;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.admin-icon-button:hover {
+    background: #f3f6fa;
+    color: var(--admin-primary);
+}
+
+.admin-icon-button .material-symbols-outlined {
+    font-size: 21px;
+}
+
+
+/* ==========================================
+   ADMIN PROFILE BUTTON
+========================================== */
+
+.admin-profile-button {
+    min-height: 46px;
+
+    padding: 4px 8px 4px 5px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+    color: var(--admin-text);
+
+    text-align: left;
+
+    transition:
+        background 0.2s ease;
+}
+
+.admin-profile-button:hover {
+    background: #f5f7fa;
+}
+
+
+/* ==========================================
+   PROFILE AVATAR
+========================================== */
+
+.admin-profile-avatar {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    border-radius: 50%;
+
+    background: #eaf2fb;
+    color: var(--admin-primary);
+
+    font-weight: 800;
+}
+
+.admin-profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.admin-profile-letter {
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   PROFILE INFO
+========================================== */
+
+.admin-profile-info {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 100px;
+    line-height: 1.2;
+}
+
+.admin-profile-info strong {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.admin-profile-info span {
+    margin-top: 4px;
+
+    color: var(--admin-muted);
+    font-size: 11px;
+}
+
+.admin-profile-arrow {
+    color: #9ca3af;
+    font-size: 20px;
+}
+
+
+/* ==========================================
+   ADMIN LAYOUT
+========================================== */
+
+.admin-layout {
+    min-height: 100vh;
+    padding-top: var(--admin-topbar-height);
+}
+
+
+/* ==========================================
+   ADMIN MAIN
+   Keeps page content below fixed header
+========================================== */
+
+.admin-main {
+    margin-left: var(--admin-sidebar-width);
+    padding-top: var(--admin-topbar-height);
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   ADMIN SIDEBAR
+========================================== */
+
+.admin-sidebar {
+    width: var(--admin-sidebar-width);
+    height: calc(100vh - var(--admin-topbar-height));
+
+    position: fixed;
+    top: var(--admin-topbar-height);
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--admin-surface);
+    border-right: 1px solid var(--admin-border);
+
+    z-index: 900;
+}
+
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+.admin-navigation {
+    flex: 1;
+
+    padding: 18px 10px;
+
+    overflow-y: auto;
+}
+
+.admin-nav-label {
+    margin: 0 9px 7px;
+
+    color: #9ca3af;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.admin-nav-label:not(:first-child) {
+    margin-top: 20px;
+}
+
+
+/* ==========================================
+   NAVIGATION LINKS
+========================================== */
+
+.admin-nav-link {
+    min-height: 42px;
+
+    margin-bottom: 3px;
+    padding: 0 11px;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    border-radius: 9px;
+
+    color: #4b5563;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.admin-nav-link .material-symbols-outlined {
+    flex-shrink: 0;
+
+    font-size: 21px;
+
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+.admin-nav-link:hover {
+    background: #f3f6fa;
+    color: var(--admin-primary);
+}
+
+.admin-nav-link.active {
+    background: #eaf2fb;
+    color: var(--admin-primary);
+}
+
+.admin-nav-link.active .material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 600,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+
+/* ==========================================
+   SIDEBAR FOOTER
+========================================== */
+
+.admin-sidebar-footer {
+    padding: 14px;
+
+    border-top: 1px solid var(--admin-border);
+}
+
+.admin-logout-button {
+    width: 100%;
+    min-height: 44px;
+
+    padding: 0 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border: none;
+    border-radius: var(--admin-radius-sm);
+
+    background: transparent;
+    color: #6b7280;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-align: left;
+}
+
+.admin-logout-button:hover {
+    background: #fff1f2;
+    color: #dc2626;
+}
+
+
+/* ==========================================
+   PAGE
+========================================== */
+
+.admin-page {
+    margin-left: var(--admin-sidebar-width);
+
+    min-height:
+        calc(100vh - var(--admin-topbar-height));
+}
+
+.admin-page-content {
+    max-width: 1400px;
+
+    margin: 0 auto;
+    padding: 32px;
+}
+
+
+/* ==========================================
+   MOBILE OVERLAY
+========================================== */
+
+.admin-sidebar-overlay {
+    display: none;
+}
+
+
+/* ==========================================
+   SIDEBAR BRAND / LOGO
+========================================== */
+
+.admin-brand {
+    height: 76px;
+
+    padding: 0 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.admin-brand-logo {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    text-decoration: none;
+}
+
+.admin-brand-logo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.admin-brand-text {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.2;
+}
+
+.admin-brand-text strong {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.admin-brand-text span {
+    margin-top: 3px;
+
+    color: var(--admin-muted);
+    font-size: 11px;
+}
+

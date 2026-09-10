@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- ==========================================
+         MATERIAL SYMBOLS
+    =========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0"
+    >
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+
+ 
+
+    <link
+    rel="stylesheet"
+    href="./css/variables.css"
+>
+    <!-- ==========================================
+         SHARED SITE HEADER
+    =========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="./css/header.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/skeleton.css"
+    >
+
+
+        <link
+    rel="stylesheet"
+    href="./css/header-mobile.css"
+>
+
+<link rel="stylesheet" href="./css/bottom-nav.css">
+ 
+
+
+
+    <!-- ==========================================
+         ACCOUNT PAGE
+    =========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="./css/account.css"
+    >
+
+
+    <title>
+        My Account | Second Chance Store
+    </title>
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     SHARED SITE HEADER
+========================================== -->
+
+<div id="site-header"></div>
+
+
+
+<!-- ==========================================
+     ACCOUNT PAGE
+========================================== -->
+
+<main class="account-page">
+
+
+    <div class="account-container">
+
+
+        <nav
+    id="breadcrumb"
+    class="site-breadcrumb"
+    aria-label="Breadcrumb"
+></nav>
+
+
+        <!-- ======================================
+             ACCOUNT PROFILE BAR
+        ======================================= -->
+
+        <section class="account-profile-bar">
+
+
+            <!-- ==================================
+                 PROFILE INFORMATION
+            =================================== -->
+
+            <div class="account-profile-left">
+
+
+                <div class="account-avatar">
+
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+
+                </div>
+
+
+<div class="account-profile-info">
+
+    <strong id="account-name" class="skeleton skeleton-text skeleton-name"></strong>
+
+    <span id="account-email" class="skeleton skeleton-text skeleton-email"></span>
+        
+    </span>
+
+</div>
+
+
+            </div>
+
+
+
+            <!-- ==================================
+                 ACCOUNT TYPE
+            =================================== -->
+
+            <div class="account-profile-middle">
+
+                <span class="account-profile-label">
+                    Account Type
+                </span>
+
+              <strong id="account-role" class="skeleton skeleton-role"></strong>
+
+            </div>
+
+
+
+            <!-- ==================================
+                 LOGOUT
+            =================================== -->
+
+            <button
+                type="button"
+                id="logout-button"
+                class="account-logout-button"
+            >
+
+                <span class="material-symbols-outlined">
+                    logout
+                </span>
+
+                <span>
+                    Logout
+                </span>
+
+            </button>
+
+
+        </section>
+
+
+
+        <!-- ======================================
+             ACCOUNT MESSAGE
+        ======================================= -->
+
+        <p
+            id="account-message"
+            class="account-message"
+        ></p>
+
+
+
+        <!-- ======================================
+             ACCOUNT STATISTICS
+        ======================================= -->
+
+        <section class="account-statistics">
+
+
+            <!-- ==================================
+                 MY PRODUCTS
+            =================================== -->
+
+            <article class="account-stat-card">
+
+
+                <div class="account-stat-icon">
+
+                    <span class="material-symbols-outlined">
+                        inventory_2
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <span class="account-stat-label">
+                        My Products
+                    </span>
+
+                    <strong id="total-products" class="skeleton skeleton-stat"></strong>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- ==================================
+                 TOTAL VIEWS
+            =================================== -->
+
+            <article class="account-stat-card">
+
+
+                <div class="account-stat-icon">
+
+                    <span class="material-symbols-outlined">
+                        visibility
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <span class="account-stat-label">
+                        Total Views
+                    </span>
+
+                    <strong id="total-views" class="skeleton skeleton-stat">
+                    0
+                    </strong>
+
+                </div>
+
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- ======================================
+             MY PRODUCTS
+        ======================================= -->
+
+        <section class="my-products-section">
+
+
+            <!-- ==================================
+                 SECTION HEADER
+            =================================== -->
+
+            <div class="my-products-header">
+
+
+                <div>
+
+                    <p class="account-eyebrow">
+                        
+                    </p>
+
+                    <h2>
+                        My Products
+                    </h2>
+
+                    <p>
+                        Products you have listed
+                        on Second Chance Store.
+                    </p>
+
+                </div>
+
+
+
+                <!-- ==================================
+                     SELL PRODUCT
+                =================================== -->
+
+                <a
+                    href="sell.html"
+                    class="sell-product-button"
+                >
+
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+
+                    Sell an Item
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- ==================================
+                 PRODUCT GRID
+            =================================== -->
+
+           <div
+    id="my-products-container"
+    class="my-products-grid"
+>
+
+    <!-- ==================================
+         PRODUCT SKELETON 1
+    =================================== -->
+
+    <article class="product-skeleton">
+
+        <div class="skeleton skeleton-product-image"></div>
+
+        <div class="skeleton skeleton-product-name"></div>
+
+        <div class="skeleton skeleton-product-price"></div>
+
+        <div class="skeleton skeleton-product-condition"></div>
+
+    </article>
+
+
+    <!-- ==================================
+         PRODUCT SKELETON 2
+    =================================== -->
+
+    <article class="product-skeleton">
+
+        <div class="skeleton skeleton-product-image"></div>
+
+        <div class="skeleton skeleton-product-name"></div>
+
+        <div class="skeleton skeleton-product-price"></div>
+
+        <div class="skeleton skeleton-product-condition"></div>
+
+    </article>
+
+
+    <!-- ==================================
+         PRODUCT SKELETON 3
+    =================================== -->
+
+    <article class="product-skeleton">
+
+        <div class="skeleton skeleton-product-image"></div>
+
+        <div class="skeleton skeleton-product-name"></div>
+
+        <div class="skeleton skeleton-product-price"></div>
+
+        <div class="skeleton skeleton-product-condition"></div>
+
+    </article>
+
+
+    <!-- ==================================
+         PRODUCT SKELETON 4
+    =================================== -->
+
+    <article class="product-skeleton">
+
+        <div class="skeleton skeleton-product-image"></div>
+
+        <div class="skeleton skeleton-product-name"></div>
+
+        <div class="skeleton skeleton-product-price"></div>
+
+        <div class="skeleton skeleton-product-condition"></div>
+
+    </article>
+
+</div>
+
+
+        </section>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- ==========================================
+     MY PRODUCT DETAILS MODAL
+========================================== -->
+
+<div
+    id="my-product-modal"
+    class="my-product-modal"
+    hidden
+>
+
+
+    <!-- ======================================
+         MODAL OVERLAY
+    ======================================= -->
+
+    <div
+        class="my-product-modal-overlay"
+    ></div>
+
+
+
+    <!-- ======================================
+         MODAL CONTENT
+    ======================================= -->
+
+    <div
+        class="my-product-modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="my-product-modal-title"
+    >
+
+
+        <!-- CLOSE -->
+
+        <button
+            type="button"
+            id="close-my-product-modal"
+            class="my-product-modal-close"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+
+
+        <!-- PRODUCT DETAILS -->
+
+        <div
+            id="my-product-modal-body"
+        ></div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ==========================================
+     SHARED SITE FOOTER
+========================================== -->
+
+<div id="site-footer"></div>
+
+
+
+<!-- ==========================================
+     SCRIPTS
+========================================== -->
+
+<script
+    type="module"
+    src="./js/header.js"
+></script>
+
+
+<script
+    type="module"
+    src="./js/footer.js"
+></script>
+
+
+<script
+    type="module"
+    src="./js/account.js"
+></script>
+
+
+</body>
+
+</html>

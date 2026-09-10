@@ -1,0 +1,977 @@
+body {
+    font-family:
+        "Poppins",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+/* ==========================================
+   HOUSES PAGE — DESIGN FOUNDATION
+========================================== */
+
+:root {
+
+    /* ======================================
+       COLORS
+    ====================================== */
+
+    --house-black: #111111;
+    --house-text: #222222;
+    --house-muted: #666666;
+
+    --house-border: #e5e5e5;
+
+    --house-background: #ffffff;
+    --house-surface: #f7f7f7;
+
+
+    /* ======================================
+       TYPOGRAPHY
+    ====================================== */
+
+    --house-font:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+
+    /* ======================================
+       LAYOUT
+    ====================================== */
+
+    --house-page-width: 1200px;
+
+    --house-page-padding: 24px;
+
+
+    /* ======================================
+       SPACING
+    ====================================== */
+
+    --house-space-xs: 4px;
+    --house-space-sm: 8px;
+    --house-space-md: 16px;
+    --house-space-lg: 24px;
+    --house-space-xl: 32px;
+    --house-space-xxl: 48px;
+
+
+    /* ======================================
+       BORDERS
+    ====================================== */
+
+    --house-radius-sm: 4px;
+    --house-radius-md: 8px;
+
+
+    /* ======================================
+       TRANSITIONS
+    ====================================== */
+
+    --house-transition:
+        0.2s ease;
+
+}
+
+
+/* ==========================================
+   GLOBAL RESET
+========================================== */
+
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+/* ==========================================
+   HTML / BODY
+========================================== */
+
+html {
+    font-size: 16px;
+
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    background: var(--house-background);
+
+    color: var(--house-text);
+
+    font-family: var(--house-font);
+
+    line-height: 1.5;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* ==========================================
+   IMAGES
+========================================== */
+
+img {
+    max-width: 100%;
+
+    display: block;
+}
+
+
+/* ==========================================
+   BUTTONS & INPUTS
+========================================== */
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+button {
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   LINKS
+========================================== */
+
+a {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+/* ==========================================
+   MAIN PAGE CONTAINER
+========================================== */
+
+main {
+    width: 100%;
+}
+
+
+/* ==========================================
+   RESPONSIVE FOUNDATION
+========================================== */
+
+@media (max-width: 768px) {
+
+    :root {
+        --house-page-padding: 16px;
+    }
+
+}
+
+
+
+
+/* ==========================================
+   HOUSES PAGE
+========================================== */
+
+/* ==========================================
+   HOUSES PAGE LAYOUT
+========================================== */
+
+.houses-page {
+    width: 100%;
+    padding: 32px 24px 70px;
+}
+
+.houses-layout {
+    width: min(1280px, 100%);
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 250px minmax(0, 1fr);
+
+    gap: 32px;
+
+    align-items: start;
+}
+
+
+/* ==========================================
+   FILTER SIDEBAR
+========================================== */
+
+.houses-sidebar {
+    position: sticky;
+    top: 90px;
+
+    align-self: start;
+
+    width: 100%;
+}
+
+
+.houses-sidebar-inner {
+    background: #ffffff;
+
+    border: 1px solid var(--house-border);
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* ==========================================
+   FILTER HEADER
+========================================== */
+
+.houses-filter-header {
+    margin-bottom: 22px;
+
+    padding-bottom: 14px;
+
+    border-bottom: 1px solid var(--house-border);
+}
+
+
+.houses-filter-header h2 {
+    margin: 0;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: var(--house-black);
+}
+
+
+/* ==========================================
+   FILTER GROUP
+========================================== */
+
+.house-filter-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-bottom: 18px;
+}
+
+
+.house-filter-group label {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: var(--house-text);
+}
+
+
+/* ==========================================
+   FILTER INPUTS
+========================================== */
+
+.house-filter-group input,
+.house-filter-group select {
+    width: 100%;
+
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid var(--house-border);
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: var(--house-text);
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.house-filter-group input:focus,
+.house-filter-group select:focus {
+    border-color: #0e2637;
+
+    box-shadow:
+        0 0 0 2px rgba(14, 38, 55, 0.08);
+}
+
+
+/* ==========================================
+   RENT INPUTS
+========================================== */
+
+.rent-inputs {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+}
+
+
+/* ==========================================
+   FILTER ACTIONS
+========================================== */
+
+.house-filter-actions {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 24px;
+}
+
+
+#search-houses-button,
+#reset-houses-button {
+    width: 100%;
+
+    min-height: 42px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* Search */
+
+#search-houses-button {
+    background: #0e2637;
+
+    color: #ffffff;
+}
+
+
+#search-houses-button:hover {
+    background: #173c55;
+
+    transform: translateY(-1px);
+}
+
+
+/* Reset */
+
+#reset-houses-button {
+    background: #f3f3f3;
+
+    color: #333333;
+
+    border: 1px solid var(--house-border);
+}
+
+
+#reset-houses-button:hover {
+    background: #e9e9e9;
+}
+
+
+/* ==========================================
+   HOUSES CONTENT
+========================================== */
+
+.houses-content {
+    min-width: 0;
+}
+
+
+.houses-results-header {
+    min-height: 24px;
+
+    margin-bottom: 20px;
+}
+
+
+#houses-message {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: var(--house-muted);
+}
+
+
+/* ==========================================
+   HOUSE GRID
+========================================== */
+
+#houses-container {
+    width: 100%;
+
+    margin: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    column-gap: 22px;
+
+    row-gap: 40px;
+}
+
+
+/* ==========================================
+   HOUSE ITEM
+========================================== */
+
+.house-card {
+    background: transparent;
+
+    border: none;
+
+    border-radius: 0;
+
+    overflow: visible;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   HOUSE IMAGE
+========================================== */
+
+.house-card-image {
+    width: 100%;
+    height: 230px;
+
+    overflow: hidden;
+
+    background: #f3f3f3;
+
+    border-radius: 10px;
+}
+
+
+.house-card-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.house-card:hover
+.house-card-image img {
+    transform: scale(1.03);
+}
+
+
+/* ==========================================
+   NO IMAGE
+========================================== */
+
+.house-no-image {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f5f5f5;
+
+    color: #777;
+}
+
+
+.house-no-image
+.material-symbols-outlined {
+    font-size: 44px;
+}
+
+
+/* ==========================================
+   HOUSE DETAILS
+========================================== */
+
+.house-card-content {
+    padding: 12px 2px 0;
+}
+
+
+/* ==========================================
+   HOUSE TYPE
+========================================== */
+
+.house-card-type {
+    margin: 0 0 6px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: #333;
+}
+
+
+/* ==========================================
+   RENT
+========================================== */
+
+.house-card-rent {
+    margin: 0 0 7px;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    color: #111;
+}
+
+
+.house-card-rent span {
+    font-size: 12px;
+
+    font-weight: 600;
+
+    margin-right: 3px;
+}
+
+
+.house-card-rent small {
+    font-size: 12px;
+
+    font-weight: 400;
+
+    color: #777;
+}
+
+
+/* ==========================================
+   LOCATION
+========================================== */
+
+.house-card-location {
+    margin: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    font-size: 13px;
+
+    color: #666;
+}
+
+
+.house-card-location
+.material-symbols-outlined {
+    font-size: 17px;
+}
+
+
+/* ==========================================
+   VIEW DETAILS
+========================================== */
+
+.view-house-button {
+    margin-top: 12px;
+
+    padding: 0;
+
+    border: none;
+
+    background: none;
+
+    color: #111;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    text-decoration: underline;
+
+    text-underline-offset: 3px;
+}
+
+
+.view-house-button:hover {
+    color: #555;
+}
+
+
+/* ==========================================
+   NO HOUSES
+========================================== */
+
+.no-houses-message {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: #777;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1000px) {
+
+    #houses-container {
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 35px 20px;
+    }
+
+}
+
+
+/* ==========================================
+   SMALL TABLET
+========================================== */
+
+@media (max-width: 750px) {
+
+    #houses-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 30px 16px;
+    }
+
+
+    .house-card-image {
+        height: 210px;
+    }
+
+}
+
+
+/* ==========================================
+   PHONE
+========================================== */
+
+@media (max-width: 500px) {
+
+    #houses-container {
+        width: 94%;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 28px 12px;
+    }
+
+
+    .house-card-image {
+        height: 170px;
+    }
+
+
+    .house-card-content {
+        padding-top: 9px;
+    }
+
+
+    .house-card-type {
+        font-size: 12px;
+    }
+
+
+    .house-card-rent {
+        font-size: 15px;
+    }
+
+
+    .house-card-location {
+        font-size: 11px;
+    }
+
+
+    .view-house-button {
+        font-size: 11px;
+
+        margin-top: 9px;
+    }
+
+}
+
+
+
+/* ==========================================
+   HOUSE INTEREST BUTTON
+========================================== */
+
+.house-interest-button {
+    width: 100%;
+    margin-top: 12px;
+
+    padding: 10px 14px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #0e2637;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.house-interest-button:hover {
+    background: #173c55;
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   ACTIVE
+========================================== */
+
+.house-interest-button:active {
+    transform: translateY(0);
+}
+
+
+/* ==========================================
+   FOCUS
+========================================== */
+
+.house-interest-button:focus-visible {
+    outline: 2px solid #0e2637;
+    outline-offset: 2px;
+}
+
+
+
+/* ==========================================
+   HOUSE CARD CONTENT
+========================================== */
+
+.house-card-content {
+    padding: 10px 2px 0;
+}
+
+
+/* ==========================================
+   HOUSE TYPE
+========================================== */
+
+.house-card-type {
+    margin: 0 0 5px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #555;
+}
+
+
+/* ==========================================
+   HOUSE RENT
+========================================== */
+
+.house-card-rent {
+    margin: 0 0 6px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    color: #0e2637;
+}
+
+.house-card-rent span {
+    font-size: 12px;
+    font-weight: 400;
+
+    color: #777;
+}
+
+
+/* ==========================================
+   HOUSE LOCATION
+========================================== */
+
+.house-card-location {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    margin: 0;
+
+    font-size: 13px;
+    color: #666;
+}
+
+
+/* Location icon */
+
+.house-card-location .material-symbols-outlined {
+    font-size: 17px;
+    line-height: 1;
+}
+
+
+/* ==========================================
+   INTEREST BUTTON
+========================================== */
+
+.house-interest-button {
+    width: 100%;
+
+    margin-top: 12px;
+    padding: 10px 14px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #0e2637;
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.house-interest-button:hover {
+    background: #173c55;
+    transform: translateY(-1px);
+}
+
+.house-interest-button:active {
+    transform: translateY(0);
+}
+
+
+
+/* ==========================================
+   SHARED BREADCRUMB
+========================================== */
+
+.site-breadcrumb {
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    margin-bottom: 22px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    line-height: 1;
+}
+
+
+/* ==========================================
+   BREADCRUMB LINKS
+========================================== */
+
+.site-breadcrumb a {
+
+    color: #555f6d;
+
+    font-weight: 500;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.site-breadcrumb a:hover {
+
+    color: #0050aa;
+}
+
+
+/* ==========================================
+   BREADCRUMB SEPARATOR
+========================================== */
+
+.site-breadcrumb
+.material-symbols-outlined {
+
+    font-size: 17px;
+
+    color: #9ca3af;
+}
+
+
+/* ==========================================
+   CURRENT PAGE
+========================================== */
+
+.site-breadcrumb > span:last-child {
+
+    color: #172033;
+
+    font-weight: 600;
+}

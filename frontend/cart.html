@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+
+
+<link
+    rel="stylesheet"
+    href="./css/variables.css"
+>
+
+    <link
+    rel="stylesheet"
+    href="./css/header.css"
+>
+
+<link
+    rel="stylesheet"
+    href="./css/products.css"
+>
+
+<link
+    rel="stylesheet"
+    href="./css/cart.css"
+>
+
+<link
+    rel="stylesheet"
+    href="./css/product-modal.css"
+>
+
+    <link
+    rel="stylesheet"
+    href="./css/header-mobile.css"
+>
+
+<link
+    rel="stylesheet"
+    href="./css/cart-mobile.css"
+>
+
+<link
+    rel="stylesheet"
+    href="./css/product-modal-mobile.css"
+>
+
+<link rel="stylesheet" href="./css/bottom-nav.css">
+
+    <title>My Cart | Second Chance Store</title>
+
+    
+
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+    <main>
+
+
+        <nav
+    id="breadcrumb"
+    class="site-breadcrumb"
+    aria-label="Breadcrumb"
+></nav>
+
+        <!-- Cart -->
+
+        <section
+    id="cart-skeleton"
+    class="cart-skeleton"
+>
+    <!-- ==========================================
+         CART LOADING SKELETON
+    =========================================== -->
+
+    <div
+        id="cart-skeleton"
+        class="cart-skeleton"
+    >
+
+
+
+
+        <div class="cart-skeleton-item">
+
+            <div class="cart-skeleton-image"></div>
+
+            <div class="cart-skeleton-content">
+
+                <div class="cart-skeleton-line cart-skeleton-name"></div>
+
+                <div class="cart-skeleton-line"></div>
+
+                <div class="cart-skeleton-line cart-skeleton-short"></div>
+
+                <div class="cart-skeleton-line cart-skeleton-price"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+    </section>
+
+
+    <!-- ==========================================
+         REAL CART ITEMS
+    =========================================== -->
+<section
+    id="cart-section"
+    hidden
+>
+    <div id="cart-items-container">
+        <!-- Products will be rendered here -->
+    </div>
+
+            <!-- Cart summary -->
+
+            <aside id="cart-summary">
+
+    <!-- ======================================
+         ORDER SUMMARY
+    ======================================= -->
+
+    <div
+        id="cart-summary-content"
+        hidden
+    >
+
+        <h2>Order Summary</h2>
+
+        <p>
+            Items:
+            <span id="cart-item-count">
+                0
+            </span>
+        </p>
+
+        <p>
+            Total:
+            <strong id="cart-total">
+                KSh 0
+            </strong>
+        </p>
+
+        <button
+            id="clear-cart-button"
+            type="button"
+        >
+            Clear Cart
+        </button>
+
+        <button
+            id="place-order-button"
+            type="button"
+        >
+            Proceed to Order
+        </button>
+
+    </div>
+
+
+    <!-- ======================================
+         SUMMARY SKELETON
+    ======================================= -->
+
+    <div
+        id="cart-summary-skeleton"
+        class="cart-summary-skeleton"
+    >
+
+        <div class="cart-skeleton-summary-title"></div>
+
+        <div class="cart-skeleton-summary-row">
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="cart-skeleton-summary-row">
+            <span></span>
+            <span class="cart-skeleton-summary-total"></span>
+        </div>
+
+        <div class="cart-skeleton-summary-button"></div>
+
+        <div class="cart-skeleton-summary-button"></div>
+
+    </div>
+
+</aside>
+
+        </section>
+
+
+        <!-- Empty cart -->
+
+        <section
+            id="empty-cart"
+            hidden
+        >
+
+            <h2>Your cart is empty</h2>
+
+            <p>
+                Add products to your cart and
+                they will appear here.
+            </p>
+
+            <a href="home.html">
+                Continue Shopping
+            </a>
+
+        </section>
+
+
+        <!-- Recommendations -->
+
+        <section id="recommendations-section">
+
+            <h2>You may also like</h2>
+
+            <div id="recommendations-container">
+                <!-- Recommendations rendered here -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==========================================
+     PRODUCT MODAL
+========================================== -->
+
+<div id="product-modal-container"></div>
+
+
+    <div id="site-footer"></div>
+
+    <script
+    type="module"
+    src="./js/header.js"
+></script>
+
+<script
+    type="module"
+    src="./js/product-modal.js"
+></script>
+
+
+
+<script type="module" src="./js/footer.js"></script>
+
+    <script
+        type="module"
+        src="js/cart-page.js"
+    ></script>
+
+</body>
+
+</html>

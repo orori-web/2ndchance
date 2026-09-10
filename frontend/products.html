@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0"
+/>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+    
+
+
+<link
+    rel="stylesheet"
+    href="./css/variables.css"
+>
+
+<link
+    rel="stylesheet"
+    href="./css/header.css"
+>
+
+
+<link
+    rel="stylesheet"
+    href="./css/product-modal.css"
+>
+
+<link
+    rel="stylesheet"
+    href="./css/skeleton.css"
+>
+
+<link
+    rel="stylesheet"
+    href="./css/products.css"
+> 
+
+<link
+    rel="stylesheet"
+    href="./css/header-mobile.css"
+>
+
+<link
+    rel="stylesheet"
+    href="./css/product-mobile.css"
+>
+
+<link
+    rel="stylesheet"
+    href="./css/product-modal-mobile.css"
+>
+
+<link rel="stylesheet" href="./css/bottom-nav.css">
+
+
+<title>Products | Second Chance Store</title>
+
+
+
+
+</head>
+
+<body>
+
+
+<div id="site-header"></div>
+
+
+<nav
+    id="breadcrumb"
+    class="site-breadcrumb"
+    aria-label="Breadcrumb"
+></nav>
+
+
+<!-- ==============================
+     MAIN
+=============================== -->
+
+<main class="products-page">
+
+    <section class="products-header">
+
+
+
+    </section>
+
+
+    <!-- ==============================
+         FILTERS
+    =============================== -->
+
+    <section class="filters-section">
+
+       <div class="filters-header">
+
+    <h2>Filter Products</h2>
+
+    
+
+</div>
+
+        
+
+        <!-- Category -->
+
+       <div class="filter-group category-filter-group">
+
+    <div class="filter-group-title">
+        Category
+    </div>
+
+    <select id="category-filter">
+
+        <option value="">
+            All categories
+        </option>
+
+    </select>
+
+</div>
+
+
+        <!-- Condition -->
+
+        <div class="filter-group condition-filter-group">
+
+            <div class="filter-group-title">
+                 Condition
+             </div>
+
+            <select id="condition-filter">
+
+                <option value="">
+                    All conditions
+                </option>
+
+                <option value="New">
+                    New
+                </option>
+
+                <option value="Like New">
+                    Like New
+                </option>
+
+                <option value="Good">
+                    Good
+                </option>
+
+                <option value="Fair">
+                    Fair
+                </option>
+
+                <option value="Needs Repair">
+                    Needs Repair
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="filter-group price-filter-group">
+
+    <div class="filter-group-title">
+        Price
+    </div>
+
+    <div class="price-inputs">
+
+        <input
+            type="number"
+            id="min-price"
+            min="0"
+            placeholder="Min"
+        >
+
+        <span class="price-separator">
+            —
+        </span>
+
+        <input
+            type="number"
+            id="max-price"
+            min="0"
+            placeholder="Max"
+        >
+
+    </div>
+
+</div>
+
+
+        <!-- Sort -->
+
+        <div class="filter-group sort-filter-group">
+
+    <div class="filter-group-title">
+        Sort by
+    </div>
+
+    <select id="sort-filter">
+
+        <option value="latest">
+            Latest
+        </option>
+
+        <option value="oldest">
+            Oldest
+        </option>
+
+        <option value="priceLow">
+            Price: Low to High
+        </option>
+
+        <option value="priceHigh">
+            Price: High to Low
+        </option>
+
+        <option value="popular">
+            Most Popular
+        </option>
+
+    </select>
+
+</div>
+
+<div class="filter-actions">
+
+    <button
+        type="button"
+        id="clear-filters-button"
+    >
+        Clear Filters
+    </button>
+
+</div>
+
+    </section>
+
+
+   
+<div class="products-content">
+    
+    
+
+
+
+
+    <!-- ==============================
+         ERROR
+    =============================== -->
+
+    <div
+        id="products-error"
+        class="products-state"
+        hidden
+    >
+        <p id="products-error-message">
+            Failed to load products.
+        </p>
+
+        <button
+            type="button"
+            id="retry-button"
+        >
+            Try Again
+        </button>
+
+    </div>
+
+
+    <!-- ==============================
+         EMPTY
+    =============================== -->
+
+    <div
+        id="products-empty"
+        class="products-state"
+        hidden
+    >
+        <h2>
+            No products found
+        </h2>
+
+        <p>
+            Try changing your search or filters.
+        </p>
+
+    </div>
+
+
+    <!-- ==============================
+         PRODUCT GRID
+    =============================== -->
+
+    <section
+        id="products-container"
+        class="products-grid"
+        aria-live="polite"
+    >
+
+     <!-- INITIAL SKELETON -->
+
+        <article class="product-card-skeleton">
+
+            <div class="skeleton product-card-skeleton-image"></div>
+
+            <div class="product-card-skeleton-content">
+
+                <div class="skeleton product-card-skeleton-name"></div>
+
+                <div class="skeleton product-card-skeleton-price"></div>
+
+                <div class="skeleton product-card-skeleton-condition"></div>
+
+                <div class="skeleton product-card-skeleton-button"></div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product-card-skeleton">
+
+            <div class="skeleton product-card-skeleton-image"></div>
+
+            <div class="product-card-skeleton-content">
+
+                <div class="skeleton product-card-skeleton-name"></div>
+
+                <div class="skeleton product-card-skeleton-price"></div>
+
+                <div class="skeleton product-card-skeleton-condition"></div>
+
+                <div class="skeleton product-card-skeleton-button"></div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product-card-skeleton">
+
+            <div class="skeleton product-card-skeleton-image"></div>
+
+            <div class="product-card-skeleton-content">
+
+                <div class="skeleton product-card-skeleton-name"></div>
+
+                <div class="skeleton product-card-skeleton-price"></div>
+
+                <div class="skeleton product-card-skeleton-condition"></div>
+
+                <div class="skeleton product-card-skeleton-button"></div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product-card-skeleton">
+
+            <div class="skeleton product-card-skeleton-image"></div>
+
+            <div class="product-card-skeleton-content">
+
+                <div class="skeleton product-card-skeleton-name"></div>
+
+                <div class="skeleton product-card-skeleton-price"></div>
+
+                <div class="skeleton product-card-skeleton-condition"></div>
+
+                <div class="skeleton product-card-skeleton-button"></div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+</section>
+
+
+    <!-- ==============================
+         PAGINATION
+    =============================== -->
+
+    <nav
+        id="pagination"
+        class="pagination"
+        aria-label="Product pages"
+    ></nav>
+
+</div>
+
+</main>
+
+
+<div id="product-modal-container"></div>
+
+<div id="site-footer"></div>
+
+
+<!-- ==============================
+     JAVASCRIPT
+=============================== -->
+
+<script
+    type="module"
+    src="./js/header.js"
+></script>
+
+<script
+    type="module"
+    src="./js/product-modal.js"
+></script>
+
+
+
+
+
+
+<script
+    type="module"
+    src="./js/products.js"
+></script>
+
+<script type="module" src="./js/product-mobile.js"></script>
+
+<script type="module" src="./js/footer.js"></script>
+
+
+</body>
+</html>

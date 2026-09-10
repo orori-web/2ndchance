@@ -1,0 +1,941 @@
+body {
+    font-family:
+        "Poppins",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+/* =========================================================
+   SECOND CHANCE STORE
+   HOUSE CREATE PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.house-create-page {
+    padding-top: 34px;
+    padding-bottom: 60px;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.house-page-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.house-page-eyebrow {
+
+    margin-bottom: 6px;
+
+    color: var(--admin-primary);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+}
+
+
+.house-page-header h1 {
+
+    margin: 0;
+
+    color: var(--admin-text);
+
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+
+}
+
+
+.house-page-header p:not(.house-page-eyebrow) {
+
+    margin-top: 8px;
+
+    color: var(--admin-muted);
+
+    font-size: 14px;
+
+}
+
+
+.back-to-houses {
+
+    min-height: 42px;
+
+    padding: 0 15px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 1px solid var(--admin-border);
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #4b5563;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+.back-to-houses:hover {
+
+    border-color: var(--admin-primary);
+
+    color: var(--admin-primary);
+
+    background: #f7faff;
+
+}
+
+
+.back-to-houses
+.material-symbols-outlined {
+
+    font-size: 19px;
+
+}
+
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+.house-message {
+
+    display: none;
+
+    margin-bottom: 20px;
+
+    padding: 13px 16px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.house-form {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+}
+
+
+/* =========================================================
+   FORM CARD
+   ========================================================= */
+
+.house-form-card {
+
+    margin-bottom: 20px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid var(--admin-border);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 2px 8px rgba(23, 32, 51, 0.035);
+
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.form-card-header {
+
+    min-height: 82px;
+
+    padding: 18px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    border-bottom: 1px solid var(--admin-border);
+
+}
+
+
+.form-card-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #eaf2fb;
+
+    color: var(--admin-primary);
+
+}
+
+
+.form-card-icon
+.material-symbols-outlined {
+
+    font-size: 21px;
+
+}
+
+
+.form-card-header h2 {
+
+    margin: 0;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    color: var(--admin-text);
+
+}
+
+
+.form-card-header p {
+
+    margin-top: 3px;
+
+    color: var(--admin-muted);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   CARD BODY
+   ========================================================= */
+
+.form-card-body {
+
+    padding: 24px 22px;
+
+}
+
+
+/* =========================================================
+   FORM GRID
+   ========================================================= */
+
+.form-grid {
+
+    display: grid;
+
+    gap: 20px;
+
+}
+
+
+.form-grid-2 {
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+}
+
+
+.form-field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.form-field-full {
+
+    grid-column: 1 / -1;
+
+}
+
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+.form-field label {
+
+    color: #374151;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+
+    width: 100%;
+
+    border: 1px solid #dfe3e8;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: var(--admin-text);
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.form-field input,
+.form-field select {
+
+    height: 44px;
+
+    padding: 0 13px;
+
+}
+
+
+.form-field textarea {
+
+    min-height: 115px;
+
+    padding: 12px 13px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+
+}
+
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+
+    color: #a5acb7;
+
+}
+
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+
+    border-color: var(--admin-primary);
+
+    box-shadow:
+        0 0 0 3px rgba(0, 80, 170, 0.08);
+
+}
+
+
+/* =========================================================
+   CURRENCY INPUT
+   ========================================================= */
+
+.input-with-prefix {
+
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    border: 1px solid #dfe3e8;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.input-with-prefix:focus-within {
+
+    border-color: var(--admin-primary);
+
+    box-shadow:
+        0 0 0 3px rgba(0, 80, 170, 0.08);
+
+}
+
+
+.input-with-prefix > span {
+
+    height: 100%;
+
+    padding: 0 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    border-right: 1px solid #e5e7eb;
+
+    background: #f8f9fb;
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.input-with-prefix input {
+
+    height: 100%;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+}
+
+
+.input-with-prefix input:focus {
+
+    box-shadow: none;
+
+}
+
+
+/* =========================================================
+   PARKING
+   ========================================================= */
+
+.parking-option {
+
+    grid-column: 1 / -1;
+
+    padding-top: 4px;
+
+}
+
+
+.parking-option label {
+
+    min-height: 64px;
+
+    padding: 12px 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border: 1px solid var(--admin-border);
+
+    border-radius: 8px;
+
+    background: #fafbfc;
+
+    cursor: pointer;
+
+}
+
+
+.parking-option label > input {
+
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+
+.custom-checkbox {
+
+    width: 22px;
+
+    height: 22px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1.5px solid #cbd1d9;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+}
+
+
+.custom-checkbox
+.material-symbols-outlined {
+
+    display: none;
+
+    font-size: 17px;
+
+    color: #ffffff;
+
+}
+
+
+.parking-option
+input:checked
+~ .custom-checkbox {
+
+    border-color: var(--admin-primary);
+
+    background: var(--admin-primary);
+
+}
+
+
+.parking-option
+input:checked
+~ .custom-checkbox
+.material-symbols-outlined {
+
+    display: block;
+
+}
+
+
+.parking-option label > span:last-child {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.parking-option strong {
+
+    color: var(--admin-text);
+
+    font-size: 13px;
+
+}
+
+
+.parking-option small {
+
+    margin-top: 2px;
+
+    color: var(--admin-muted);
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   IMAGE UPLOAD
+   ========================================================= */
+
+.image-upload-area {
+
+    min-height: 220px;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border: 1.5px dashed #cbd5e1;
+
+    border-radius: 10px;
+
+    background: #fafcff;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+.image-upload-area:hover {
+
+    border-color: var(--admin-primary);
+
+    background: #f6faff;
+
+}
+
+
+.upload-icon {
+
+    margin-bottom: 10px;
+
+    color: var(--admin-primary);
+
+    font-size: 42px;
+
+}
+
+
+.image-upload-area strong {
+
+    color: var(--admin-text);
+
+    font-size: 15px;
+
+}
+
+
+.image-upload-area > span:not(.material-symbols-outlined) {
+
+    margin-top: 4px;
+
+    color: var(--admin-muted);
+
+    font-size: 12px;
+
+}
+
+
+.image-upload-area small {
+
+    margin-top: 12px;
+
+    color: #9ca3af;
+
+    font-size: 11px;
+
+}
+
+
+.image-upload-area input {
+
+    display: none;
+
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+   ========================================================= */
+
+.house-form-actions {
+
+    padding: 6px 0 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+}
+
+
+.cancel-button,
+.create-house-button {
+
+    min-height: 46px;
+
+    padding: 0 18px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.cancel-button {
+
+    border: 1px solid var(--admin-border);
+
+    background: #ffffff;
+
+    color: #4b5563;
+
+}
+
+
+.cancel-button:hover {
+
+    background: #f5f7fa;
+
+}
+
+
+.create-house-button {
+
+    border: 1px solid var(--admin-primary);
+
+    background: var(--admin-primary);
+
+    color: #ffffff;
+
+    box-shadow:
+        0 3px 8px rgba(0, 80, 170, 0.16);
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease;
+
+}
+
+
+.create-house-button:hover {
+
+    background: var(--admin-primary-dark);
+
+    border-color: var(--admin-primary-dark);
+
+}
+
+
+.create-house-button:active {
+
+    transform: translateY(1px);
+
+}
+
+
+.create-house-button
+.material-symbols-outlined {
+
+    font-size: 19px;
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .house-page-header {
+
+        align-items: stretch;
+
+        flex-direction: column;
+
+    }
+
+
+    .back-to-houses {
+
+        align-self: flex-start;
+
+    }
+
+
+    .form-grid-2 {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .form-field-full {
+
+        grid-column: auto;
+
+    }
+
+
+    .parking-option {
+
+        grid-column: auto;
+
+    }
+
+}
+
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .house-create-page {
+
+        padding-top: 24px;
+
+    }
+
+
+    .house-page-header h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .house-page-header p:not(.house-page-eyebrow) {
+
+        font-size: 13px;
+
+    }
+
+
+    .form-card-header {
+
+        padding: 16px;
+
+    }
+
+
+    .form-card-body {
+
+        padding: 18px 16px;
+
+    }
+
+
+    .form-card-icon {
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
+
+    .form-card-header h2 {
+
+        font-size: 15px;
+
+    }
+
+
+    .house-form-actions {
+
+        flex-direction: column-reverse;
+
+        align-items: stretch;
+
+    }
+
+
+    .cancel-button,
+    .create-house-button {
+
+        width: 100%;
+
+    }
+
+}
+

@@ -1,0 +1,1093 @@
+body {
+    font-family:
+        "Poppins",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* ==========================================
+   SECOND CHANCE STORE
+   HOUSE MODAL
+   PRODUCT-MODAL-STYLE DESIGN
+========================================== */
+
+:root {
+
+    --house-modal-blue: #0038a8;
+    --house-modal-blue-dark: #002b80;
+
+    --house-modal-text: #1f2937;
+    --house-modal-muted: #6b7280;
+
+    --house-modal-border: #e5e7eb;
+
+    --house-modal-overlay: rgba(0, 0, 0, 0.55);
+
+    --house-modal-white: #ffffff;
+
+    --house-modal-radius: 10px;
+
+}
+
+
+
+/* ==========================================
+   MODAL
+========================================== */
+
+#house-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+/* ==========================================
+   HIDDEN MODAL
+========================================== */
+
+#house-modal[hidden] {
+
+    display: none !important;
+
+}
+
+
+
+/* ==========================================
+   OVERLAY / MODAL BACKGROUND
+========================================== */
+
+#house-modal {
+
+    background:
+        var(--house-modal-overlay);
+
+    padding: 24px;
+
+    box-sizing: border-box;
+
+}
+
+
+
+/* ==========================================
+   MODAL CONTAINER
+========================================== */
+
+#house-modal > div {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 950px;
+
+    max-height: 90vh;
+
+    background:
+        var(--house-modal-white);
+
+    border-radius:
+        var(--house-modal-radius);
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    box-shadow:
+        0 25px 60px
+        rgba(0, 0, 0, 0.25);
+
+}
+
+
+
+/* ==========================================
+   CLOSE BUTTON
+========================================== */
+
+#close-house-modal {
+
+    position: absolute;
+
+    top: 16px;
+    right: 16px;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        var(--house-modal-border);
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #333333;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.15s ease;
+
+}
+
+
+
+#close-house-modal:hover {
+
+    background: #f5f5f5;
+
+    color:
+        var(--house-modal-blue);
+
+}
+
+
+
+#close-house-modal:active {
+
+    transform:
+        scale(0.94);
+
+}
+
+
+
+#close-house-modal
+.material-symbols-outlined {
+
+    font-size: 22px;
+
+}
+
+
+
+/* ==========================================
+   HOUSE MODAL BODY
+========================================== */
+
+#house-modal-content {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 36px;
+
+    padding: 32px;
+
+    box-sizing: border-box;
+
+    color:
+        var(--house-modal-text);
+
+}
+
+
+
+/* ==========================================
+   IMAGE GALLERY
+========================================== */
+
+.house-image-gallery {
+
+    min-width: 0;
+
+    min-height: 520px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 32px;
+
+    box-sizing: border-box;
+
+    background: #f7f7f7;
+
+    border-radius: 8px;
+
+}
+
+
+
+/* ==========================================
+   MAIN IMAGE CONTAINER
+========================================== */
+
+.house-main-image-container {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    height: 400px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+
+
+
+/* ==========================================
+   MAIN HOUSE IMAGE
+========================================== */
+
+.house-main-image {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+
+/* ==========================================
+   NO IMAGE
+========================================== */
+
+.house-no-image {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f5f5f5;
+
+    color: #888888;
+
+    font-size: 14px;
+
+}
+
+
+
+/* ==========================================
+   IMAGE THUMBNAILS
+========================================== */
+
+.house-image-thumbnails {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 16px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+/* ==========================================
+   THUMBNAIL BUTTON
+========================================== */
+
+.house-image-thumbnail {
+
+    width: 72px;
+    height: 72px;
+
+    flex:
+        0 0 72px;
+
+    padding: 4px;
+
+    background: #ffffff;
+
+    border:
+        1px solid
+        #dcdcdc;
+
+    border-radius: 6px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.15s ease;
+
+}
+
+
+
+.house-image-thumbnail:hover {
+
+    border-color:
+        var(--house-modal-blue);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+
+/* ==========================================
+   THUMBNAIL IMAGE
+========================================== */
+
+.house-image-thumbnail img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    border: none;
+
+    padding: 0;
+
+    border-radius: 3px;
+
+}
+
+
+
+/* ==========================================
+   ACTIVE THUMBNAIL
+========================================== */
+
+.house-image-thumbnail.active {
+
+    border:
+        2px solid
+        var(--house-modal-blue);
+
+    box-shadow:
+        0 0 0 1px
+        var(--house-modal-blue);
+
+}
+
+
+
+/* ==========================================
+   HOUSE DETAILS
+========================================== */
+
+.house-modal-details {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+}
+
+
+
+/* ==========================================
+   PRIMARY HOUSE DETAILS
+========================================== */
+
+.house-primary-details {
+
+    padding-bottom: 18px;
+
+    border-bottom:
+        1px solid
+        #eeeeee;
+
+}
+
+
+
+/* ==========================================
+   HOUSE TITLE
+========================================== */
+
+.house-primary-details h2 {
+
+    margin:
+        0 0 12px 0;
+
+    font-size: 26px;
+
+    line-height: 1.25;
+
+    font-weight: 700;
+
+    color:
+        var(--house-modal-text);
+
+}
+
+
+
+/* ==========================================
+   HOUSE RENT
+========================================== */
+
+.house-primary-details
+.house-modal-rent {
+
+    margin: 0;
+
+    font-size: 27px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    color:
+        var(--house-modal-blue);
+
+}
+
+
+
+/* ==========================================
+   RENT PERIOD
+========================================== */
+
+.house-modal-rent span {
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color:
+        var(--house-modal-muted);
+
+}
+
+
+
+/* ==========================================
+   INFORMATION GRID
+========================================== */
+
+.house-info-grid {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 20px;
+
+}
+
+
+
+/* ==========================================
+   INFORMATION BOX
+========================================== */
+
+.house-modal-info {
+
+    margin: 0;
+
+    padding:
+        8px 12px;
+
+    background: #f5f5f5;
+
+    border:
+        1px solid
+        #e8e8e8;
+
+    border-radius: 7px;
+
+    color:
+        var(--house-modal-muted);
+
+    font-size: 13px;
+
+    line-height: 1.3;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+
+}
+
+
+
+/* ==========================================
+   INFORMATION BOX HOVER
+========================================== */
+
+.house-modal-info:hover {
+
+    background: #f1f1f1;
+
+    border-color:
+        #dddddd;
+
+}
+
+
+
+/* ==========================================
+   VERIFIED LISTING
+========================================== */
+
+.house-modal-verified {
+
+    margin: 0;
+
+    padding:
+        8px 12px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    background: #f3f7ff;
+
+    border:
+        1px solid
+        #e1eaff;
+
+    border-radius: 7px;
+
+    color:
+        var(--house-modal-blue);
+
+    font-size: 13px;
+
+    line-height: 1.3;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+}
+
+
+
+.house-modal-verified
+.material-symbols-outlined {
+
+    font-size: 17px;
+
+}
+
+
+
+/* ==========================================
+   HOUSE SECTIONS
+========================================== */
+
+.house-modal-section {
+
+    margin-top: 24px;
+
+}
+
+
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.house-modal-section-title {
+
+    margin:
+        0 0 8px;
+
+    color:
+        var(--house-modal-text);
+
+    font-size: 0.95rem;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+
+}
+
+
+
+/* ==========================================
+   SECTION TEXT
+========================================== */
+
+.house-modal-section-text {
+
+    margin: 0;
+
+    color: #4b5563;
+
+    font-size: 0.95rem;
+
+    line-height: 1.6;
+
+}
+
+
+
+/* ==========================================
+   LOW-KEY DETAIL
+========================================== */
+
+.house-modal-detail {
+
+    margin: 12px 0 0;
+
+    padding:
+        10px 0;
+
+    border-bottom:
+        1px solid
+        #f1f1f1;
+
+    color:
+        var(--house-modal-muted);
+
+    font-size: 0.82rem;
+
+    font-weight: 400;
+
+}
+
+
+
+/* ==========================================
+   WHATSAPP BUTTON
+========================================== */
+
+#whatsapp-house-button {
+
+    width: 100%;
+
+    min-height: 44px;
+
+    margin-top: 28px;
+
+    padding:
+        11px 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        var(--house-modal-blue);
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease;
+
+}
+
+
+
+#whatsapp-house-button:hover {
+
+    background:
+        var(--house-modal-blue-dark);
+
+}
+
+
+
+#whatsapp-house-button:active {
+
+    transform:
+        scale(0.98);
+
+}
+
+
+
+#whatsapp-house-button
+.material-symbols-outlined {
+
+    font-size: 20px;
+
+}
+
+
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.house-modal-error {
+
+    grid-column:
+        1 / -1;
+
+    padding: 40px;
+
+    text-align: center;
+
+    color: #b91c1c;
+
+}
+
+
+
+/* ==========================================
+   MODAL SCROLLBAR
+========================================== */
+
+#house-modal > div::-webkit-scrollbar {
+
+    width: 7px;
+
+}
+
+
+
+#house-modal > div::-webkit-scrollbar-track {
+
+    background: transparent;
+
+}
+
+
+
+#house-modal > div::-webkit-scrollbar-thumb {
+
+    background: #c9c9c9;
+
+    border-radius: 10px;
+
+}
+
+
+
+#house-modal > div::-webkit-scrollbar-thumb:hover {
+
+    background: #999999;
+
+}
+
+
+
+/* ==========================================
+   TABLET / MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+    #house-modal {
+
+        padding: 12px;
+
+    }
+
+
+    #house-modal > div {
+
+        max-height: 94vh;
+
+        border-radius: 8px;
+
+    }
+
+
+    #house-modal-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+
+        padding: 20px;
+
+    }
+
+
+    /* ======================================
+       IMAGE GALLERY
+    ====================================== */
+
+    .house-image-gallery {
+
+        min-height: auto;
+
+        padding: 20px;
+
+    }
+
+
+    /* ======================================
+       MAIN IMAGE
+    ====================================== */
+
+    .house-main-image-container {
+
+        height: 320px;
+
+    }
+
+
+    /* ======================================
+       THUMBNAILS
+    ====================================== */
+
+    .house-image-thumbnails {
+
+        max-width: 100%;
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        flex-wrap: nowrap;
+
+        padding-bottom: 4px;
+
+    }
+
+
+    .house-image-thumbnail {
+
+        flex:
+            0 0 64px;
+
+        width: 64px;
+
+        height: 64px;
+
+    }
+
+
+    /* ======================================
+       TITLE
+    ====================================== */
+
+    .house-primary-details h2 {
+
+        font-size: 22px;
+
+    }
+
+
+    /* ======================================
+       RENT
+    ====================================== */
+
+    .house-primary-details
+    .house-modal-rent {
+
+        font-size: 24px;
+
+    }
+
+
+    /* ======================================
+       INFO BOXES
+    ====================================== */
+
+    .house-info-grid {
+
+        gap: 7px;
+
+    }
+
+
+    .house-modal-info,
+    .house-modal-verified {
+
+        font-size: 12px;
+
+        padding:
+            7px 10px;
+
+    }
+
+}
+
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 420px) {
+
+    #house-modal {
+
+        padding: 0;
+
+    }
+
+
+    #house-modal > div {
+
+        width: 100%;
+
+        max-height: 100vh;
+
+        min-height: 100vh;
+
+        border-radius: 0;
+
+    }
+
+
+    #house-modal-content {
+
+        padding: 16px;
+
+        gap: 20px;
+
+    }
+
+
+    /* ======================================
+       MAIN IMAGE
+    ====================================== */
+
+    .house-main-image-container {
+
+        height: 280px;
+
+    }
+
+
+    /* ======================================
+       GALLERY
+    ====================================== */
+
+    .house-image-gallery {
+
+        padding: 12px;
+
+    }
+
+
+    /* ======================================
+       THUMBNAILS
+    ====================================== */
+
+    .house-image-thumbnails {
+
+        gap: 8px;
+
+    }
+
+
+    .house-image-thumbnail {
+
+        flex:
+            0 0 60px;
+
+        width: 60px;
+
+        height: 60px;
+
+    }
+
+
+    /* ======================================
+       CLOSE BUTTON
+    ====================================== */
+
+    #close-house-modal {
+
+        top: 12px;
+        right: 12px;
+
+        width: 36px;
+        height: 36px;
+
+    }
+
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+    <title>Business Settings</title>
+</head>
+
+<body>
+
+    <h1>Business Settings</h1>
+
+    <p id="settings-message"></p>
+
+    <form id="settings-form">
+
+        <!-- Business Name -->
+
+        <div>
+
+            <label for="business-name">
+                Business Name
+            </label>
+
+            <input
+                type="text"
+                id="business-name"
+                placeholder="Business name"
+            >
+
+        </div>
+
+
+        <br>
+
+
+        <!-- WhatsApp -->
+
+        <div>
+
+            <label for="whatsapp-number">
+                Business WhatsApp Number
+            </label>
+
+            <input
+                type="tel"
+                id="whatsapp-number"
+                placeholder="0710988812"
+                required
+            >
+
+            <small>
+                This is the WhatsApp number customers will contact.
+            </small>
+
+        </div>
+
+
+        <br>
+
+
+        <!-- Support Email -->
+
+        <div>
+
+            <label for="support-email">
+                Support Email
+            </label>
+
+            <input
+                type="email"
+                id="support-email"
+                placeholder="support@example.com"
+            >
+
+        </div>
+
+
+        <br>
+
+
+        <!-- Support Phone -->
+
+        <div>
+
+            <label for="support-phone">
+                Support Phone
+            </label>
+
+            <input
+                type="tel"
+                id="support-phone"
+                placeholder="0710988812"
+            >
+
+        </div>
+
+
+        <br>
+
+
+        <button
+            type="submit"
+            id="save-settings-button"
+        >
+            Save Settings
+        </button>
+
+    </form>
+
+
+    <script
+        type="module"
+        src="./js/settings.js"
+    ></script>
+
+</body>
+
+</html>

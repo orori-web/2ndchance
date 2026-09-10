@@ -1,0 +1,358 @@
+/* ==========================================
+   SECOND CHANCE STORE
+   SKELETON LOADING
+========================================== */
+
+.skeleton {
+    position: relative;
+    overflow: hidden;
+    background: #e5e7eb;
+    border-radius: 6px;
+}
+
+/* ==========================================
+   SHIMMER ANIMATION
+========================================== */
+
+.skeleton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.55),
+        transparent
+    );
+
+    transform: translateX(-100%);
+
+    animation: skeleton-shimmer 1.5s infinite;
+}
+
+@keyframes skeleton-shimmer {
+
+    100% {
+        transform: translateX(100%);
+    }
+
+}
+
+/* ==========================================
+   PRODUCT CARD SKELETON
+========================================== */
+
+.product-card-skeleton {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+}
+
+
+/* ==========================================
+   PRODUCT IMAGE SKELETON
+========================================== */
+
+.product-card-skeleton-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    display: block;
+    border-radius: 14px;
+}
+
+
+/* ==========================================
+   PRODUCT CONTENT SKELETON
+========================================== */
+
+.product-card-skeleton-content {
+    width: 100%;
+    padding: 10px 2px 0;
+}
+
+
+/* ==========================================
+   PRODUCT NAME SKELETON
+========================================== */
+
+.product-card-skeleton-name {
+    width: 75%;
+    height: 15px;
+    margin-bottom: 9px;
+    border-radius: 4px;
+}
+
+
+/* ==========================================
+   PRODUCT PRICE SKELETON
+========================================== */
+
+.product-card-skeleton-price {
+    width: 45%;
+    height: 20px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+
+/* ==========================================
+   PRODUCT CONDITION SKELETON
+========================================== */
+
+.product-card-skeleton-condition {
+    width: 60%;
+    height: 13px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+
+/* ==========================================
+   ADD BUTTON SKELETON
+========================================== */
+
+.product-card-skeleton-button {
+    width: 34px;
+    height: 34px;
+    margin-top: 8px;
+    margin-left: 0;
+    border-radius: 50%;
+}
+
+
+/* ==========================================
+   CATEGORY CARD SKELETON
+========================================== */
+
+.category-card-skeleton {
+    width: 100%;
+    text-align: center;
+}
+
+/* ==========================================
+   CATEGORY IMAGE
+========================================== */
+
+.category-card-skeleton-image {
+    width: 60%;
+    height: 130px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+/* ==========================================
+   CATEGORY NAME
+========================================== */
+
+.category-card-skeleton-name {
+    width: 70%;
+    height: 16px;
+    margin: 12px auto 0;
+}
+
+
+
+
+
+.home-products-skeleton {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 18px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.home-products-skeleton .product-card-skeleton {
+    flex: 0 0 180px;
+    width: 180px;
+    min-width: 180px;
+    max-width: 180px;
+}
+
+
+
+
+/* ==========================================
+   ACCOUNT SKELETON LOADING
+========================================== */
+
+.account-skeleton {
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   SKELETON BASE
+========================================== */
+
+.skeleton {
+    position: relative;
+    overflow: hidden;
+    background: #e5e7eb;
+    border-radius: 6px;
+}
+
+.skeleton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.55),
+            transparent
+        );
+
+    transform: translateX(-100%);
+    animation: skeleton-shimmer 1.4s infinite;
+}
+
+@keyframes skeleton-shimmer {
+
+    100% {
+        transform: translateX(100%);
+    }
+
+}
+
+
+/* ==========================================
+   PROFILE SKELETON
+========================================== */
+
+.skeleton-avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+}
+
+.skeleton-name {
+    width: 150px;
+    height: 17px;
+    margin-bottom: 7px;
+}
+
+.skeleton-email {
+    width: 190px;
+    height: 13px;
+}
+
+
+/* ==========================================
+   ACCOUNT TYPE
+========================================== */
+
+.skeleton-label {
+    width: 75px;
+    height: 10px;
+    margin-bottom: 7px;
+}
+
+.skeleton-role {
+    width: 75px;
+    height: 25px;
+    border-radius: 20px;
+}
+
+
+/* ==========================================
+   LOGOUT BUTTON
+========================================== */
+
+.skeleton-logout {
+    width: 85px;
+    height: 40px;
+    border-radius: 7px;
+}
+
+
+/* ==========================================
+   STATISTICS SKELETON
+========================================== */
+
+.skeleton-stat-icon {
+    width: 19px;
+    height: 19px;
+    border-radius: 4px;
+}
+
+.skeleton-stat-label {
+    width: 75px;
+    height: 13px;
+}
+
+.skeleton-stat-value {
+    width: 25px;
+    height: 14px;
+}
+
+
+/* ==========================================
+   MY PRODUCTS HEADER
+========================================== */
+
+.skeleton-section-title {
+    width: 130px;
+    height: 22px;
+    margin-bottom: 8px;
+}
+
+.skeleton-section-description {
+    width: 260px;
+    height: 13px;
+}
+
+.skeleton-sell-button {
+    width: 115px;
+    height: 40px;
+    border-radius: 6px;
+}
+
+
+/* ==========================================
+   PRODUCT CARD SKELETON
+========================================== */
+
+.skeleton-product-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 14px;
+}
+
+.skeleton-product-name {
+    width: 75%;
+    height: 15px;
+    margin-top: 11px;
+    margin-bottom: 8px;
+}
+
+.skeleton-product-price {
+    width: 90px;
+    height: 18px;
+    margin-bottom: 7px;
+}
+
+.skeleton-product-condition {
+    width: 65px;
+    height: 13px;
+}
+
+
+/* ==========================================
+   HIDE SKELETON
+========================================== */
+
+.account-skeleton[hidden] {
+    display: none;
+}
+
+
+
+

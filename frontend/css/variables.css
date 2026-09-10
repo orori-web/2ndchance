@@ -1,0 +1,62 @@
+/* ==========================================
+   SECOND CHANCE STORE — BRAND COLORS
+========================================== */
+
+:root {
+
+    /* Primary Brand */
+    --brand-green: #495b49;
+
+    /* Brand Background / Cream */
+    --brand-cream: #f7f2df;
+
+
+    /* ======================================
+       SUPPORTING COLORS
+    ====================================== */
+
+    --brand-green-dark: #394839;
+
+    --brand-green-light: #e8ede6;
+
+    --brand-cream-dark: #eee8d3;
+
+
+    /* ======================================
+       NEUTRAL COLORS
+    ====================================== */
+
+    --text-primary: #222222;
+
+    --text-secondary: #666666;
+
+    --text-muted: #8a8a8a;
+
+    --border-light: #e5e5e5;
+
+    --surface: #ffffff;
+
+    --page-background: #f8f8f6;
+
+
+    /* ======================================
+       STATUS COLORS
+    ====================================== */
+
+    --success: #4f7654;
+
+    --error: #b94a48;
+
+    --warning: #a67c32;
+
+
+    /* ======================================
+       EFFECTS
+    ====================================== */
+
+    --shadow-sm:
+        0 2px 8px rgba(0, 0, 0, 0.06);
+
+    --shadow-md:
+        0 6px 20px rgba(0, 0, 0, 0.08);
+}

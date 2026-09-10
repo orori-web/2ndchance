@@ -1,0 +1,234 @@
+/* =====================================================
+   MOBILE HOMEPAGE
+   PROMOTIONAL POSTERS
+===================================================== */
+
+@media (max-width: 600px) {
+
+    /* ==========================================
+       MAIN CONTENT
+    ========================================== */
+
+    main {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+    }
+
+
+    /* ==========================================
+       POSTER SECTIONS
+    ========================================== */
+
+    .poster-section {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    /* ==========================================
+       POSTER CONTAINER
+    ========================================== */
+
+    .poster-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+
+    /* ==========================================
+       POSTER IMAGE
+    ========================================== */
+
+    .poster-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: none;
+        object-fit: cover;
+    }
+
+
+    /* ==========================================
+       POSTER SLIDESHOW
+    ========================================== */
+
+    .poster-slider {
+        width: 100%;
+        overflow: hidden;
+    }
+
+
+    .poster-slide {
+        width: 100%;
+    }
+
+
+    .poster-slide .poster-link {
+        display: block;
+        width: 100%;
+    }
+
+
+    .poster-slide .poster-image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* ==========================================
+       TOP BANNER
+    ========================================== */
+
+    .poster-top-banner {
+        margin-top: 0;
+    }
+
+}
+
+
+
+
+/* =====================================================
+   MOBILE HOMEPAGE
+   CATEGORIES
+===================================================== */
+
+@media (max-width: 600px) {
+
+    #categories-section {
+        width: 100%;
+        padding: 18px 10px 22px;
+    }
+
+    .categories-grid {
+        width: 100%;
+        display: grid;
+
+        /* Automatically fit categories */
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(70px, 1fr)
+        );
+
+        gap: 18px 8px;
+    }
+
+    .category-card {
+        width: 100%;
+        min-width: 0;
+        background: transparent;
+        border: none;
+    }
+
+    .category-card-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .category-card-image {
+        width: 48px;
+        height: 48px;
+        margin: 0 auto;
+
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .category-card-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .category-card-name {
+        display: -webkit-box;
+
+        width: 100%;
+        margin-top: 6px;
+        padding: 0;
+
+        font-size: 11px;
+        line-height: 1.2;
+        font-weight: 600;
+        text-align: center;
+
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+
+
+    /* ==========================================
+   CATEGORY SKELETON — MOBILE
+========================================== */
+
+.category-card-skeleton {
+    width: 100%;
+    text-align: center;
+}
+
+/* CATEGORY IMAGE SKELETON */
+
+.category-card-skeleton-image {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+/* CATEGORY NAME SKELETON */
+
+.category-card-skeleton-name {
+    width: 70%;
+    height: 12px;
+    margin: 10px auto 0;
+    border-radius: 4px;
+}
+
+
+
+/* ==========================================
+   CATEGORY — VIEW ALL
+========================================== */
+
+.category-view-all {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #0050aa;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.category-view-all::after {
+    content: "arrow_forward";
+    font-family: "Material Symbols Outlined";
+    font-size: 16px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.category-view-all:hover {
+    color: #003f87;
+}
+
+.category-view-all:hover::after {
+    transform: translateX(2px);
+}
+
+
+
+
+}

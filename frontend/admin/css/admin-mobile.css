@@ -1,0 +1,530 @@
+/* ==========================================
+SECOND CHANCE STORE
+SHARED ADMIN MOBILE SYSTEM
+========================================== */
+
+/* ==========================================
+TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+
+:root {
+    --admin-sidebar-width: 72px;
+}
+
+.admin-logo img {
+    max-height: 42px;
+}
+
+.admin-nav-link {
+    justify-content: center;
+    padding: 0;
+}
+
+.admin-nav-link span:not(
+    .material-symbols-outlined
+) {
+    display: none;
+}
+
+.admin-nav-label {
+    display: none;
+}
+
+.admin-logout-button {
+    justify-content: center;
+    padding: 0;
+}
+
+.admin-logout-button span:not(
+    .material-symbols-outlined
+) {
+    display: none;
+}
+
+
+}
+
+/* ==========================================
+PHONE
+========================================== */
+
+@media (max-width: 600px) {
+
+
+:root {
+    --admin-topbar-height: 64px;
+    --admin-sidebar-width: 76px;
+}
+
+
+/* ======================================
+   TOP BAR
+====================================== */
+
+.admin-topbar {
+    height: var(--admin-topbar-height);
+    padding: 0 12px;
+}
+
+.admin-logo img {
+    max-height: 38px;
+    max-width: 150px;
+}
+
+.admin-profile-info,
+.admin-profile-arrow {
+    display: none;
+}
+
+.admin-topbar-actions {
+    gap: 8px;
+}
+
+.admin-icon-button {
+    width: 38px;
+    height: 38px;
+}
+
+.admin-icon-button .material-symbols-outlined {
+    font-size: 20px;
+}
+
+
+/* ======================================
+   COMPACT MOBILE SIDEBAR
+====================================== */
+
+.admin-sidebar {
+    width: var(--admin-sidebar-width);
+    height: calc(
+        100vh -
+        var(--admin-topbar-height)
+    );
+
+    position: fixed;
+    top: var(--admin-topbar-height);
+    left: 0;
+
+    transform: none;
+
+    overflow: hidden;
+
+    background: var(--admin-surface);
+    border-right: 1px solid var(--admin-border);
+
+    box-shadow:
+        2px 0 12px rgba(0, 0, 0, 0.06);
+
+    z-index: 1100;
+}
+
+
+/* ======================================
+   SIDEBAR BRAND
+====================================== */
+
+.admin-brand {
+    height: 68px;
+
+    padding: 10px 6px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+}
+
+.admin-brand-logo {
+    width: 32px;
+    height: 32px;
+}
+
+.admin-brand-text {
+    display: none;
+}
+
+
+/* ======================================
+   NAVIGATION
+====================================== */
+
+.admin-navigation {
+    padding: 10px 6px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.admin-nav-label {
+    display: none;
+}
+
+
+/* ======================================
+   NAVIGATION LINKS
+====================================== */
+
+.admin-nav-link {
+    width: 100%;
+    min-height: 58px;
+
+    margin-bottom: 5px;
+    padding: 6px 3px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    border-radius: 9px;
+
+    color: #4b5563;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    text-align: center;
+}
+
+.admin-nav-link .material-symbols-outlined {
+    display: block;
+
+    flex-shrink: 0;
+
+    font-size: 21px;
+    line-height: 1;
+}
+
+.admin-nav-link span:not(
+    .material-symbols-outlined
+) {
+    display: block;
+
+    width: 100%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.admin-nav-link:hover {
+    background: #f3f6fa;
+    color: var(--admin-primary);
+}
+
+.admin-nav-link.active {
+    background: #eaf2fb;
+    color: var(--admin-primary);
+}
+
+.admin-nav-link.active .material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 600,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+
+/* ======================================
+   SIDEBAR FOOTER
+====================================== */
+
+.admin-sidebar-footer {
+    padding: 6px;
+
+    border-top: 1px solid var(--admin-border);
+}
+
+.admin-logout-button {
+    width: 100%;
+    min-height: 58px;
+
+    padding: 6px 3px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    border-radius: 9px;
+
+    color: #6b7280;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    text-align: center;
+}
+
+.admin-logout-button .material-symbols-outlined {
+    font-size: 21px;
+}
+
+.admin-logout-button span:not(
+    .material-symbols-outlined
+) {
+    display: block;
+}
+
+.admin-logout-button:hover {
+    background: #fff1f2;
+    color: #dc2626;
+}
+
+
+/* ======================================
+   PAGE CONTENT
+====================================== */
+
+.admin-page {
+    margin-left: var(--admin-sidebar-width);
+    width: calc(
+        100% -
+        var(--admin-sidebar-width)
+    );
+}
+
+.admin-main {
+    margin-left: var(--admin-sidebar-width);
+    width: calc(
+        100% -
+        var(--admin-sidebar-width)
+    );
+}
+
+.admin-page-content {
+    padding:
+        18px 12px 32px;
+}
+
+.admin-content {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* ======================================
+   MOBILE OVERLAY
+====================================== */
+
+.admin-sidebar-overlay {
+    display: none;
+}
+
+
+}
+
+
+
+/* ==========================================
+   ADMIN MOBILE BOTTOM NAVIGATION
+========================================== */
+
+.admin-mobile-bottom-nav {
+    display: none;
+}
+
+
+@media (max-width: 600px) {
+
+    .admin-mobile-bottom-nav {
+        position: fixed;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        width: 100%;
+        height: 64px;
+
+        display: flex;
+
+        align-items: stretch;
+        justify-content: space-around;
+
+        background: #ffffff;
+
+        border-top: 1px solid #e5e7eb;
+
+        box-shadow:
+            0 -4px 16px rgba(0, 0, 0, 0.08);
+
+        z-index: 5000;
+
+        padding-bottom:
+            env(safe-area-inset-bottom);
+
+        box-sizing: content-box;
+    }
+
+
+    /* ==========================================
+       NAV ITEM
+    ========================================== */
+
+    .admin-mobile-bottom-nav-item {
+        position: relative;
+
+        flex: 1;
+
+        min-width: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 3px;
+
+        padding: 6px 2px;
+
+        color: #6b7280;
+
+        text-decoration: none;
+
+        transition:
+            color 0.2s ease,
+            background 0.2s ease;
+    }
+
+
+    /* ==========================================
+       ICON
+    ========================================== */
+
+    .admin-mobile-bottom-nav-item
+    .material-symbols-outlined {
+        font-size: 23px;
+
+        line-height: 1;
+
+        transition:
+            transform 0.2s ease,
+            font-variation-settings 0.2s ease;
+    }
+
+
+    /* ==========================================
+       LABEL
+    ========================================== */
+
+    .admin-mobile-bottom-nav-label {
+        font-size: 10px;
+
+        line-height: 1.2;
+
+        font-weight: 600;
+
+        white-space: nowrap;
+    }
+
+
+    /* ==========================================
+       ACTIVE
+    ========================================== */
+
+    .admin-mobile-bottom-nav-item.active {
+        color: #0050aa;
+    }
+
+
+    .admin-mobile-bottom-nav-item.active
+    .material-symbols-outlined {
+        font-variation-settings:
+            'FILL' 1,
+            'wght' 600,
+            'GRAD' 0,
+            'opsz' 24;
+
+        transform:
+            translateY(-1px);
+    }
+
+
+    /* ==========================================
+       ACTIVE INDICATOR
+    ========================================== */
+
+    .admin-mobile-bottom-nav-item.active::before {
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+        left: 50%;
+
+        width: 28px;
+        height: 3px;
+
+        transform:
+            translateX(-50%);
+
+        border-radius:
+            0 0 4px 4px;
+
+        background: #0050aa;
+    }
+
+
+    /* ==========================================
+       PRESS STATE
+    ========================================== */
+
+    .admin-mobile-bottom-nav-item:active {
+        background: #f5f7fa;
+    }
+
+}
+
+/* ==========================================
+   BOTTOM NAVIGATION CONTENT CLEARANCE
+========================================== */
+
+/* ==========================================
+   BOTTOM NAVIGATION — CONTENT AREA CLEARANCE
+========================================== */
+
+/* ==========================================
+   ADMIN MAIN — MOBILE VIEWPORT
+   Keeps all admin content above bottom nav
+========================================== */
+
+@media (max-width: 600px) {
+
+    .admin-main {
+        width: calc(100% - var(--admin-sidebar-width));
+        height: calc(
+            100vh -
+            var(--admin-topbar-height) -
+            64px
+        );
+        min-height: 0;
+
+        margin-left: var(--admin-sidebar-width);
+
+        padding-top: var(--admin-topbar-height);
+        padding-bottom: 0;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        box-sizing: border-box;
+    }
+
+}

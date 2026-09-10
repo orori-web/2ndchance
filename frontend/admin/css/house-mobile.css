@@ -1,0 +1,534 @@
+
+/* ==========================================
+   SECOND CHANCE STORE
+   ADMIN HOUSES
+   MOBILE STYLES ONLY
+========================================== */
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .admin-houses-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        gap: 18px 14px;
+    }
+
+    .admin-house-image {
+        height: 165px;
+    }
+
+}
+
+
+/* ==========================================
+   SMALL TABLET
+========================================== */
+
+@media (max-width: 700px) {
+
+    .houses-page-header {
+        align-items: flex-start;
+    }
+
+    .houses-controls {
+        padding: 14px;
+    }
+
+    .houses-filters {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .houses-filter-button {
+        width: 100%;
+    }
+
+    .houses-refresh-button {
+        width: 100%;
+    }
+
+    .admin-houses-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        gap: 16px 10px;
+    }
+
+    .admin-house-image {
+        height: 155px;
+    }
+
+}
+
+
+/* ==========================================
+   PHONE
+========================================== */
+
+@media (max-width: 600px) {
+
+    /* ------------------------------------------
+       PAGE CONTENT
+    ------------------------------------------ */
+
+    .admin-page-content {
+        padding: 14px 10px 28px;
+    }
+
+
+    /* ------------------------------------------
+       PAGE HEADER
+    ------------------------------------------ */
+
+    .houses-page-header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        margin-bottom: 18px;
+    }
+
+    .houses-eyebrow {
+        margin-bottom: 4px;
+        font-size: 10px;
+    }
+
+    .houses-page-header h1 {
+        font-size: 25px;
+        line-height: 1.2;
+    }
+
+    .houses-page-header p:last-child {
+        margin-top: 5px;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+
+    /* ------------------------------------------
+       ADD HOUSE BUTTON
+    ------------------------------------------ */
+
+    .houses-create-button {
+        width: 100%;
+        min-height: 42px;
+        padding: 0 14px;
+        gap: 6px;
+        border-radius: 7px;
+        font-size: 12px;
+    }
+
+    .houses-create-button .material-symbols-outlined {
+        font-size: 18px;
+    }
+
+
+    /* ------------------------------------------
+       CONTROLS
+    ------------------------------------------ */
+
+    .houses-controls {
+        width: 100%;
+        margin-bottom: 16px;
+        padding: 12px;
+        border-radius: 9px;
+        box-sizing: border-box;
+    }
+
+
+    /* ------------------------------------------
+       SEARCH
+    ------------------------------------------ */
+
+    .houses-search {
+        min-height: 42px;
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .houses-search > .material-symbols-outlined {
+        margin-left: 11px;
+        font-size: 19px;
+    }
+
+    .houses-search input {
+        height: 40px;
+        padding: 0 9px;
+        font-size: 12px;
+    }
+
+    .houses-search-button {
+        height: 36px;
+        margin-right: 3px;
+        padding: 0 13px;
+        border-radius: 6px;
+        font-size: 10px;
+    }
+
+
+    /* ------------------------------------------
+       FILTERS
+    ------------------------------------------ */
+
+    .houses-filters {
+        margin-top: 10px;
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .houses-filter-group {
+        gap: 5px;
+    }
+
+    .houses-filter-group label {
+        font-size: 9px;
+    }
+
+    .houses-filter-group select,
+    .houses-filter-group input {
+        height: 40px;
+        padding: 0 10px;
+        border-radius: 7px;
+        font-size: 11px;
+    }
+
+    .houses-filter-button {
+        width: 100%;
+        height: 40px;
+        padding: 0 12px;
+        gap: 5px;
+        border-radius: 7px;
+        font-size: 11px;
+    }
+
+    .houses-filter-button .material-symbols-outlined {
+        font-size: 17px;
+    }
+
+    .houses-refresh-button {
+        width: 100%;
+        height: 40px;
+        border-radius: 7px;
+    }
+
+    .houses-refresh-button .material-symbols-outlined {
+        font-size: 19px;
+    }
+
+
+    /* ------------------------------------------
+       MESSAGE
+    ------------------------------------------ */
+
+    .houses-message {
+        min-height: 18px;
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+
+
+    /* ------------------------------------------
+       HOUSES GRID
+    ------------------------------------------ */
+
+    .admin-houses-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        gap: 18px 10px;
+    }
+
+
+    /* ------------------------------------------
+       HOUSE CARD
+    ------------------------------------------ */
+
+    .admin-house-card {
+        min-width: 0;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        overflow: visible;
+        box-shadow: none;
+        transition: none;
+    }
+
+    .admin-house-card:hover {
+        transform: none;
+    }
+
+
+    /* ------------------------------------------
+       IMAGE
+    ------------------------------------------ */
+
+    .admin-house-image {
+        width: 100%;
+        height: 145px;
+        border-radius: 9px;
+        box-shadow:
+            0 1px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .admin-house-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    /* ------------------------------------------
+       NO IMAGE
+    ------------------------------------------ */
+
+    .admin-house-no-image {
+        gap: 4px;
+        font-size: 8px;
+    }
+
+    .admin-house-no-image .material-symbols-outlined {
+        font-size: 26px;
+    }
+
+
+    /* ------------------------------------------
+       STATUS BADGES
+    ------------------------------------------ */
+
+    .admin-house-availability {
+        top: 6px;
+        left: 6px;
+        padding: 3px 6px;
+        border-radius: 20px;
+        font-size: 7px;
+        letter-spacing: 0.03em;
+    }
+
+    .admin-house-active {
+        top: 6px;
+        right: 6px;
+        padding: 3px 6px;
+        border-radius: 20px;
+        font-size: 7px;
+        letter-spacing: 0.03em;
+    }
+
+
+    /* ------------------------------------------
+       HOUSE BODY
+    ------------------------------------------ */
+
+    .admin-house-body {
+        padding: 8px 2px 0;
+    }
+
+
+    /* ------------------------------------------
+       TITLE
+    ------------------------------------------ */
+
+    .admin-house-heading {
+        display: block;
+        min-width: 0;
+    }
+
+    .admin-house-heading h3 {
+        font-size: 11px;
+        line-height: 1.3;
+        -webkit-line-clamp: 2;
+    }
+
+    .admin-house-code {
+        margin-top: 3px;
+        font-size: 8px;
+    }
+
+
+    /* ------------------------------------------
+       PRICE
+    ------------------------------------------ */
+
+    .admin-house-price {
+        margin-top: 5px;
+        font-size: 13px;
+    }
+
+    .admin-house-price span {
+        margin-right: 2px;
+        font-size: 8px;
+    }
+
+    .admin-house-price small {
+        margin-left: 1px;
+        font-size: 8px;
+    }
+
+
+    /* ------------------------------------------
+       DETAILS
+    ------------------------------------------ */
+
+    .admin-house-details {
+        grid-template-columns:
+            1fr 1fr;
+        gap: 7px;
+        margin-top: 8px;
+    }
+
+    .admin-house-detail {
+        gap: 4px;
+    }
+
+    .admin-house-detail .material-symbols-outlined {
+        font-size: 14px;
+    }
+
+    .admin-house-detail small {
+        font-size: 7px;
+        line-height: 1.2;
+    }
+
+    .admin-house-detail strong {
+        margin-top: 1px;
+        font-size: 8px;
+        line-height: 1.2;
+    }
+
+
+    /* ------------------------------------------
+       CARETAKER
+    ------------------------------------------ */
+
+    .admin-house-caretaker {
+        gap: 6px;
+        margin-top: 8px;
+        padding: 7px 8px;
+        border-radius: 6px;
+    }
+
+    .admin-house-caretaker-icon {
+        width: 27px;
+        height: 27px;
+    }
+
+    .admin-house-caretaker-icon .material-symbols-outlined {
+        font-size: 14px;
+    }
+
+    .admin-house-caretaker small {
+        font-size: 7px;
+    }
+
+    .admin-house-caretaker strong {
+        font-size: 8px;
+    }
+
+    .admin-house-caretaker span {
+        font-size: 8px;
+    }
+
+
+    /* ------------------------------------------
+       ACTIONS
+    ------------------------------------------ */
+
+    .admin-house-actions {
+        display: grid;
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        gap: 5px;
+        margin-top: 8px;
+        padding: 0;
+        border: none;
+    }
+
+    .admin-house-actions button {
+        min-height: 29px;
+        padding: 0 5px;
+        gap: 3px;
+        border-radius: 5px;
+        font-size: 7px;
+    }
+
+    .admin-house-actions .material-symbols-outlined {
+        font-size: 13px;
+    }
+
+    .admin-house-actions .availability-house-button {
+        grid-column: span 2;
+    }
+
+    .admin-house-actions .delete-house-button {
+        grid-column: span 2;
+    }
+
+
+    /* ------------------------------------------
+       EMPTY STATE
+    ------------------------------------------ */
+
+    .admin-houses-empty {
+        min-height: 200px;
+        padding: 25px 15px;
+        border-radius: 9px;
+    }
+
+    .admin-houses-empty .material-symbols-outlined {
+        font-size: 34px;
+    }
+
+    .admin-houses-empty h3 {
+        margin-top: 8px;
+        font-size: 13px;
+    }
+
+    .admin-houses-empty p {
+        font-size: 10px;
+    }
+
+}
+
+
+/* ==========================================
+   VERY SMALL PHONE
+========================================== */
+
+@media (max-width: 430px) {
+
+    .admin-houses-grid {
+        gap: 16px 9px;
+    }
+
+    .admin-house-image {
+        height: 135px;
+    }
+
+    .admin-house-details {
+        grid-template-columns:
+            1fr;
+        gap: 6px;
+    }
+
+    .admin-house-caretaker {
+        padding: 7px;
+    }
+
+    .admin-house-actions {
+        grid-template-columns:
+            1fr;
+        gap: 5px;
+    }
+
+    .admin-house-actions .availability-house-button,
+    .admin-house-actions .delete-house-button {
+        grid-column: span 1;
+    }
+
+}
+

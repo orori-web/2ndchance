@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Manage Posters | Second Chance Store</title>
+
+    <!-- Main stylesheet -->
+    <link
+        rel="stylesheet"
+        href="./css/poster.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/admin.css"
+    >
+
+    <link rel="stylesheet" href="./css/admin-mobile.css">
+
+   <link
+    rel="stylesheet"
+    href="./css/poster-mobile.css"
+>
+
+
+    <!-- Material Symbols -->
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    >
+
+</head>
+
+
+<body>
+
+ <!-- ==========================================
+         SHARED ADMIN HEADER
+    =========================================== -->
+
+    <div id="admin-header"></div>
+
+
+    <!-- ==========================================
+         ADMIN BODY
+    =========================================== -->
+
+    <div class="admin-layout">
+
+
+        <!-- ==========================================
+             SHARED ADMIN SIDEBAR
+        =========================================== -->
+
+        <div id="admin-sidebar"></div>
+
+
+    <!-- ==========================================
+         ADMIN POSTERS PAGE
+    =========================================== -->
+
+    <main class="admin-posters-page">
+
+
+        <!-- ==========================================
+             PAGE HEADER
+        =========================================== -->
+
+        <section class="admin-page-header">
+
+            <div>
+
+                <h1>
+                    Manage Posters
+                </h1>
+
+                <p>
+                    Manage the posters displayed across the
+                    Second Chance Store homepage.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="add-poster-button"
+                class="admin-primary-button"
+            >
+
+                <span class="material-symbols-outlined">
+                    add
+                </span>
+
+                Add Poster
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             POSTER MANAGEMENT CONTENT
+        =========================================== -->
+
+        <section class="admin-posters-section">
+
+
+            <!-- ==========================================
+                 LOADING STATE
+            =========================================== -->
+
+            <div
+                id="posters-loading"
+                class="admin-loading"
+            >
+
+                <span class="material-symbols-outlined">
+                    progress_activity
+                </span>
+
+                <p>
+                    Loading posters...
+                </p>
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 ERROR MESSAGE
+            =========================================== -->
+
+            <div
+                id="posters-error"
+                class="admin-error"
+                hidden
+            >
+
+                <span class="material-symbols-outlined">
+                    error
+                </span>
+
+                <p id="posters-error-message">
+                    Failed to load posters.
+                </p>
+
+                <button
+                    type="button"
+                    id="retry-posters-button"
+                    class="admin-secondary-button"
+                >
+                    Retry
+                </button>
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 EMPTY STATE
+            =========================================== -->
+
+            <div
+                id="posters-empty"
+                class="admin-empty"
+                hidden
+            >
+
+                <span class="material-symbols-outlined">
+                    image
+                </span>
+
+                <h2>
+                    No Posters Yet
+                </h2>
+
+                <p>
+                    Create your first homepage poster.
+                </p>
+
+                <button
+                    type="button"
+                    id="empty-add-poster-button"
+                    class="admin-primary-button"
+                >
+                    Add Poster
+                </button>
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 POSTERS GRID
+            =========================================== -->
+
+            <div
+                id="posters-container"
+                class="admin-posters-grid"
+            >
+            </div>
+
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <!-- ==========================================
+         ADD / EDIT POSTER MODAL
+    =========================================== -->
+
+    <div
+        id="poster-modal"
+        class="admin-modal"
+        hidden
+    >
+
+        <div
+            class="admin-modal-overlay"
+            id="poster-modal-overlay"
+        >
+        </div>
+
+
+        <div
+            class="admin-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="poster-modal-title"
+        >
+
+
+            <!-- ==========================================
+                 MODAL HEADER
+            ========================================== -->
+
+            <div class="admin-modal-header">
+
+                <div>
+
+                    <h2 id="poster-modal-title">
+                        Add Poster
+                    </h2>
+
+                    <p id="poster-modal-description">
+                        Add a new poster to the homepage.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="close-poster-modal"
+                    class="admin-modal-close"
+                    aria-label="Close"
+                >
+
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 POSTER FORM
+            ========================================== -->
+
+            <form
+                id="poster-form"
+                enctype="multipart/form-data"
+            >
+
+
+                <!-- ==========================================
+                     IMAGE
+                ========================================== -->
+
+                <div class="admin-form-group">
+
+                    <label for="poster-image">
+                        Poster Image
+                    </label>
+
+                    <input
+                        type="file"
+                        id="poster-image"
+                        name="image"
+                        accept="image/*"
+                    >
+
+                    <small>
+                        Upload the image that will appear on the homepage.
+                    </small>
+
+                    <div
+                        id="poster-image-preview"
+                        class="poster-image-preview"
+                    >
+                    </div>
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     TITLE
+                ========================================== -->
+
+                <div class="admin-form-group">
+
+                    <label for="poster-title">
+                        Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="poster-title"
+                        name="title"
+                        maxlength="100"
+                        placeholder="Enter poster title"
+                    >
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     LINK
+                ========================================== -->
+
+                <div class="admin-form-group">
+
+                    <label for="poster-link">
+                        Destination Link
+                    </label>
+
+                    <input
+                        type="text"
+                        id="poster-link"
+                        name="link"
+                        placeholder="products.html"
+                    >
+
+                    <small>
+                        Where should the user go when they click the poster?
+                    </small>
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     PLACEMENT
+                ========================================== -->
+
+                <div class="admin-form-group">
+
+                    <label for="poster-placement">
+                        Homepage Placement
+                    </label>
+
+                    <select
+                        id="poster-placement"
+                        name="placement"
+                        required
+                    >
+
+                        <option value="">
+                            Select placement
+                        </option>
+
+                        <option value="top-banner">
+                            Top Banner
+                        </option>
+
+                        <option value="banner-2">
+                            Banner 2
+                        </option>
+
+                        <option value="banner-3">
+                            Banner 3
+                        </option>
+
+                        <option value="banner-4">
+                            Banner 4
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     DISPLAY ORDER
+                ========================================== -->
+
+                <div class="admin-form-group">
+
+                    <label for="poster-display-order">
+                        Display Order
+                    </label>
+
+                    <input
+                        type="number"
+                        id="poster-display-order"
+                        name="displayOrder"
+                        min="1"
+                        value="1"
+                    >
+
+                    <small>
+                        Lower numbers appear first.
+                    </small>
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     FORM ERROR
+                ========================================== -->
+
+                <div
+                    id="poster-form-error"
+                    class="admin-form-error"
+                    hidden
+                >
+                </div>
+
+
+
+                <!-- ==========================================
+                     FORM ACTIONS
+                ========================================== -->
+
+                <div class="admin-form-actions">
+
+                    <button
+                        type="button"
+                        id="cancel-poster-button"
+                        class="admin-secondary-button"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        id="save-poster-button"
+                        class="admin-primary-button"
+                    >
+
+                        <span class="material-symbols-outlined">
+                            save
+                        </span>
+
+                        Save Poster
+
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==========================================
+         DELETE CONFIRMATION MODAL
+    =========================================== -->
+
+    <div
+        id="delete-poster-modal"
+        class="admin-modal"
+        hidden
+    >
+
+        <div
+            class="admin-modal-overlay"
+            id="delete-modal-overlay"
+        >
+        </div>
+
+
+        <div
+            class="admin-modal-content admin-confirm-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="delete-modal-title"
+        >
+
+            <span class="material-symbols-outlined admin-danger-icon">
+                delete
+            </span>
+
+            <h2 id="delete-modal-title">
+                Delete Poster?
+            </h2>
+
+            <p>
+                This action cannot be undone.
+                Are you sure you want to delete this poster?
+            </p>
+
+
+            <div class="admin-form-actions">
+
+                <button
+                    type="button"
+                    id="cancel-delete-button"
+                    class="admin-secondary-button"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="button"
+                    id="confirm-delete-button"
+                    class="admin-danger-button"
+                >
+                    Delete Poster
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+        <script
+        type="module"
+        src="./js/admin-layout.js"
+    ></script>
+
+
+    <script
+        type="module"
+        src="./js/admin-posters.js"
+    ></script>
+
+
+</body>
+
+</html>
+

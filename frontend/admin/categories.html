@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        rel="stylesheet"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+    <link
+    rel="stylesheet"
+    href="./css/variables.css"
+>
+
+    <!-- Shared Admin Styles -->
+    <link
+        rel="stylesheet"
+        href="./css/admin.css"
+    >
+
+    <!-- Categories Styles -->
+    <link
+        rel="stylesheet"
+        href="./css/categories.css"
+    >
+
+    <link rel="stylesheet" href="./css/admin-mobile.css">
+
+    <title>Admin - Categories | Second Chance Store</title>
+
+</head>
+
+
+<body>
+
+    <div class="admin-layout">
+
+
+        <!-- ==========================================
+             SHARED ADMIN HEADER
+        =========================================== -->
+
+        <div id="admin-header"></div>
+
+
+        <!-- ==========================================
+             SHARED ADMIN SIDEBAR
+        =========================================== -->
+
+        <div id="admin-sidebar"></div>
+
+
+        <!-- ==========================================
+             PAGE
+        =========================================== -->
+
+        <main class="admin-page">
+
+            <div class="admin-page-content">
+
+
+                <!-- ==================================
+                     PAGE HEADER
+                =================================== -->
+
+                <section class="categories-page-header">
+
+                    <div>
+
+                        <p class="categories-eyebrow">
+                            Management
+                        </p>
+
+                        <h1>
+                            Categories
+                        </h1>
+
+                        <p>
+                            Manage the categories used across
+                            the marketplace.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================
+                     ADD CATEGORY
+                =================================== -->
+
+                <section class="category-add-panel">
+
+
+                    <div class="category-add-heading">
+
+                        <div class="category-add-icon">
+
+                            <span class="material-symbols-outlined">
+                                add
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Add Category
+                            </h2>
+
+                            <p>
+                                Create a new marketplace category.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <form
+                        id="category-form"
+                        class="category-form"
+                    >
+
+                        <div class="category-input-wrapper">
+
+                            <span class="material-symbols-outlined">
+                                category
+                            </span>
+
+                            <input
+                                type="text"
+                                id="category-name"
+                                placeholder="Enter category name"
+                                autocomplete="off"
+                                required
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="category-add-button"
+                        >
+
+                            <span class="material-symbols-outlined">
+                                add
+                            </span>
+
+                            <span>
+                                Add Category
+                            </span>
+
+                        </button>
+
+                    </form>
+
+                </section>
+
+
+                <!-- ==================================
+                     MESSAGE
+                =================================== -->
+
+                <p
+                    id="categories-message"
+                    class="categories-message"
+                ></p>
+
+
+                <!-- ==================================
+                     CATEGORIES HEADER
+                =================================== -->
+
+                <section class="categories-section-header">
+
+                    <div>
+
+                        <h2>
+                            All Categories
+                        </h2>
+
+                        <p>
+                            Marketplace categories
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================
+                     CATEGORIES
+                =================================== -->
+
+                <section
+                    id="categories-container"
+                    class="categories-container"
+                >
+
+                    <!-- Categories rendered by categories.js -->
+
+                </section>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- ==========================================
+         SHARED ADMIN LAYOUT
+    =========================================== -->
+
+    <script
+        type="module"
+        src="./js/admin-layout.js"
+    ></script>
+
+
+    <!-- ==========================================
+         CATEGORIES SCRIPT
+    =========================================== -->
+
+    <script
+        type="module"
+        src="./js/categories.js"
+    ></script>
+
+</body>
+
+</html>
+
