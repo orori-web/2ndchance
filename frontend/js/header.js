@@ -1,13 +1,15 @@
 import {
     getCurrentUser,
     loginWithGoogle,
-    
 } from "./auth.js";
 
 import {
     getCart
 } from "./cart.js";
 
+import {
+    apiFetch
+} from "./api.js";
 
 // ==========================================
 // CONFIGURATION
@@ -22,6 +24,7 @@ console.log("Shared header running");
 // ==========================================
 // HEADER SEARCH
 // ==========================================
+
 const setupHeaderSearch = () => {
 
     const searchForm =
@@ -34,20 +37,36 @@ const setupHeaderSearch = () => {
             "header-search-input"
         );
 
-        const urlParams =
-    new URLSearchParams(
-        window.location.search
-    );
+    const suggestionsContainer =
+        document.getElementById(
+            "search-suggestions"
+        );
 
-const currentSearch =
-    urlParams.get("search") || "";
+    const urlParams =
+        new URLSearchParams(
+            window.location.search
+        );
 
-searchInput.value =
-    currentSearch;
+    const currentSearch =
+        urlParams.get("search") || "";
 
-    if (!searchForm || !searchInput) {
+    if (searchInput) {
+        searchInput.value =
+            currentSearch;
+    }
+
+    if (
+        !searchForm ||
+        !searchInput ||
+        !suggestionsContainer
+    ) {
         return;
     }
+
+
+    // ==========================================
+    // SEARCH SUBMIT
+    // ==========================================
 
     searchForm.addEventListener(
         "submit",
@@ -62,8 +81,149 @@ searchInput.value =
                 return;
             }
 
+            suggestionsContainer.hidden = true;
+
             window.location.href =
                 `products.html?search=${encodeURIComponent(search)}`;
+        }
+    );
+
+
+    // ==========================================
+    // SEARCH SUGGESTIONS
+    // ==========================================
+
+    searchInput.addEventListener(
+        "input",
+        async () => {
+
+            const query =
+                searchInput.value.trim();
+
+                console.log("Search query:", query);
+
+            // Hide suggestions when empty
+            if (!query) {
+                suggestionsContainer.innerHTML = "";
+                suggestionsContainer.hidden = true;
+                return;
+            }
+
+            try {
+
+                const result =
+                    await apiFetch(
+                        `/api/products/suggestions?q=${encodeURIComponent(query)}`
+                    );
+
+                const suggestions =
+                    result?.suggestions || [];
+
+                    console.log("Suggestions:", suggestions);
+
+                // No results
+                if (!suggestions.length) {
+                    suggestionsContainer.innerHTML = "";
+                    suggestionsContainer.hidden = true;
+                    return;
+                }
+
+
+                // ==========================================
+                // BUILD SUGGESTIONS
+                // ==========================================
+
+                suggestionsContainer.innerHTML =
+                    suggestions.map(product => {
+
+                      return `
+    <button
+        type="button"
+        class="search-suggestion-item"
+        data-product-name="${product.name}"
+    >
+        <span class="search-suggestion-name">
+            ${product.name}
+        </span>
+
+        ${
+            product.brand
+                ? `
+                    <span class="search-suggestion-brand">
+                        ${product.brand}
+                    </span>
+                `
+                : ""
+        }
+    </button>
+`;
+
+                    }).join("");
+
+
+                suggestionsContainer.hidden = false;
+
+
+                // ==========================================
+                // SUGGESTION CLICK
+                // ==========================================
+
+                const suggestionItems =
+                    suggestionsContainer.querySelectorAll(
+                        ".search-suggestion-item"
+                    );
+
+                suggestionItems.forEach(
+    (item) => {
+
+        item.addEventListener(
+            "click",
+            () => {
+
+                const productName =
+                    item.dataset.productName;
+
+                if (!productName) {
+                    return;
+                }
+
+                window.location.href =
+                    `products.html?search=${encodeURIComponent(productName)}`;
+
+            }
+        );
+
+    }
+);
+
+
+            } catch (error) {
+
+                console.error(
+                    "Failed to load search suggestions:",
+                    error
+                );
+
+                suggestionsContainer.innerHTML = "";
+                suggestionsContainer.hidden = true;
+            }
+        }
+    );
+
+
+    // ==========================================
+    // HIDE SUGGESTIONS WHEN CLICKING OUTSIDE
+    // ==========================================
+
+    document.addEventListener(
+        "click",
+        (event) => {
+
+            if (
+                !searchForm.contains(event.target)
+            ) {
+                suggestionsContainer.hidden = true;
+            }
 
         }
     );

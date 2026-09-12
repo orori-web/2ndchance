@@ -2,6 +2,7 @@ const {
     createProduct: createProductService,
     getProducts: getProductsService,
     getProductById: getProductByIdService,
+    getProductSuggestions: getProductSuggestionsService,
     updateProduct: updateProductService,
     deleteProduct: deleteProductService,
 } = require("../services/productService");
@@ -86,6 +87,32 @@ const result = await getProductsService({
         });
     }
 };
+
+
+
+
+const getProductSuggestions = async (req, res) => {
+    try {
+        const query = req.query.q || "";
+
+        const suggestions =
+            await getProductSuggestionsService(query);
+
+        return res.status(200).json({
+            success: true,
+            suggestions,
+        });
+
+    } catch (error) {
+        console.error(error);
+
+        return res.status(500).json({
+            success: false,
+            message: error.message,
+        });
+    }
+};
+
 
 
 
@@ -220,6 +247,7 @@ const deleteProduct = async (req, res) => {
 module.exports = {
     createProduct,
     getProducts,
+    getProductSuggestions,
     getProductById,
     updateProduct,
     deleteProduct,

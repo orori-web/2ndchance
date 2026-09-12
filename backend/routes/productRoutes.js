@@ -5,6 +5,7 @@ const { protect } = require("../middleware/authMiddleware");
 const {
     createProduct,
     getProducts,
+    getProductSuggestions,
     getProductById,
     updateProduct,
     deleteProduct,
@@ -22,6 +23,8 @@ const upload = require("../middleware/upload");
 const router = express.Router();
 
 router.get("/", getProducts);
+
+router.get("/suggestions", getProductSuggestions);
 
 router.get("/:id", getProductById);
 

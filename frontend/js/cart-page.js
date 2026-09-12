@@ -665,6 +665,7 @@ clearCartButton.addEventListener(
 );
 
 
+
 // ------------------------------------------
 // Proceed to WhatsApp
 // ------------------------------------------
@@ -680,35 +681,40 @@ placeOrderButton.addEventListener(
             placeOrderButton.textContent =
                 "Preparing order...";
 
-
             const result =
                 await placeOrder();
 
-
             if (!result?.message) {
-
                 throw new Error(
                     "Unable to prepare your order."
                 );
-
             }
 
+            // ------------------------------------------
+            // Clear cart after successful order preparation
+            // ------------------------------------------
+
+            await clearCart();
+
+            // Refresh cart UI
+            await loadCart();
+
+            // ------------------------------------------
+            // Open WhatsApp
+            // ------------------------------------------
 
             const whatsappNumber =
                 "254710988812";
-
 
             const whatsappUrl =
                 `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
                     result.message
                 )}`;
 
-
             window.open(
                 whatsappUrl,
                 "_blank"
             );
-
 
         } catch (error) {
 
@@ -731,16 +737,8 @@ placeOrderButton.addEventListener(
                 "Proceed to Order";
 
         }
-
     }
 );
-
-
-
-
-
-
-
 
 
 

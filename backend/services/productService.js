@@ -246,6 +246,53 @@ switch (sort) {
 
 
 
+const getProductSuggestions = async (query) => {
+    const search = query.trim();
+
+    if (!search) {
+        return [];
+    }
+
+    const escapedSearch = search.replace(
+        /[.*+?^${}()|[\]\\]/g,
+        "\\$&"
+    );
+
+    const suggestions = await Product.find(
+        {
+            isActive: true,
+            $or: [
+                {
+                    name: {
+                        $regex: escapedSearch,
+                        $options: "i",
+                    },
+                },
+                {
+                    brand: {
+                        $regex: escapedSearch,
+                        $options: "i",
+                    },
+                },
+                {
+                    description: {
+                        $regex: escapedSearch,
+                        $options: "i",
+                    },
+                },
+            ],
+        },
+        "name brand description"
+    )
+        .sort({ createdAt: -1 })
+        .limit(8);
+
+    return suggestions;
+};
+
+
+
+
 const getProductById = async (productId) => {
     const product = await Product.findOneAndUpdate(
         {
@@ -392,6 +439,7 @@ for (const image of product.images) {
 module.exports = {
     createProduct,
     getProducts,
+    getProductSuggestions,
     getProductById,
     updateProduct,
     deleteProduct,

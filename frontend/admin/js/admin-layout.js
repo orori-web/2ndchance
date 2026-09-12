@@ -324,6 +324,19 @@ const renderAdminSidebar = () => {
 
                 </a>
 
+                <a
+    href="analytics.html"
+    class="admin-nav-link"
+    data-admin-page="analytics"
+>
+    <span class="material-symbols-outlined">
+        analytics
+    </span>
+    <span>
+        Analytics
+    </span>
+</a>
+
 
                 <a
                     href="products.html"

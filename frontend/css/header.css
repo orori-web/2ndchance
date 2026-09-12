@@ -679,3 +679,116 @@ header nav > a {
     color: #6b7280;
     font-weight: 500;
 }
+
+
+
+
+/* ==========================================
+   SEARCH AUTOCOMPLETE SUGGESTIONS
+========================================== */
+
+.search-suggestions {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+
+    background: #ffffff;
+    border: 1px solid #CFC8BB;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 24px rgba(55, 67, 39, 0.12);
+
+    overflow: hidden;
+    z-index: 2000;
+}
+
+
+/* ==========================================
+   INDIVIDUAL SUGGESTION
+========================================== */
+
+.search-suggestion-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 15px;
+
+    border: none;
+    border-bottom: 1px solid #EFECE7;
+
+    background: #ffffff;
+
+    text-align: left;
+    cursor: pointer;
+
+    transition:
+        background-color 0.15s ease,
+        padding-left 0.15s ease;
+}
+
+.search-suggestion-item:last-child {
+    border-bottom: none;
+}
+
+
+/* ==========================================
+   PRODUCT NAME
+========================================== */
+
+.search-suggestion-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374327;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   BRAND
+========================================== */
+
+.search-suggestion-brand {
+    margin-left: 12px;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    color: #657150;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.search-suggestion-item:hover {
+    background: #EFECE7;
+    padding-left: 19px;
+}
+
+
+/* ==========================================
+   KEYBOARD FOCUS
+========================================== */
+
+.search-suggestion-item:focus {
+    outline: none;
+    background: #EFECE7;
+}
+
+
+/* ==========================================
+   SEARCH POSITIONING
+========================================== */
+
+.header-search {
+    position: relative;
+}

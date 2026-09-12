@@ -1,0 +1,447 @@
+/* =========================================================
+   MOBILE ACCOUNT PAGE
+========================================================= */
+
+@media (max-width: 600px) {
+
+
+    /* =====================================================
+       ACCOUNT PAGE FOUNDATION
+    ===================================================== */
+
+    .account-page {
+        width: 100%;
+        min-height: calc(100vh - 60px);
+        padding: 14px 12px 90px;
+        background: #f5f5f5;
+    }
+
+
+    .account-container {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+
+    /* =====================================================
+       BREADCRUMB
+    ===================================================== */
+
+    .site-breadcrumb,
+    .account-breadcrumb {
+        margin-bottom: 14px;
+        gap: 4px;
+        font-size: 11px;
+    }
+
+
+    .site-breadcrumb
+    .material-symbols-outlined,
+    .account-breadcrumb
+    .material-symbols-outlined {
+        font-size: 15px;
+    }
+
+
+    /* =====================================================
+       PROFILE BAR
+    ===================================================== */
+
+    .account-profile-bar {
+        width: 100%;
+        min-height: auto;
+        padding: 16px 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+
+    .account-profile-bar::before {
+        width: 3px;
+    }
+
+
+    /* =====================================================
+       PROFILE INFORMATION
+    ===================================================== */
+
+    .account-profile-left {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+
+    /* =====================================================
+       AVATAR
+    ===================================================== */
+
+    .account-avatar {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+    }
+
+
+    .account-avatar
+    .material-symbols-outlined {
+        font-size: 26px;
+    }
+
+
+    /* =====================================================
+       PROFILE TEXT
+    ===================================================== */
+
+    .account-profile-info {
+        min-width: 0;
+        gap: 3px;
+    }
+
+
+    .account-profile-info strong {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.3;
+    }
+
+
+    .account-profile-info span {
+        max-width: 100%;
+        font-size: 11px;
+        line-height: 1.3;
+    }
+
+
+    /* =====================================================
+       ACCOUNT TYPE
+    ===================================================== */
+
+    .account-profile-middle {
+        width: 100%;
+        padding: 11px 0 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+
+        border-left: none;
+        border-top: 1px solid #edf0f3;
+    }
+
+
+    .account-profile-label {
+        font-size: 9px;
+    }
+
+
+    .account-profile-middle strong {
+        padding: 4px 9px;
+        font-size: 10px;
+    }
+
+
+    /* =====================================================
+       LOGOUT
+    ===================================================== */
+
+    .account-logout-button {
+        width: 100%;
+        min-height: 40px;
+        margin-top: 1px;
+        padding: 0 14px;
+
+        border-radius: 7px;
+        font-size: 12px;
+    }
+
+
+    .account-logout-button
+    .material-symbols-outlined {
+        font-size: 17px;
+    }
+
+
+    /* =====================================================
+       ACCOUNT MESSAGE
+    ===================================================== */
+
+    .account-message {
+        margin: 10px 2px 0;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+
+    /* =====================================================
+       ACCOUNT STATISTICS
+    ===================================================== */
+
+    .account-statistics {
+        width: 100%;
+        margin-top: 14px;
+
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+
+    .account-stat-card {
+        min-width: 0;
+        min-height: 58px;
+
+        padding: 10px 11px;
+
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        background: #ffffff;
+        border: 1px solid #e3e7ec;
+        border-radius: 9px;
+    }
+
+
+    .account-stat-icon {
+        flex-shrink: 0;
+    }
+
+
+    .account-stat-icon
+    .material-symbols-outlined {
+        font-size: 18px;
+    }
+
+
+    .account-stat-card > div:last-child {
+        min-width: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1px;
+    }
+
+
+    .account-stat-label {
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+
+    .account-stat-card strong {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+
+    /* =====================================================
+       MY PRODUCTS SECTION
+    ===================================================== */
+
+    .my-products-section {
+        width: 100%;
+        margin-top: 26px;
+    }
+
+
+    /* =====================================================
+       MY PRODUCTS HEADER
+    ===================================================== */
+
+    .my-products-header {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 13px;
+
+        padding-bottom: 14px;
+    }
+
+
+    /* =====================================================
+       SECTION TITLE
+    ===================================================== */
+
+    .my-products-header h2 {
+        font-size: 19px;
+        line-height: 1.25;
+    }
+
+
+    .my-products-header p:not(.account-eyebrow) {
+        margin-top: 4px;
+        font-size: 11px;
+        line-height: 1.45;
+    }
+
+
+    .account-eyebrow {
+        margin-bottom: 4px;
+        font-size: 9px;
+    }
+
+
+    /* =====================================================
+       SELL BUTTON
+    ===================================================== */
+
+    .sell-product-button {
+        width: 100%;
+        min-height: 42px;
+
+        padding: 0 14px;
+
+        border-radius: 7px;
+
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+
+    .sell-product-button
+    .material-symbols-outlined {
+        font-size: 18px;
+    }
+
+
+    /* =====================================================
+       MY PRODUCTS GRID
+    ===================================================== */
+
+    .my-products-grid {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 22px 10px;
+    }
+
+
+    /* =====================================================
+       PRODUCT ITEM
+    ===================================================== */
+
+    .my-products-grid article {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* =====================================================
+       PRODUCT IMAGE
+    ===================================================== */
+
+    .my-products-grid article img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+
+        border-radius: 10px;
+    }
+
+
+    /* =====================================================
+       PRODUCT NAME
+    ===================================================== */
+
+    .my-products-grid article h3 {
+        margin: 8px 1px 5px;
+
+        font-size: 13px;
+        line-height: 1.35;
+    }
+
+
+    /* =====================================================
+       PRODUCT INFORMATION
+    ===================================================== */
+
+    .my-products-grid article p {
+        margin: 0 1px 4px;
+
+        font-size: 11px;
+        line-height: 1.35;
+    }
+
+
+    /* =====================================================
+       PRICE
+    ===================================================== */
+
+    .my-products-grid article p:nth-of-type(2) {
+        margin-top: 2px;
+
+        font-size: 15px;
+        line-height: 1.2;
+    }
+
+
+    /* =====================================================
+       PRODUCT ACTIONS
+    ===================================================== */
+
+    .my-products-grid article button {
+        width: 100%;
+        min-height: 34px;
+
+        margin-top: 7px;
+        margin-right: 0;
+        padding: 0 8px;
+
+        border-radius: 6px;
+
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       EMPTY STATE
+    ===================================================== */
+
+    .my-products-grid > p {
+        grid-column: 1 / -1;
+
+        margin: 16px 0;
+
+        font-size: 12px;
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       MY PRODUCT MODAL
+    ===================================================== */
+
+    .my-product-modal-content {
+        width: calc(100% - 24px);
+        max-width: none;
+
+        max-height: calc(100vh - 30px);
+
+        margin: 15px auto;
+        border-radius: 12px;
+        overflow-y: auto;
+    }
+
+
+    .my-product-modal-close {
+        width: 34px;
+        height: 34px;
+
+        top: 8px;
+        right: 8px;
+    }
+
+}
